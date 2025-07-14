@@ -1,0 +1,21 @@
+"Knee-Deep in the Big Muddy" by Barry Staw:
+
+Participants:
+- 240 undergrads in the business school
+- students volunteered to participating in a study on "financial problem-solving" as part of a course research requirement
+
+Experimental Design:
+- 2x2 factorial design with two independent variables:
+    - personal responsibility (high vs. low)
+    - decision consequences (positive vs. negative)
+
+Procedure: 
+Participants worked on a role-playing exercise involving a hypothetical corporation (Adams & Smith Company) where they acted as Financial Vice President making R&D funding decisions.
+
+High Personal Responsibility Condition:
+- Two-part sequential process:
+    - Part 1: Participants chose which division (Consumer Products or Industrial Products) should receive $10M in R&D funding
+    - Part 2: After learning the conequences of their initial decision, participants allocated $20M between the two divisions
+
+Low Personal Responsibility Condition:
+- Single-part process: Participants were told another financial officer has made the initial decision, and they only made the second allocation decision.
