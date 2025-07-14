@@ -84,3 +84,12 @@ However, one half of the subjects were also randomly assigned to a low personal 
 Dependent Variable:
 
 The DV utilized in this study was the individuals' commitment to a previously chosen investment alternative. This variable was operationalized by the amount of money subjects allocated on the second R&D funding decision to the coprorate division chosen earlier (either chosen earlier by the subject or the other financial officer mentioend in the case). The amount allocated to the previously chosen alternative could range between zero and 20 million dollars.
+
+Summary of Treatment Groups
+
+Of the 120 subjects in the high personal responsibility condition, 64 initially chose the Consumer Products Division as the best investment for R&D Funds, while 55 initially chose the Industrial Products Division.
+
+[these above numbers will be different given the models we test will make their own decisions. we could also have a significantly high N than 120.]
+
+Since subjects self-selected themselves to prior choices and then financial information was randomly assigned, fouur cells were created by initial choice and financial information.
+
