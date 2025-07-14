@@ -93,3 +93,76 @@ Of the 120 subjects in the high personal responsibility condition, 64 initially 
 
 Since subjects self-selected themselves to prior choices and then financial information was randomly assigned, fouur cells were created by initial choice and financial information.
 
+
+
+Data Extracted from Tables 1 and 2
+
+Table 1: Consumer Products Division
+Historical Performance (2002-2012):
+
+2002: Sales $624M, Earnings $14.42M
+2003: Sales $626M, Earnings $10.27M
+2004: Sales $649M, Earnings $8.65M
+2005: Sales $681M, Earnings $8.46M
+2006: Sales $674M, Earnings $4.19M
+2007: Sales $702M, Earnings $5.35M
+2008: Sales $717M, Earnings $3.92M
+2009: Sales $741M, Earnings $4.66M
+2010: Sales $765M, Earnings $2.48M
+2011: Sales $770M, Earnings ($0.12M) [loss]
+2012: Sales $769M, Earnings ($0.63M) [loss]
+
+Post-R&D Performance (2013-2017):
+
+Manipulated Improvement Condition:
+
+2013: Sales $818M, Earnings $0.02M
+2014: Sales $829M, Earnings ($0.09M) [loss]
+2015: Sales $827M, Earnings ($0.23M) [loss]
+2016: Sales $846M, Earnings $0.06M
+2017 (est): Sales $910M, Earnings $1.28M
+
+
+Manipulated Decline Condition:
+
+2013: Sales $771M, Earnings ($1.12M) [loss]
+2014: Sales $774M, Earnings ($1.96M) [loss]
+2015: Sales $762M, Earnings ($3.87M) [loss]
+2016: Sales $778M, Earnings ($3.83M) [loss]
+2017 (est): Sales $783M, Earnings ($4.16M) [loss]
+
+
+
+Table 2: Industrial Products Division
+Historical Performance (1957-1967):
+
+2002: Sales $670M, Earnings $15.31M
+2003: Sales $663M, Earnings $10.92M
+2004: Sales $689M, Earnings $11.06M
+2005: Sales $711M, Earnings $10.44M
+2006: Sales $724M, Earnings $9.04M
+2007: Sales $735M, Earnings $6.38M
+2008: Sales $748M, Earnings $5.42M
+2009: Sales $756M, Earnings $3.09M
+2010: Sales $784M, Earnings $3.26M
+2011: Sales $788M, Earnings ($0.81M) [loss]
+2012: Sales $791M, Earnings ($0.80M) [loss]
+
+Post-R&D Performance (2013-2017):
+
+Manipulated Improvement Condition:
+
+2013: Sales $818M, Earnings $0.02M
+2014: Sales $829M, Earnings ($0.09M) [loss]
+2015: Sales $827M, Earnings ($0.23M) [loss]
+2016: Sales $846M, Earnings $0.06M
+2017 (est): Sales $910M, Earnings $1.28M
+
+
+Manipulated Decline Condition:
+
+2013: Sales $771M, Earnings ($1.12M) [loss]
+2014: Sales $774M, Earnings ($1.96M) [loss]
+2015: Sales $762M, Earnings ($3.87M) [loss]
+2016: Sales $778M, Earnings ($3.83M) [loss]
+2017 (est): Sales $783M, Earnings ($4.16M) [loss]
