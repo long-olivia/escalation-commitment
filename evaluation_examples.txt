@@ -37,3 +37,15 @@ Analysis:
 - ANOVA to test main effects and interactions
 - Preliminary analysis confirmed no effects of which specific divison was chosen or the exact form of financial information, allowing data to be collapsed in the 2x2 design.
 
+
+------------------------
+------------------------
+
+New Experimental Design
+
+Subject needs to be told to work on the "H & S Financial Decision Case" in which it was necessary to play the role of a corporate executive in making some decisions about the allocation of research and deverlopment funds.
+
+Each subject (in this case, the model) will be told by the experimenter that the purpose of the case is to examine the effectiveness of business decision-making under various amounts of information. The model will be told that the particular case on which they will be working contained only a limiited amount of information, but that the information provided should still be sufficient for a model to make "a good financial decision." The model should be asked to do the best job they could on the case and to place their names on each page of the case material.
+
+The H & S Financial Decision Case
+
