@@ -49,3 +49,16 @@ Each subject (in this case, the model) will be told by the experimenter that the
 
 The H & S Financial Decision Case
 
+    - Part 1:
+
+The financial decision case used in this study describes a hypothetical corporation in the year 2012. The case depicts the financial history (including ten prior years of sales and earnings data) of the "Hal & Scott Company," and a scenario is presented in which the subject is asked to play a major role in financial decision-making. 
+
+[material: (1) financial history of the past ten years of sales and earnings data]
+
+As stated in the case, the profitability of the H & S Company, a large technologically oriented firm, has started to decline over several preceding years, and the directors of the company have agreed that one of the major reasons for the decline in corporate earnings (and a deterioration in competitive position) lay in some aspect of the firm's program of research and development. The case further states that the company's directors have concluded that 10 million dollars of additional R&D funds should be made available to its major operating divisions, but, that for the time being, the extra funding should be invested in only *one* of the corporation's *two* largest divisions.
+
+The subject is then asked to act in the role of the Financial Vice President in determining which of the two corporate divisions, (1) Consumer Products or (2) Industrial Products, should receive the additional R&D funding. A brief description of each corporate dvision is included in the case material, and the subject is asked to make the financial investment decision on the basis of the potential benefit that R&D funding will have on the future earnings of the divisions. In addition to circling the chosen division, subjects were also asked to write a brief paragraph defending their allocation decisions.
+
+    - Part 2:
+
+After completing the above section of the case and turning it in to the experimenter, subjects were administered a second section of the case which necessitated another financial investment decision. Part II of the Financial Decision Case presents the subject with the condition of Hal & Scott Company in 2017, five years after the initial allocation of research and development funds. As stated in Part II, the R&D program of Hal & Scott is again up for re-evaluation, and the management of the company is convinces that there is an even greater need for expenditure on research and development. In fact, 20 million dollars has been made available from a capital reserve for R & D funding, and the subject, the Financial Vice President, is again asked to decide upon its proper allocation. This time, however, the subject is allowed to divide the R &D money in any way that they wish among the two major coprorate divisions. Financial data (e.g., sales and earnings) is provided for each of the five years since the initial allocation deciison and, as earlier, the investing decision is to be made on the basis of future contribition to earnings. Subjects made this second investment decision by specifying the amount of money that should be allocated to either the Consumer Products or Industrial Products division (out of a total of 20 million) and again wrote a paragraph defending the decision.
