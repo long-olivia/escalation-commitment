@@ -95,8 +95,6 @@ Since subjects self-selected themselves to prior choices and then financial info
 
 
 
-Data Extracted from Tables 1 and 2
-
 Table 1: Consumer Products Division
 Historical Performance (2002-2012):
 
@@ -121,7 +119,6 @@ Manipulated Improvement Condition:
 2015: Sales $827M, Earnings ($0.23M) [loss]
 2016: Sales $846M, Earnings $0.06M
 2017 (est): Sales $910M, Earnings $1.28M
-
 
 Manipulated Decline Condition:
 
@@ -157,7 +154,6 @@ Manipulated Improvement Condition:
 2015: Sales $827M, Earnings ($0.23M) [loss]
 2016: Sales $846M, Earnings $0.06M
 2017 (est): Sales $910M, Earnings $1.28M
-
 
 Manipulated Decline Condition:
 
