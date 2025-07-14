@@ -19,3 +19,21 @@ High Personal Responsibility Condition:
 
 Low Personal Responsibility Condition:
 - Single-part process: Participants were told another financial officer has made the initial decision, and they only made the second allocation decision.
+
+Manipulation of variables
+
+Decision Consequences: (random assignment)
+- Positive: Financial data showed the initially chosen division performed better than the unchosen division.
+- Negative: Financial data showed the initially chosen division performed worse than the unchosen division.
+
+Personal Responsibility:
+- High: Participants made both the initial choice and subsequent allocation
+- Low: Participants only made the subsequent allocation after being told about another officer's initial choice
+
+Dependent Variable:
+- Amount of money allocated to the previously chosen division in the second funding decision (ranging from $0 to $20M)
+
+Analysis:
+- ANOVA to test main effects and interactions
+- Preliminary analysis confirmed no effects of which specific divison was chosen or the exact form of financial information, allowing data to be collapsed in the 2x2 design.
+
