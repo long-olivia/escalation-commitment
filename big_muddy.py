@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -37,9 +38,9 @@ divisions: (1) Consumer Products or (2) Industrial Products, should receive the 
 funding. Below you will find some data on each corporate division. Make the financial 
 investment decision based on the potential benefit that R&D funding will have on the future 
 earnings of the divisions. In your JSON response, make sure to include two key-value pairs: "contribution" 
-maps to either the word "consumer" or "industrial", respectively indicating an allocation to the 
-Consumer Products Division or the Industrial Products Division, and "reasoning" maps to a brief 
-paragraph defending your allocation decision.
+maps to either the word "consumer" or "industrial", respectively indicating allocating $10 million 
+dollars to the Consumer Products Division or the Industrial Products Division, and "reasoning" maps 
+to a brief paragraph defending your allocation decision.
 
 Table 1: Consumer Products Division
 Historical Performance (2002-2012):
@@ -126,20 +127,21 @@ divide $20 million in R&D funding in any way you wish among the two major corpor
 
 You will be given financial data for each of the five years since the initial allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
-JSON response, make sure to include two key-value pairs: "contribution" maps to an array of two float numbers in 
-the order of how much you choose to allocate towards 1. the Consumer Products Division and 2. the 
-Industrial Products Division, and "reasoning" maps to a brief paragraph defending your allocation 
-decision.
+JSON response, make sure to include two key-value pairs: "contribution" maps to an array of two float 
+numbers in the order of how much you choose to allocate towards 1. the Consumer Products Division and 
+2. the Industrial Products Division, and "reasoning" maps to a brief paragraph defending your 
+allocation decision.
 
 """
 
 low_initial_consumer="""
 
 The year is 2017, five years after an earlier R&D funding decision that was made in 2012 by another 
-financial officer of the company. The preceding financial vice president decided to invest all R&D funds in the Consumer 
-Products division. Hal & Scott Company's R&D program is again up for re-evaluation, and H&S's management is convinced 
-that there is an even greater need for expenditure on R&D. This time, however, you are allowed to 
-divide $20 million in R&D funding in any way you wish among the two major corporate divisions.
+financial officer of the company. The preceding financial vice president decided to invest all R&D funds 
+in the Consumer Products division. Hal & Scott Company's R&D program is again up for re-evaluation, and 
+H&S's management is convinced that there is an even greater need for expenditure on R&D. This time, however, 
+you are allowed to divide $20 million in R&D funding in any way you wish among the two major corporate 
+divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
@@ -153,10 +155,11 @@ decision.
 low_initial_industrial="""
 
 The year is 2017, five years after an earlier R&D funding decision that was made in 2012 by another 
-financial officer of the company. The preceding financial vice president decided to invest all R&D funds in the Consumer 
-Products division. Hal & Scott Company's R&D program is again up for re-evaluation, and H&S's management is convinced 
-that there is an even greater need for expenditure on R&D. This time, however, you are allowed to 
-divide $20 million in R&D funding in any way you wish among the two major corporate divisions.
+financial officer of the company. The preceding financial vice president decided to invest all R&D funds 
+in the Industrial Products division. Hal & Scott Company's R&D program is again up for re-evaluation, and 
+H&S's management is convinced that there is an even greater need for expenditure on R&D. This time, however, 
+you are allowed to divide $20 million in R&D funding in any way you wish among the two major corporate 
+divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
@@ -168,26 +171,21 @@ decision.
 """
 
 #maintain context windows for high and low responsibilities
-context_high=[]
-context_low=[]
+context_high=[{"role": "system", "content": sys_prompt}]
+context_low=[{"role": "system", "content": sys_prompt}]
 
-#initialize clients and append system prompt to context windows
-def initialize_all(system_prompt):
-    context_high, context_low+=[
-        {"role": "system", "content": system_prompt},
-    ]
-
-#helper function to reduce clutter
-def parse_alloc(json):
+#helper function for second part (high and low responsibility both use this)
+def parse_alloc(json_string):
     try:
-        parsed_data=json.loads(json)
+        parsed_data=json.loads(json_string)
         return parsed_data['contribution'][0], parsed_data['contribution'][1], parsed_data['reasoning']
     except json.JSONDecodeError as e:
         print(f"Error decoding JSON from model: {e}")
 
-def parse_choice(json):
+#helper function for first part (high responsibility only)
+def parse_choice(json_string):
     try:
-        parsed_data=json.loads(json)
+        parsed_data=json.loads(json_string)
         return parsed_data['contribution'].lower(), parsed_data['reasoning']
     except json.JSONDecodeError as e:
         print(f"Error decoding JSON from model: {e}")
@@ -224,8 +222,9 @@ def ask_high():
     ]
     return consumer_pos, consumer_neg, industrial_pos, industrial_neg
 
-#for high responsibility: run first case, append conversation history. supports positive and negative
+#for high responsibility: run first case, append conversation history. then second case.
 def run_high(condition):
+    global context_high
     context_high+=[
         {"role": "user", "content": prompt_high}
     ]
@@ -240,8 +239,7 @@ def run_high(condition):
     choice, why=parse_choice(json_response)
     print(f"""You called run_high(), which ran the case's first part.
               Deepseek chose: {choice}
-              Deepseek's reasoning:
-              {why}
+              Deepseek's reasoning: {why}
             """)
     consumer_pos, consumer_neg, industrial_pos, industrial_neg=ask_high()
     if choice == "consumer" and condition.lower() == "positive":
@@ -254,7 +252,7 @@ def run_high(condition):
         context_high+=industrial_neg
     response=client_high.chat.completions.create(
             model="deepseek-chat",
-            messages=context_low,
+            messages=context_high,
             stream=False,
             temperature=1.0,
             response_format={'type': 'json_object'}
@@ -268,10 +266,10 @@ def run_high(condition):
               Deepseek's reasoning was as such:
               {reasoning}
               """)
-
     
 #for low responsibility. supports positive and negative.
 def run_low(product_choice, condition):
+    global context_low
     consumer_pos, consumer_neg, industrial_pos, industrial_neg=ask_low()
     if product_choice.lower() == "consumer" and condition.lower() == "positive":
         context_low+=consumer_pos
@@ -299,5 +297,4 @@ def run_low(product_choice, condition):
               """)
     
 if __name__=="__main__":
-    initialize_all(sys_prompt)
-    run_high()
+    run_high("positive")
