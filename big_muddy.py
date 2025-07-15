@@ -243,6 +243,9 @@ def run_high(condition):
               Deepseek chose: {choice}
               Deepseek's reasoning: {why}
             """)
+    context_high+=[
+        {"role": "assistant", "content": json_response}
+    ]
     consumer_pos, consumer_neg, industrial_pos, industrial_neg=ask_high()
     if choice == "consumer" and condition.lower() == "positive":
         context_high+=consumer_pos
@@ -260,6 +263,7 @@ def run_high(condition):
             response_format={'type': 'json_object'}
     )
     json_response=response.choices[0].message.content
+    print(json_response)
     consumer_alloc, industrial_alloc, reasoning=parse_alloc(json_response)
     print(f"""Deepseek chose {choice}, and you passed the {condition}.
               Deepseek allocated:
@@ -326,11 +330,11 @@ def run_low(product_choice, condition):
     
 if __name__=="__main__":
     result_dict=[]
-    for i in range(1,26):
-        result=run_low("industrial","negative")
+    for i in range(1,51):
+        result=run_high("negative")
         result_dict+=result
         print(i)
-    output_filename = "deepseek_run/low_industrial_negative.json"
+    output_filename = "deepseek_run/high_negative.json"
     os.makedirs("deepseek_run", exist_ok=True)
     with open(output_filename, 'w') as f:
         json.dump(result_dict, f, indent=4)
