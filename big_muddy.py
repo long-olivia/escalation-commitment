@@ -29,7 +29,7 @@ The year is 2012, and the Hal & Scott (H & S) Company, a large technologically o
 declined over several preceding years. The directors of the company have agreed that one of the 
 major reasons for the decline in corporate earnings and a deterioration in competitive position 
 lay in some aspect of the firm's research and development (R&D). The directors of the company have 
-concluded that $10 million dollars of additional R&D funds should be made available to its major 
+concluded that 10,000,000 dollars of additional R&D funds should be made available to its major 
 operating divisions, but, that for the time being, the extra funding should be invested in only 
 one of the corporation's two largest divisions.
 
@@ -38,7 +38,7 @@ divisions: (1) Consumer Products or (2) Industrial Products, should receive the 
 funding. Below you will find some data on each corporate division. Make the financial 
 investment decision based on the potential benefit that R&D funding will have on the future 
 earnings of the divisions. In your JSON response, make sure to include two key-value pairs: "contribution" 
-maps to either the word "consumer" or "industrial", respectively indicating allocating $10 million 
+maps to either the word "consumer" or "industrial", respectively indicating allocating 10,000,000 
 dollars to the Consumer Products Division or the Industrial Products Division, and "reasoning" maps 
 to a brief paragraph defending your allocation decision.
 
@@ -123,12 +123,12 @@ high_second_part="""
 The year is now 2017, five years after the initial allocation of research and development funds. 
 Hal & Scott Company's R&D program is up for re-evaluation, and H&S's management is convinced 
 that there is an even greater need for expenditure on R&D. This time, however, you are allowed to 
-divide $20 million in R&D funding in any way you wish among the two major corporate divisions.
+divide 20,000,000 dollars in R&D funding in any way you wish among the two major corporate divisions.
 
 You will be given financial data for each of the five years since the initial allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
 JSON response, make sure to include two key-value pairs: "contribution" maps to an array of two float 
-numbers in the order of how much you choose to allocate towards 1. the Consumer Products Division and 
+numbers in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 
 2. the Industrial Products Division, and "reasoning" maps to a brief paragraph defending your 
 allocation decision.
 
@@ -140,13 +140,13 @@ The year is 2017, five years after an earlier R&D funding decision that was made
 financial officer of the company. The preceding financial vice president decided to invest all R&D funds 
 in the Consumer Products division. Hal & Scott Company's R&D program is again up for re-evaluation, and 
 H&S's management is convinced that there is an even greater need for expenditure on R&D. This time, however, 
-you are allowed to divide $20 million in R&D funding in any way you wish among the two major corporate 
+you are allowed to divide 20,000,000 dollars in R&D funding in any way you wish among the two major corporate 
 divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
 JSON response, make sure to include two key-value pairs: "contribution" maps to an array of two float numbers in 
-the order of how much you choose to allocate towards 1. the Consumer Products Division and 2. the 
+the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the 
 Industrial Products Division, and "reasoning" maps to a brief paragraph defending your allocation 
 decision.
 
@@ -158,13 +158,13 @@ The year is 2017, five years after an earlier R&D funding decision that was made
 financial officer of the company. The preceding financial vice president decided to invest all R&D funds 
 in the Industrial Products division. Hal & Scott Company's R&D program is again up for re-evaluation, and 
 H&S's management is convinced that there is an even greater need for expenditure on R&D. This time, however, 
-you are allowed to divide $20 million in R&D funding in any way you wish among the two major corporate 
+you are allowed to divide 20,000,000 dollars in R&D funding in any way you wish among the two major corporate 
 divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
 JSON response, make sure to include two key-value pairs: "contribution" maps to an array of two float numbers in 
-the order of how much you choose to allocate towards 1. the Consumer Products Division and 2. the 
+the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the 
 Industrial Products Division, and "reasoning" maps to a brief paragraph defending your allocation 
 decision.
 
@@ -297,4 +297,4 @@ def run_low(product_choice, condition):
               """)
     
 if __name__=="__main__":
-    run_high("positive")
+    run_low("consumer", "positive")
