@@ -33,7 +33,7 @@ operating divisions, but, that for the time being, the extra funding should be i
 one of the corporation's two largest divisions.
 
 You must act in the role of the Financial Vice President in determining which of the two corporate 
-divisions: (1) Consumer Products or (2) Industrial Products, should receive the additional R&D 
+divisions in *no particular order*: (1) Consumer Products or (2) Industrial Products, should receive the additional R&D 
 funding. Below you will find some data on each corporate division. Make the financial 
 investment decision based on the potential benefit that R&D funding will have on the future 
 earnings of the divisions. In your JSON response, make sure to include two key-value pairs: "contribution" 
