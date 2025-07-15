@@ -126,8 +126,8 @@ divide 20,000,000 dollars in R&D funding in any way you wish among the two major
 
 You will be given financial data for each of the five years since the initial allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
-JSON response, make sure to include two key-value pairs: "contribution" maps to an array of two float 
-numbers in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 
+JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float 
+numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 
 2. the Industrial Products Division, and "reasoning" maps to a brief paragraph defending your 
 allocation decision.
 
@@ -144,7 +144,7 @@ divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
-JSON response, make sure to include two key-value pairs: "contribution" maps to an array of two float numbers in 
+JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float numbers*, not strings, in 
 the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the 
 Industrial Products Division, and "reasoning" maps to a brief paragraph defending your allocation 
 decision.
@@ -162,7 +162,7 @@ divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
-JSON response, make sure to include two key-value pairs: "contribution" maps to an array of two float numbers in 
+JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float numbers*, not strings, in 
 the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the 
 Industrial Products Division, and "reasoning" maps to a brief paragraph defending your allocation 
 decision.
@@ -321,16 +321,16 @@ def run_low(product_choice, condition):
             "reasoning": f"{reasoning}"
         }
     ]
-    round_high+=1
+    round_low+=1
     return result
     
 if __name__=="__main__":
     result_dict=[]
-    for i in range(1,51):
-        result=run_high("negative")
+    for i in range(1,26):
+        result=run_low("industrial","negative")
         result_dict+=result
         print(i)
-    output_filename = "deepseek_run/high_negative.json"
+    output_filename = "deepseek_run/low_industrial_negative.json"
     os.makedirs("deepseek_run", exist_ok=True)
     with open(output_filename, 'w') as f:
         json.dump(result_dict, f, indent=4)

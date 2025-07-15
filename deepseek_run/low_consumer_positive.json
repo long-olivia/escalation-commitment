@@ -1,0 +1,202 @@
+[
+    {
+        "n": 1,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical post-R&D performance data for both the Consumer Products Division and the Industrial Products Division from 2013 to 2017, including sales and earnings, it suggests that both divisions have similar potential for future contribution to earnings. Therefore, allocating the R&D funds equally between the two divisions is a balanced approach that mitigates risk and capitalizes on the potential of both sectors equally."
+    },
+    {
+        "n": 2,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and capitalizes on the potential for both divisions to contribute equally to future earnings, based on their historical performance trajectories. The equal allocation also reflects a strategic decision to not favor one division over the other without clear differentiating performance indicators."
+    },
+    {
+        "n": 3,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics between the Consumer Products Division and the Industrial Products Division over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth in both areas, maximizing the company's overall future contribution to earnings. The similar trends in both divisions suggest that they both have the potential to benefit equally from additional R&D investment."
+    },
+    {
+        "n": 4,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk by not over-investing in one division over the other, especially in light of their similar historical performance and estimated earnings for 2017. It also allows for the potential to capitalize on any unforeseen opportunities or challenges that may arise in either division, ensuring that the company remains competitive across both sectors."
+    },
+    {
+        "n": 5,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and capitalizes on the potential for both divisions to contribute equally to future earnings, especially considering their similar trajectories and the lack of distinguishing performance data to favor one over the other."
+    },
+    {
+        "n": 6,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and capitalizes on the potential for both divisions to contribute equally to future earnings, especially considering their similar trajectories in sales and earnings growth."
+    },
+    {
+        "n": 7,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth in both areas, leveraging their similar historical performance trajectories. The equal allocation also mitigates risk by not over-concentrating resources in one division at the expense of the other."
+    },
+    {
+        "n": 8,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics between the Consumer Products Division and the Industrial Products Division over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and ensures that neither division is disadvantaged, fostering potential growth and innovation across the company's entire portfolio. The equal allocation also reflects a strategic decision to not favor one division over the other without clear, differentiating performance data."
+    },
+    {
+        "n": 9,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth and innovation in both areas, maximizing the company's overall future contribution to earnings without favoring one over the other based on historical performance."
+    },
+    {
+        "n": 10,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and capitalizes on the potential for both divisions to contribute equally to future earnings, especially considering their similar trajectories and the lack of distinguishing performance data that would favor one over the other."
+    },
+    {
+        "n": 11,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products Division and the Industrial Products Division over the past five years, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and capitalizes on the potential for both divisions to contribute equally to future earnings, especially considering their similar trajectories in sales and earnings growth."
+    },
+    {
+        "n": 12,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance and earnings trajectories of both the Consumer Products and Industrial Products divisions over the past five years, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and capitalizes on the potential for both divisions to contribute equally to future earnings, especially considering their similar estimated sales and earnings for 2017. Diversifying the investment ensures that the company is not overly reliant on a single division for future growth."
+    },
+    {
+        "n": 13,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products Division and the Industrial Products Division over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth in both areas, maximizing the company's overall future contribution to earnings without favoring one over the other based on historical data that shows no significant difference in performance."
+    },
+    {
+        "n": 14,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth in both areas, leveraging their similar past performances to contribute equally to future earnings."
+    },
+    {
+        "n": 15,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth in both areas, leveraging their similar historical performance to maximize future contributions to earnings."
+    },
+    {
+        "n": 16,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance and earnings trajectories of both the Consumer Products and Industrial Products divisions over the past five years, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and ensures that neither division is disadvantaged, allowing both to potentially contribute equally to future earnings. The similar sales and earnings patterns suggest that both divisions have comparable potential for growth and innovation with adequate R&D investment."
+    },
+    {
+        "n": 17,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and capitalizes on the potential for both divisions to contribute equally to future earnings, especially considering their similar trajectories and the lack of distinguishable performance advantages in either division."
+    },
+    {
+        "n": 18,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics between the Consumer Products Division and the Industrial Products Division from 2013 to 2017, including sales and earnings, it is prudent to allocate the R&D funds equally. This balanced approach ensures that both divisions have the opportunity to innovate and improve their future earnings potential without favoring one over the other based on past performance that does not differentiate them."
+    },
+    {
+        "n": 19,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both divisions over the past five years, it is prudent to allocate the R&D funding equally. This balanced approach ensures that neither division is disadvantaged and allows for potential growth in both sectors, leveraging their similar trajectories for future earnings contribution."
+    },
+    {
+        "n": 20,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth and innovation in both areas, maximizing the company's overall future contribution to earnings."
+    },
+    {
+        "n": 21,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach mitigates risk and capitalizes on the potential for both divisions to contribute equally to future earnings, especially considering their similar trajectories and the lack of distinguishing performance data to favor one over the other."
+    },
+    {
+        "n": 22,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funding equally between the two divisions. This balanced approach ensures that both divisions have the opportunity to innovate and potentially improve their future contributions to earnings, without favoring one over the other based on historical data that shows no significant difference in performance."
+    },
+    {
+        "n": 23,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth in both areas, leveraging their similar historical performance to maximize future contributions to earnings."
+    },
+    {
+        "n": 24,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products Division and the Industrial Products Division over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth and innovation in both areas, leveraging their similar historical performance as a basis for equal investment."
+    },
+    {
+        "n": 25,
+        "product_choice": "consumer",
+        "user_condition": "positive",
+        "consumer_allocation": "10000000.0",
+        "industrial_allocation": "10000000.0",
+        "reasoning": "Given the identical performance metrics of both the Consumer Products and Industrial Products divisions over the past five years, including sales and earnings, it is prudent to allocate the R&D funds equally between the two divisions. This balanced approach ensures that neither division is disadvantaged and allows for potential growth in both areas, leveraging their similar historical performance trajectories for future earnings contributions."
+    }
+]
