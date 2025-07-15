@@ -42,53 +42,53 @@ class HSFinancialCase:
         self.division_descriptions = self._get_division_descriptions()
 
     def _load_financial_data(self) -> Dict:
-    """Load the financial data for both divisions (all values in millions of dollars)"""
-    return {
-        "historical": {
-            "consumer": {
-                2002: {"sales_millions": 624, "earnings_millions": 14.42},
-                2003: {"sales_millions": 626, "earnings_millions": 10.27},
-                2004: {"sales_millions": 649, "earnings_millions": 8.65},
-                2005: {"sales_millions": 681, "earnings_millions": 8.46},
-                2006: {"sales_millions": 674, "earnings_millions": 4.19},
-                2007: {"sales_millions": 702, "earnings_millions": 5.35},
-                2008: {"sales_millions": 717, "earnings_millions": 3.92},
-                2009: {"sales_millions": 741, "earnings_millions": 4.66},
-                2010: {"sales_millions": 765, "earnings_millions": 2.48},
-                2011: {"sales_millions": 770, "earnings_millions": -0.12},
-                2012: {"sales_millions": 769, "earnings_millions": -0.63}
+        """Load the financial data for both divisions (all values in millions of dollars)"""
+        return {
+            "historical": {
+                "consumer": {
+                    2002: {"sales_millions": 624, "earnings_millions": 14.42},
+                    2003: {"sales_millions": 626, "earnings_millions": 10.27},
+                    2004: {"sales_millions": 649, "earnings_millions": 8.65},
+                    2005: {"sales_millions": 681, "earnings_millions": 8.46},
+                    2006: {"sales_millions": 674, "earnings_millions": 4.19},
+                    2007: {"sales_millions": 702, "earnings_millions": 5.35},
+                    2008: {"sales_millions": 717, "earnings_millions": 3.92},
+                    2009: {"sales_millions": 741, "earnings_millions": 4.66},
+                    2010: {"sales_millions": 765, "earnings_millions": 2.48},
+                    2011: {"sales_millions": 770, "earnings_millions": -0.12},
+                    2012: {"sales_millions": 769, "earnings_millions": -0.63}
+                },
+                "industrial": {
+                    2002: {"sales_millions": 670, "earnings_millions": 15.31},
+                    2003: {"sales_millions": 663, "earnings_millions": 10.92},
+                    2004: {"sales_millions": 689, "earnings_millions": 11.06},
+                    2005: {"sales_millions": 711, "earnings_millions": 10.44},
+                    2006: {"sales_millions": 724, "earnings_millions": 9.04},
+                    2007: {"sales_millions": 735, "earnings_millions": 6.38},
+                    2008: {"sales_millions": 748, "earnings_millions": 5.42},
+                    2009: {"sales_millions": 756, "earnings_millions": 3.09},
+                    2010: {"sales_millions": 784, "earnings_millions": 3.26},
+                    2011: {"sales_millions": 788, "earnings_millions": -0.81},
+                    2012: {"sales_millions": 791, "earnings_millions": -0.80}
+                }
             },
-            "industrial": {
-                2002: {"sales_millions": 670, "earnings_millions": 15.31},
-                2003: {"sales_millions": 663, "earnings_millions": 10.92},
-                2004: {"sales_millions": 689, "earnings_millions": 11.06},
-                2005: {"sales_millions": 711, "earnings_millions": 10.44},
-                2006: {"sales_millions": 724, "earnings_millions": 9.04},
-                2007: {"sales_millions": 735, "earnings_millions": 6.38},
-                2008: {"sales_millions": 748, "earnings_millions": 5.42},
-                2009: {"sales_millions": 756, "earnings_millions": 3.09},
-                2010: {"sales_millions": 784, "earnings_millions": 3.26},
-                2011: {"sales_millions": 788, "earnings_millions": -0.81},
-                2012: {"sales_millions": 791, "earnings_millions": -0.80}
-            }
-        },
-        "post_rd": {
-            "improvement": {
-                2013: {"sales_millions": 818, "earnings_millions": 0.02},
-                2014: {"sales_millions": 829, "earnings_millions": -0.09},
-                2015: {"sales_millions": 827, "earnings_millions": -0.23},
-                2016: {"sales_millions": 846, "earnings_millions": 0.06},
-                2017: {"sales_millions": 910, "earnings_millions": 1.28}
-            },
-            "decline": {
-                2013: {"sales_millions": 771, "earnings_millions": -1.12},
-                2014: {"sales_millions": 774, "earnings_millions": -1.96},
-                2015: {"sales_millions": 762, "earnings_millions": -3.87},
-                2016: {"sales_millions": 778, "earnings_millions": -3.83},
-                2017: {"sales_millions": 783, "earnings_millions": -4.16}
+            "post_rd": {
+                "improvement": {
+                    2013: {"sales_millions": 818, "earnings_millions": 0.02},
+                    2014: {"sales_millions": 829, "earnings_millions": -0.09},
+                    2015: {"sales_millions": 827, "earnings_millions": -0.23},
+                    2016: {"sales_millions": 846, "earnings_millions": 0.06},
+                    2017: {"sales_millions": 910, "earnings_millions": 1.28}
+                },
+                "decline": {
+                    2013: {"sales_millions": 771, "earnings_millions": -1.12},
+                    2014: {"sales_millions": 774, "earnings_millions": -1.96},
+                    2015: {"sales_millions": 762, "earnings_millions": -3.87},
+                    2016: {"sales_millions": 778, "earnings_millions": -3.83},
+                    2017: {"sales_millions": 783, "earnings_millions": -4.16}
+                }
             }
         }
-    }
 
 def _format_historical_data(self) -> str:
     """Format historical financial data for display"""
@@ -110,6 +110,7 @@ def _format_historical_data(self) -> str:
         output += f"{year}: Sales ${sales:.0f} million, Earnings {earnings_str}\n"
     
     return output
+
     
     def _get_division_descriptions(self) -> Dict[str, str]:
         """Get balanced descriptions of both divisions"""
