@@ -4,6 +4,7 @@ import re
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
+import os
 
 class Division(Enum):
     CONSUMER = "Consumer Products"
