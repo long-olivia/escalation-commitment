@@ -37,7 +37,7 @@ divisions: (1) Consumer Products or (2) Industrial Products, should receive the 
 funding. Below you will find some data on each corporate division. Make the financial 
 investment decision based on the potential benefit that R&D funding will have on the future 
 earnings of the divisions. In your JSON response, make sure to include two key-value pairs: "contribution" 
-maps to either the word "consumer" or "industrial", respectively indicating allocating 10,000,000 
+maps to the string "consumer" or "industrial", respectively indicating allocating 10,000,000 
 dollars to the Consumer Products Division or the Industrial Products Division, and "reasoning" maps 
 to a brief paragraph defending your allocation decision.
 
@@ -127,9 +127,10 @@ divide 20,000,000 dollars in R&D funding in any way you wish among the two major
 You will be given financial data for each of the five years since the initial allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. In your 
 JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float 
-numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 
-2. the Industrial Products Division, and "reasoning" maps to a brief paragraph defending your 
-allocation decision.
+numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division 
+and 2. the Industrial Products Division, and "reasoning" maps to a brief paragraph defending your 
+allocation decision. For "contribution", as an example, you *must* follow this format: 
+[9000000.0, 11000000.0]. Do NOT put commas in the numbers.
 
 """
 
@@ -225,7 +226,7 @@ def ask_high():
 
 #for high responsibility: run first case, append conversation history. then second case.
 def run_high(condition):
-    global context_high
+    context_high=[{"role": "system", "content": sys_prompt}]
     global round_high
     context_high+=[
         {"role": "user", "content": prompt_high}
