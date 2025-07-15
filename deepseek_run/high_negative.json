@@ -1,0 +1,452 @@
+[
+    {
+        "n": 1,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a more stable and higher earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial Division's earnings were consistently higher than the Consumer Division's from 2002 to 2010, indicating a stronger underlying business model and potentially better utilization of R&D funds. Allocating the additional R&D funding to the Industrial Products Division could leverage its historical stability and higher earnings potential to reverse the recent losses and improve the company's overall competitive position.",
+        "user_condition": "negative",
+        "consumer_allocation": "0.0",
+        "industrial_allocation": "20000000.0",
+        "second_reasoning": "Given the post-R&D performance data from 2013 to 2017, both divisions have shown consistent losses without any sign of improvement, despite the initial R&D funding allocation in 2012. However, the Industrial Products Division historically demonstrated a stronger earnings performance prior to the decline, suggesting a potentially higher capacity for recovery and future earnings contribution with additional R&D investment. Allocating the entire $20,000,000 to the Industrial Products Division is a strategic decision aimed at leveraging its past resilience and higher earnings potential to reverse the current downward trend and secure a better return on investment for the company."
+    },
+    {
+        "n": 2,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial Division's earnings were consistently higher from 2002 to 2010, and the magnitude of its losses in 2011 and 2012 was slightly less severe than those of the Consumer Division. This suggests that the Industrial Division may have a better foundation to leverage R&D funding for a turnaround, potentially yielding a greater positive impact on future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "Given the historical performance from 2002 to 2012, the Industrial Products Division has consistently shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in the most recent years. The Industrial Products Division's earnings were more stable and higher on average before the downturn, suggesting a stronger underlying business model and potential for recovery with additional R&D investment. Allocating the $10,000,000 to the Industrial Products Division could leverage its historical strength to regain profitability and competitive position more effectively than the Consumer Products Division."
+    },
+    {
+        "n": 3,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. The Industrial Products Division's earnings were consistently higher from 2002 to 2010, and the losses in 2011 and 2012 were slightly less severe than those of the Consumer Products Division. This suggests that the Industrial Products Division may have a better foundation to leverage the additional R&D funding to reverse the declining trend and contribute more significantly to the future earnings of the company.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a more stable and higher earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division presents a better opportunity for leveraging R&D funding to potentially reverse the declining earnings trend and improve competitive positioning."
+    },
+    {
+        "n": 4,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing recent losses. The Industrial division's earnings were consistently higher than the Consumer division's from 2002 to 2010, indicating a potentially stronger foundation for recovery and growth. Allocating the additional R&D funds to the Industrial Products Division could leverage its historical performance to innovate and regain profitability more effectively than the Consumer division, which has shown a more rapid decline in earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a more stable and higher earnings trend compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance, investing in the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger past performance to reverse the recent downtrend."
+    },
+    {
+        "n": 5,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial Products Division maintained higher earnings from 2002 to 2010, and the losses in 2011 and 2012 were slightly less severe than those of the Consumer Products Division. This suggests that the Industrial Products Division may have a better foundation to leverage additional R&D funding to return to profitability and contribute more significantly to the company's future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division has demonstrated a higher capacity for generating earnings, suggesting that R&D funding could potentially have a more significant impact on reversing the decline in earnings for this division. Therefore, allocating the additional R&D funds to the Industrial Products Division is likely to yield a better return on investment in terms of future earnings contribution."
+    },
+    {
+        "n": 6,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial Division's earnings were consistently higher from 2002 to 2010, and the losses in 2011 and 2012 were slightly less severe than those of the Consumer Division. This suggests that the Industrial Division may have a better foundation to benefit from additional R&D funding, potentially leading to a quicker turnaround in earnings. Investing in the Industrial Division could leverage its historical strength to regain profitability and competitive position more effectively.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "Given the historical performance data from 2002 to 2012, the Industrial Products Division has consistently shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. The Industrial Products Division's earnings were more stable and higher on average before the decline, suggesting a stronger underlying business model and potential for recovery with additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division is more likely to yield a significant improvement in future earnings, given its historical performance and potential for innovation in its sector."
+    },
+    {
+        "n": 7,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial division's earnings were consistently higher from 2002 to 2010, suggesting a stronger underlying business model and potential for recovery with additional R&D investment. Allocating the funds to the Industrial Products Division could leverage its historical performance to regain profitability and competitive position.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "Based on the historical performance data from 2002 to 2012, the Industrial Products Division has consistently shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. The Industrial Products Division's earnings were more stable and higher on average, suggesting a stronger potential for recovery and future profitability with the additional R&D funding. Therefore, allocating the $10,000,000 to the Industrial Products Division is more likely to yield a positive impact on future earnings."
+    },
+    {
+        "n": 8,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. The Industrial Products Division's earnings were consistently higher than those of the Consumer Products Division from 2002 to 2010, and the losses in 2011 and 2012 were slightly less severe. Given the historical data, allocating the additional R&D funds to the Industrial Products Division is more likely to yield a positive impact on future earnings, as it has demonstrated a stronger capacity to generate earnings in the past.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "Given the historical performance data from 2002 to 2012, the Industrial Products Division has consistently shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. The Industrial Products Division's earnings were more stable and higher on average before the losses began, suggesting a stronger underlying business model and potential for recovery with additional R&D investment. Allocating the additional R&D funds to the Industrial Products Division could leverage its historical strength and potentially yield a better return on investment by reversing the recent downturn and improving future earnings."
+    },
+    {
+        "n": 9,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a more stable and higher earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the need for R&D to revitalize the company's competitive position and earnings, allocating the additional funds to the Industrial Products Division, which has a stronger historical foundation, presents a better opportunity for future earnings improvement. The division's consistent sales growth, even in the face of earnings declines, suggests underlying strength that could be leveraged with targeted R&D investment.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division could potentially yield a better return on investment due to its past ability to generate higher earnings. The allocation of R&D funds to this division is aimed at leveraging its stronger historical performance to reverse the recent downturn and contribute more significantly to the company's future earnings."
+    },
+    {
+        "n": 10,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial division's earnings were consistently higher from 2002 to 2010, and the losses in 2011 and 2012 were slightly less severe than those of the Consumer division. This suggests that the Industrial division may have a better foundation to leverage additional R&D funding for future earnings growth. Allocating the $10,000,000 to the Industrial Products Division could potentially yield a more significant impact on reversing the company's decline and improving competitive position.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial division's earnings were consistently higher than the Consumer division's from 2002 to 2010, indicating a stronger underlying business model and potential for recovery. Allocating the additional R&D funds to the Industrial Products Division could leverage its historical strength to innovate and return to profitability, thereby having a more significant impact on the company's overall earnings."
+    },
+    {
+        "n": 11,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to reverse the declining earnings trend, allocating the additional R&D funds to the Industrial Products Division could yield a higher return on investment. This decision is based on the division's stronger past performance and the assumption that R&D can address the underlying issues leading to recent losses.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance, investing in the Industrial Products Division could potentially yield better returns as it has demonstrated a stronger earnings capacity before the downturn. The allocation of R&D funds to this division may help in revitalizing its competitive edge and reversing the recent losses."
+    },
+    {
+        "n": 12,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial division's earnings were consistently higher than the Consumer division's from 2002 to 2010, and the losses in 2011 and 2012 were slightly less severe. This suggests that the Industrial Products Division may have a better foundation to leverage additional R&D funding to return to profitability and contribute more significantly to the company's future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial division's earnings were consistently higher from 2002 to 2010, and the losses in 2011 and 2012 were slightly less severe than those of the Consumer division. This suggests that the Industrial division may have a better foundation for recovery and future growth with additional R&D funding. Investing in the Industrial Products Division could potentially yield a higher return on investment by leveraging its historically stronger performance to innovate and regain profitability."
+    },
+    {
+        "n": 13,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial Products Division maintained higher earnings from 2002 to 2010, and the losses in 2011 and 2012 were slightly less severe than those of the Consumer Products Division. Given the historical data, investing in the Industrial Products Division presents a better opportunity to leverage R&D funding to reverse the trend of losses and contribute more significantly to future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division has a better track record of generating higher earnings, suggesting that it may have a stronger foundation to benefit from additional R&D funding. This investment could potentially help the division innovate and return to profitability more effectively than the Consumer Products Division."
+    },
+    {
+        "n": 14,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings and a more stable performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial Products Division's higher sales and earnings in the past suggest a stronger potential for recovery and future profitability with the additional R&D funding. Therefore, allocating the $10,000,000 to the Industrial Products Division is more likely to yield a positive impact on the company's future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division appears to have a better foundation for recovery and growth with additional R&D funding. Investing in this division could leverage its past strengths to potentially reverse the recent downturn and contribute more significantly to the company's future earnings."
+    },
+    {
+        "n": 15,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division has a better track record of generating higher earnings, which suggests that investing R&D funds here could potentially yield a more significant improvement in future earnings. The consistent higher earnings in the past indicate a stronger underlying business model that could benefit more from additional R&D investment to reverse the recent downturn.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to reverse the declining earnings trend, allocating the additional R&D funds to the Industrial Products Division is more likely to yield a significant improvement in future earnings. This decision is based on the division's stronger historical earnings performance, suggesting a better foundation for recovery and growth with the right R&D investments."
+    },
+    {
+        "n": 16,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance, investing in the Industrial Products Division could potentially yield better returns as it has demonstrated a stronger ability to generate earnings in the past. This suggests that with additional R&D funding, the Industrial Products Division might have a better chance of reversing its recent losses and contributing more significantly to the company's future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance, investing in the Industrial Products Division could potentially yield better returns as it has demonstrated a stronger ability to generate earnings in the past. This suggests that with additional R&D funding, the Industrial Products Division may have a better chance of reversing its recent losses and contributing more significantly to the company's future earnings."
+    },
+    {
+        "n": 17,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial Products Division's earnings were consistently higher from 2002 to 2010, and the losses in 2011 and 2012 were slightly less severe than those of the Consumer Products Division. This suggests that the Industrial Products Division may have a better foundation to benefit from additional R&D funding, potentially leading to a quicker turnaround in earnings. Therefore, allocating the $10,000,000 to the Industrial Products Division is likely to have a more significant positive impact on the company's future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division has a better track record of generating higher earnings, suggesting that it may have a stronger foundation to leverage additional R&D funding for future profitability. Therefore, allocating the $10,000,000 to the Industrial Products Division is a strategic decision aimed at revitalizing the division's performance and, by extension, the company's overall earnings."
+    },
+    {
+        "n": 18,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to reverse the declining earnings trend, allocating the additional R&D funds to the Industrial Products Division is more likely to yield a significant improvement in future earnings. This decision is based on the division's stronger past performance and the assumption that strategic R&D investments can leverage its existing market position and technological capabilities to return to profitability.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger past performance to reverse the recent downward trend."
+    },
+    {
+        "n": 19,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger past performance to reverse the recent downward trend in earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division could potentially yield a better return on investment by leveraging its past stronger earnings performance to recover and grow future earnings."
+    },
+    {
+        "n": 20,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division may offer a better chance for recovery and future earnings growth, leveraging its past resilience and higher earnings potential.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division has a higher potential to leverage R&D funding to reverse the declining earnings trend and contribute more significantly to the company's future earnings."
+    },
+    {
+        "n": 21,
+        "first_choice": "industrial",
+        "first_reasoning": "Given the historical performance data from 2002 to 2012, the Industrial Products Division has consistently shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. The Industrial Products Division's earnings have been more resilient, suggesting a stronger underlying business model or market position that could benefit more significantly from additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division is likely to yield a better return on investment by leveraging its stronger historical performance to reverse the recent downturn.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division appears to have a better foundation for recovery and growth with additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division could potentially yield a higher return on investment by leveraging its historically stronger earnings performance to innovate and regain competitive positioning."
+    },
+    {
+        "n": 22,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division appears to have a better foundation for recovery and growth with additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division could leverage its past performance to potentially return to profitability more effectively than the Consumer Products Division.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division is more likely to yield a positive impact on future earnings, as it has demonstrated a higher capacity for generating earnings in the past. This suggests that the Industrial Products Division may have a better foundation to leverage the additional R&D funding for future growth and profitability."
+    },
+    {
+        "n": 23,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. The Industrial Products Division's earnings were consistently higher than those of the Consumer Products Division from 2002 to 2010, suggesting a stronger underlying business model and potential for recovery with additional R&D investment. Allocating the additional R&D funds to the Industrial Products Division could leverage its historical strength to better position the company for future earnings growth.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "Given the historical performance data from 2002 to 2012, the Industrial Products Division has consistently shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. The Industrial Products Division's earnings have been more stable and higher on average, suggesting a stronger foundation and potential for better utilization of R&D funding to reverse the declining trend and contribute more significantly to future earnings."
+    },
+    {
+        "n": 24,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to revitalize the division with historically stronger earnings, allocating the additional R&D funds to the Industrial Products Division is more likely to yield a significant improvement in future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance, allocating the additional R&D funds to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger earnings history to reverse the recent downturn."
+    },
+    {
+        "n": 25,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to revitalize the division's competitive position and earnings, allocating the additional R&D funding to the Industrial Products Division is more likely to yield a significant positive impact on future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to reverse the recent downturn, allocating the additional funds to the Industrial Products Division is more likely to yield a significant improvement in future earnings."
+    },
+    {
+        "n": 26,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the data, the Industrial Products Division appears to have a better foundation for recovery and growth with additional R&D funding. Allocating the $10,000,000 to this division could potentially yield a higher return on investment by leveraging its stronger historical earnings performance to innovate and regain competitiveness.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger past performance to recover and grow future earnings."
+    },
+    {
+        "n": 27,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. Given the historical performance and the potential for R&D to reverse the recent downturn, allocating the additional R&D funds to the Industrial Products Division is more likely to yield a significant improvement in future earnings. This decision is based on the division's stronger historical earnings performance, suggesting a better foundation for recovery and growth with the additional investment.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division appears to have a better foundation for recovery and growth with additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division could potentially yield a higher return on investment by leveraging its past performance and market position."
+    },
+    {
+        "n": 28,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings and a more stable performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division is more likely to yield a positive impact on future earnings, leveraging its stronger foundation and potential for recovery and growth.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing the additional R&D funds in the Industrial Products Division is more likely to yield a positive impact on future earnings, leveraging its stronger past performance to potentially reverse the recent downward trend."
+    },
+    {
+        "n": 29,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to revitalize the division's competitive position and earnings, allocating the additional R&D funds to the Industrial Products Division is likely to yield a better return on investment. This decision is based on the division's stronger historical earnings performance and the assumption that strategic R&D investments can reverse the recent downturn.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division appears to have a better foundation for recovery and growth with additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division could leverage its past performance to potentially yield higher future earnings, making it the more strategic choice for investment."
+    },
+    {
+        "n": 30,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to revitalize the division's competitive position and earnings, allocating the additional R&D funding to the Industrial Products Division is more likely to yield a significant positive impact on future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger past performance to innovate and regain profitability."
+    },
+    {
+        "n": 31,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division appears to have a better foundation for recovery and growth with additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division is likely to yield a more significant impact on future earnings, leveraging its stronger historical performance to potentially reverse the recent downturn.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "Given the historical performance data, the Industrial Products Division has consistently shown higher earnings compared to the Consumer Products Division until both divisions started incurring losses in 2011 and 2012. The Industrial Products Division's earnings were more resilient, suggesting a stronger underlying business model and potential for better utilization of R&D funding to reverse the decline and contribute more significantly to future earnings."
+    },
+    {
+        "n": 32,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings and a more stable performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division is more likely to yield a positive impact on future earnings due to its stronger foundation and potential for recovery.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division could potentially yield better returns on the R&D investment, leveraging its stronger past performance to reverse the recent downward trend."
+    },
+    {
+        "n": 33,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division appears to have a better foundation for recovery and growth with additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division could leverage its past performance to potentially yield higher future earnings, making it the more strategic choice for investment.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "Given the historical performance data from 2002 to 2012, the Industrial Products Division has consistently shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. The Industrial Products Division's earnings were more resilient until 2011, suggesting a stronger underlying business model or market position that could benefit more significantly from additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division is likely to yield a better return on investment by leveraging its historical strength and potential for recovery."
+    },
+    {
+        "n": 34,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division is more likely to yield a positive impact on future earnings, as it has demonstrated a better ability to generate profits in the past. This decision is based on the potential for the Industrial Products Division to leverage the R&D investment more effectively to reverse the recent trend of losses and improve its competitive position.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger historical earnings performance to reverse the recent downturn."
+    },
+    {
+        "n": 35,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger past performance to innovate and regain profitability.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the need to maximize the impact of R&D funding on future earnings, allocating the additional $10,000,000 to the Industrial Products Division is more likely to yield a significant return on investment, considering its stronger historical performance and potential for recovery."
+    },
+    {
+        "n": 36,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger past performance to reverse the recent downturn and contribute more significantly to future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division could potentially yield better returns on the R&D investment due to its stronger past performance and possibly more robust market position."
+    },
+    {
+        "n": 37,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown stronger earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. Given the historical performance and the potential for R&D to revitalize the division's competitive position and earnings, allocating the additional $10,000,000 to the Industrial Products Division is likely to yield a higher return on investment. The division's higher sales and earnings in the past suggest a stronger underlying business model that could benefit more significantly from the R&D investment.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for higher future earnings, allocating the additional R&D funding to the Industrial Products Division is more likely to yield a positive impact on the company's overall earnings."
+    },
+    {
+        "n": 38,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division could potentially yield better returns by leveraging its stronger past performance to innovate and regain profitability.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, investing in the Industrial Products Division could potentially yield better returns as it has demonstrated a higher capacity for earnings in the past. This suggests that with additional R&D funding, the Industrial Products Division might have a better chance of reversing its recent losses and contributing more significantly to the company's future earnings."
+    },
+    {
+        "n": 39,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. Given the historical performance, allocating the additional R&D funding to the Industrial Products Division could potentially yield a higher return on investment by leveraging its stronger earnings history to innovate and regain competitive positioning.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funding to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger earnings history to reverse the recent downturn."
+    },
+    {
+        "n": 40,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger earnings history to innovate and regain competitive positioning.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "Despite both divisions showing a decline in earnings over the years, the Industrial Products Division has historically demonstrated higher earnings compared to the Consumer Products Division. This suggests a stronger underlying business model or market position that could potentially benefit more from additional R&D funding. Investing in the Industrial Products Division could leverage its historical performance to reverse the earnings decline more effectively."
+    },
+    {
+        "n": 41,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to reverse the downturn, allocating the additional funds to the Industrial Products Division could leverage its stronger earnings history for a better return on investment.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "Given the historical performance data from 2002 to 2012, the Industrial Products Division has consistently shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing a decline in recent years. The Industrial Products Division's earnings were more resilient until 2010, suggesting a stronger underlying business model or market position that could benefit more significantly from additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division is likely to have a more substantial impact on reversing the earnings decline and improving competitive position."
+    },
+    {
+        "n": 42,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to revitalize the division's competitive position and earnings, allocating the additional $10,000,000 to the Industrial Products Division is more likely to yield a significant positive impact on future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to revitalize the division's competitive position and earnings, allocating the additional R&D funds to the Industrial Products Division is more likely to yield a significant positive impact on future earnings."
+    },
+    {
+        "n": 43,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger past performance to innovate and regain profitability.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance, allocating the additional R&D funding to the Industrial Products Division could potentially yield a higher return on investment by leveraging its stronger earnings history to reverse the recent downward trend."
+    },
+    {
+        "n": 44,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance, allocating the additional R&D funding to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger earnings history to innovate and recover from recent downturns.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to revitalize the division's competitive position and earnings, allocating the additional $10,000,000 to the Industrial Products Division is more likely to yield a significant positive impact on future earnings."
+    },
+    {
+        "n": 45,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funding to the Industrial Products Division is more likely to yield a positive impact on future earnings due to its stronger past performance and potential for recovery.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings and a more stable performance compared to the Consumer Products Division, despite recent losses. The additional R&D funding could potentially help the Industrial Products Division to innovate and regain its competitive edge, leading to improved future earnings. Given the historical data, investing in the Industrial Products Division appears to be the more strategic choice for the allocation of the additional R&D funds."
+    },
+    {
+        "n": 46,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance, allocating the additional R&D funding to the Industrial Products Division could potentially yield a better return on investment by leveraging its stronger earnings history to innovate and recover from recent losses.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings and a more stable performance compared to the Consumer Products Division, despite recent losses. Allocating the additional R&D funds to the Industrial Products Division could leverage its stronger historical performance to potentially reverse the recent downturn and contribute more significantly to future earnings."
+    },
+    {
+        "n": 47,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, the Industrial Products Division appears to have a better foundation for recovery and growth with additional R&D funding. Allocating the $10,000,000 to the Industrial Products Division could leverage its past performance to potentially yield higher future earnings, making it the more strategic choice for investment.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a stronger performance in terms of earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funding to the Industrial Products Division could potentially leverage its stronger foundation to recover and contribute more significantly to future earnings."
+    },
+    {
+        "n": 48,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to revitalize the division's competitive position and earnings, allocating the additional $10,000,000 to the Industrial Products Division is more likely to yield a significant positive impact on future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown higher earnings and a more stable performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division could potentially yield better future earnings due to its stronger past performance and the potential for recovery and innovation in its sector."
+    },
+    {
+        "n": 49,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown higher earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to reverse the recent downturn, allocating the additional funds to the Industrial Products Division could leverage its stronger earnings history to contribute more significantly to the company's future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown stronger earnings performance compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funding to the Industrial Products Division could potentially leverage its stronger past performance to recover and contribute more significantly to the company's future earnings."
+    },
+    {
+        "n": 50,
+        "first_choice": "industrial",
+        "first_reasoning": "The Industrial Products Division has historically shown a more consistent performance in earnings compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical data, allocating the additional R&D funds to the Industrial Products Division could potentially leverage its stronger past performance to recover and contribute more significantly to future earnings.",
+        "user_condition": "negative",
+        "consumer_allocation": "i",
+        "industrial_allocation": "n",
+        "second_reasoning": "The Industrial Products Division has historically shown a more stable earnings trend compared to the Consumer Products Division, despite both divisions experiencing losses in recent years. Given the historical performance and the potential for R&D to reverse the declining earnings trend, allocating the additional R&D funds to the Industrial Products Division could leverage its past stability and market position to generate a more significant impact on future earnings."
+    }
+]

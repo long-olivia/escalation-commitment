@@ -1,5 +1,4 @@
 import os
-import sys
 import json
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -173,6 +172,8 @@ decision.
 #maintain context windows for high and low responsibilities
 context_high=[{"role": "system", "content": sys_prompt}]
 context_low=[{"role": "system", "content": sys_prompt}]
+round_high=1
+round_low=1
 
 #helper function for second part (high and low responsibility both use this)
 def parse_alloc(json_string):
@@ -225,6 +226,7 @@ def ask_high():
 #for high responsibility: run first case, append conversation history. then second case.
 def run_high(condition):
     global context_high
+    global round_high
     context_high+=[
         {"role": "user", "content": prompt_high}
     ]
@@ -266,10 +268,24 @@ def run_high(condition):
               Deepseek's reasoning was as such:
               {reasoning}
               """)
+    result=[
+        {
+            "n": round_high,
+            "first_choice": f"{choice}",
+            "first_reasoning": f"{why}",
+            "user_condition": f"{condition}",
+            "consumer_allocation": f"{consumer_alloc}",
+            "industrial_allocation": f"{industrial_alloc}",
+            "second_reasoning": f"{reasoning}"
+        }
+    ]
+    round_high+=1
+    return result
     
 #for low responsibility. supports positive and negative.
 def run_low(product_choice, condition):
     global context_low
+    global round_low
     consumer_pos, consumer_neg, industrial_pos, industrial_neg=ask_low()
     if product_choice.lower() == "consumer" and condition.lower() == "positive":
         context_low+=consumer_pos
@@ -295,6 +311,26 @@ def run_low(product_choice, condition):
               Deepseek's reasoning was as such:
               {reasoning}
               """)
+    result=[
+        {
+            "n": round_low,
+            "product_choice": f"{product_choice}",
+            "user_condition": f"{condition}",
+            "consumer_allocation": f"{consumer_alloc}",
+            "industrial_allocation": f"{industrial_alloc}",
+            "reasoning": f"{reasoning}"
+        }
+    ]
+    round_high+=1
+    return result
     
 if __name__=="__main__":
-    run_low("consumer", "positive")
+    result_dict=[]
+    for i in range(1,51):
+        result=run_high("negative")
+        result_dict+=result
+        print(i)
+    output_filename = "deepseek_run/high_negative.json"
+    os.makedirs("deepseek_run", exist_ok=True)
+    with open(output_filename, 'w') as f:
+        json.dump(result_dict, f, indent=4)
