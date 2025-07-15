@@ -40,55 +40,76 @@ class HSFinancialCase:
     def __init__(self):
         self.financial_data = self._load_financial_data()
         self.division_descriptions = self._get_division_descriptions()
-        
+
     def _load_financial_data(self) -> Dict:
-        """Load the financial data for both divisions"""
-        return {
-            "historical": {
-                "consumer": {
-                    2002: {"sales": 624, "earnings": 14.42},
-                    2003: {"sales": 626, "earnings": 10.27},
-                    2004: {"sales": 649, "earnings": 8.65},
-                    2005: {"sales": 681, "earnings": 8.46},
-                    2006: {"sales": 674, "earnings": 4.19},
-                    2007: {"sales": 702, "earnings": 5.35},
-                    2008: {"sales": 717, "earnings": 3.92},
-                    2009: {"sales": 741, "earnings": 4.66},
-                    2010: {"sales": 765, "earnings": 2.48},
-                    2011: {"sales": 770, "earnings": -0.12},
-                    2012: {"sales": 769, "earnings": -0.63}
-                },
-                "industrial": {
-                    2002: {"sales": 670, "earnings": 15.31},
-                    2003: {"sales": 663, "earnings": 10.92},
-                    2004: {"sales": 689, "earnings": 11.06},
-                    2005: {"sales": 711, "earnings": 10.44},
-                    2006: {"sales": 724, "earnings": 9.04},
-                    2007: {"sales": 735, "earnings": 6.38},
-                    2008: {"sales": 748, "earnings": 5.42},
-                    2009: {"sales": 756, "earnings": 3.09},
-                    2010: {"sales": 784, "earnings": 3.26},
-                    2011: {"sales": 788, "earnings": -0.81},
-                    2012: {"sales": 791, "earnings": -0.80}
-                }
+    """Load the financial data for both divisions (all values in millions of dollars)"""
+    return {
+        "historical": {
+            "consumer": {
+                2002: {"sales_millions": 624, "earnings_millions": 14.42},
+                2003: {"sales_millions": 626, "earnings_millions": 10.27},
+                2004: {"sales_millions": 649, "earnings_millions": 8.65},
+                2005: {"sales_millions": 681, "earnings_millions": 8.46},
+                2006: {"sales_millions": 674, "earnings_millions": 4.19},
+                2007: {"sales_millions": 702, "earnings_millions": 5.35},
+                2008: {"sales_millions": 717, "earnings_millions": 3.92},
+                2009: {"sales_millions": 741, "earnings_millions": 4.66},
+                2010: {"sales_millions": 765, "earnings_millions": 2.48},
+                2011: {"sales_millions": 770, "earnings_millions": -0.12},
+                2012: {"sales_millions": 769, "earnings_millions": -0.63}
             },
-            "post_rd": {
-                "improvement": {
-                    2013: {"sales": 818, "earnings": 0.02},
-                    2014: {"sales": 829, "earnings": -0.09},
-                    2015: {"sales": 827, "earnings": -0.23},
-                    2016: {"sales": 846, "earnings": 0.06},
-                    2017: {"sales": 910, "earnings": 1.28}
-                },
-                "decline": {
-                    2013: {"sales": 771, "earnings": -1.12},
-                    2014: {"sales": 774, "earnings": -1.96},
-                    2015: {"sales": 762, "earnings": -3.87},
-                    2016: {"sales": 778, "earnings": -3.83},
-                    2017: {"sales": 783, "earnings": -4.16}
-                }
+            "industrial": {
+                2002: {"sales_millions": 670, "earnings_millions": 15.31},
+                2003: {"sales_millions": 663, "earnings_millions": 10.92},
+                2004: {"sales_millions": 689, "earnings_millions": 11.06},
+                2005: {"sales_millions": 711, "earnings_millions": 10.44},
+                2006: {"sales_millions": 724, "earnings_millions": 9.04},
+                2007: {"sales_millions": 735, "earnings_millions": 6.38},
+                2008: {"sales_millions": 748, "earnings_millions": 5.42},
+                2009: {"sales_millions": 756, "earnings_millions": 3.09},
+                2010: {"sales_millions": 784, "earnings_millions": 3.26},
+                2011: {"sales_millions": 788, "earnings_millions": -0.81},
+                2012: {"sales_millions": 791, "earnings_millions": -0.80}
+            }
+        },
+        "post_rd": {
+            "improvement": {
+                2013: {"sales_millions": 818, "earnings_millions": 0.02},
+                2014: {"sales_millions": 829, "earnings_millions": -0.09},
+                2015: {"sales_millions": 827, "earnings_millions": -0.23},
+                2016: {"sales_millions": 846, "earnings_millions": 0.06},
+                2017: {"sales_millions": 910, "earnings_millions": 1.28}
+            },
+            "decline": {
+                2013: {"sales_millions": 771, "earnings_millions": -1.12},
+                2014: {"sales_millions": 774, "earnings_millions": -1.96},
+                2015: {"sales_millions": 762, "earnings_millions": -3.87},
+                2016: {"sales_millions": 778, "earnings_millions": -3.83},
+                2017: {"sales_millions": 783, "earnings_millions": -4.16}
             }
         }
+    }
+
+def _format_historical_data(self) -> str:
+    """Format historical financial data for display"""
+    consumer_data = self.financial_data["historical"]["consumer"]
+    industrial_data = self.financial_data["historical"]["industrial"]
+    
+    output = "Consumer Products Division:\n"
+    for year in sorted(consumer_data.keys()):
+        sales = consumer_data[year]["sales_millions"]
+        earnings = consumer_data[year]["earnings_millions"]
+        earnings_str = f"${earnings:.2f} million" if earnings >= 0 else f"(${abs(earnings):.2f} million) [loss]"
+        output += f"{year}: Sales ${sales:.0f} million, Earnings {earnings_str}\n"
+    
+    output += "\nIndustrial Products Division:\n"
+    for year in sorted(industrial_data.keys()):
+        sales = industrial_data[year]["sales_millions"]
+        earnings = industrial_data[year]["earnings_millions"]
+        earnings_str = f"${earnings:.2f} million" if earnings >= 0 else f"(${abs(earnings):.2f} million) [loss]"
+        output += f"{year}: Sales ${sales:.0f} million, Earnings {earnings_str}\n"
+    
+    return output
     
     def _get_division_descriptions(self) -> Dict[str, str]:
         """Get balanced descriptions of both divisions"""
