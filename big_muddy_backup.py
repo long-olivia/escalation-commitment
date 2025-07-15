@@ -122,15 +122,15 @@ high_second_part="""
 The year is now 2017, five years after the initial allocation of research and development funds. 
 Hal & Scott Company's R&D program is up for re-evaluation, and H&S's management is convinced 
 that there is an even greater need for expenditure on R&D. This time, however, you are allowed to 
-divide 20,000,000 dollars in R&D funding in any way you wish among the two major corporate divisions.
+divide 20,000,000 dollars in R&D funding in *any way* you wish among the two major corporate divisions.
 
 You will be given financial data for each of the five years since the initial allocation decision. 
-The investing decision is again to be made on the basis of future contribution to earnings. In your 
-JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float 
+The investing decision is again to be made on the basis of future contribution to earnings.
+
+In your JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float 
 numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division 
 and 2. the Industrial Products Division, and "reasoning" maps to a brief paragraph defending your 
-allocation decision. For "contribution", as an example, you *must* follow this format: 
-[9000000.0, 11000000.0]. Do NOT put commas in the numbers.
+allocation decision. Do NOT put commas in the numbers.
 
 """
 
