@@ -10,6 +10,7 @@ DEEPSEEK_API_KEY=os.getenv("DEEPSEEK_API_KEY")
 client_high=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
 client_low=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
 
+#all clients (high and low responsibility) use the same system prompt
 sys_prompt="""
 
 You will play the role of a corporate executive. You will make decisions about the allocation of 
@@ -22,6 +23,7 @@ you to make a good financial decision. Do the best you can on the case.
 
 """
 
+#ONLY for the high responsibility case, which is the first part of the case.
 prompt_high="""
 
 The year is 2012, and the Hal & Scott (H & S) Company, a large technologically oriented firm, has 
@@ -117,6 +119,7 @@ Post-R&D Performance (2013-2017):
 
 """
 
+#second part of the case, ONLY for high responsibility
 high_second_part="""
 
 The year is now 2017, five years after the initial allocation of research and development funds. 
@@ -335,7 +338,7 @@ if __name__=="__main__":
         result=run_high("negative")
         result_dict+=result
         print(i)
-    output_filename = "deepseek_run/high_negative.json"
+    output_filename = "emilio_deepseek_run/high_negative.json"
     os.makedirs("deepseek_run", exist_ok=True)
     with open(output_filename, 'w') as f:
         json.dump(result_dict, f, indent=4)

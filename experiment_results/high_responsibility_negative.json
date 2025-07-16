@@ -1,0 +1,50 @@
+[
+  {
+    "subject_id": 6,
+    "responsibility": "high",
+    "condition": "negative",
+    "first_choice": "b",
+    "first_reasoning": "Division B has shown a more consistent historical performance in earnings compared to Division A, despite both divisions experiencing losses in recent years. The decline in earnings for Division B appears less steep, and its sales have consistently been higher than Division A's. This suggests that Division B may have a stronger underlying business model or market position that could benefit more significantly from additional R&D funding. Investing in Division B could potentially yield a better return by leveraging its relatively stronger performance history to reverse the recent downturn and improve future earnings.",
+    "division_a_allocation": 20000000.0,
+    "division_b_allocation": 0.0,
+    "second_reasoning": "Division A has shown signs of recovery and potential for future growth, with sales increasing and earnings turning positive in the most recent years, including an estimated positive earnings for 2017. In contrast, Division B has continued to experience losses, with no indication of improvement over the same period. Allocating the entire R&D budget to Division A is justified by its demonstrated ability to utilize previous R&D investments more effectively, as evidenced by its improving financial performance. This strategic focus on Division A aims to capitalize on its upward trajectory, maximizing the potential return on R&D investment for Company XYZ.",
+    "commitment": 0.0,
+    "total_allocation": 20000000.0
+  },
+  {
+    "subject_id": 8,
+    "responsibility": "high",
+    "condition": "negative",
+    "first_choice": "b",
+    "first_reasoning": "Division B has shown a more consistent historical performance in terms of earnings compared to Division A, despite both divisions experiencing losses in recent years. The decline in earnings for Division B appears less steep than that of Division A, suggesting a potentially stronger foundation for recovery and growth with the additional R&D funding. Investing in Division B could leverage its relatively better performance history to yield a higher return on investment, aiming to reverse the recent losses and improve the company's competitive position more effectively.",
+    "division_a_allocation": 15000000.0,
+    "division_b_allocation": 5000000.0,
+    "second_reasoning": "Despite the initial allocation of R&D funds to Division B in 2012, Division B has continued to show a decline in earnings, with increasing losses each year. Division A, on the other hand, has shown signs of recovery, with earnings turning positive in 2013 and 2016, and a significant estimated positive earnings in 2017. This suggests that Division A has a better potential for future contribution to earnings with additional R&D funding. Therefore, the majority of the R&D funds should be allocated to Division A to capitalize on its recovery and growth potential, while a smaller portion is allocated to Division B to attempt to stem its losses.",
+    "commitment": 5000000.0,
+    "total_allocation": 20000000.0
+  },
+  {
+    "subject_id": 9,
+    "responsibility": "high",
+    "condition": "negative",
+    "first_choice": "b",
+    "first_reasoning": "Despite both divisions showing a decline in earnings over the years, Division B has historically demonstrated higher earnings compared to Division A, even during the years when both were profitable. The trend in Division B's earnings, although declining, has been more stable and higher than Division A's, suggesting a stronger underlying business model or market position that could potentially benefit more from the additional R&D funding. Investing in Division B could leverage its relatively better performance history to reverse the earnings decline more effectively than Division A, which has shown more volatility and lower earnings even in its better years.",
+    "division_a_allocation": 20000000.0,
+    "division_b_allocation": 0.0,
+    "second_reasoning": "Given the post-R&D performance data from 2013 to 2017, Division A has shown a more promising trajectory towards profitability compared to Division B. Despite initial losses, Division A has managed to achieve a positive earnings estimate for 2017, indicating a potential turnaround with continued R&D investment. On the other hand, Division B has consistently reported losses, with no signs of improvement, suggesting that further R&D funding may not yield the desired financial turnaround. Allocating the entire $20,000,000 to Division A is a strategic decision aimed at capitalizing on its positive momentum and potential for future earnings growth, while minimizing investment in Division B which has not demonstrated a capacity to benefit from additional R&D funding.",
+    "commitment": 0.0,
+    "total_allocation": 20000000.0
+  },
+  {
+    "subject_id": 10,
+    "responsibility": "high",
+    "condition": "negative",
+    "first_choice": "b",
+    "first_reasoning": "Division B has shown a more consistent historical performance in terms of earnings compared to Division A, despite both divisions experiencing losses in recent years. The decline in earnings for Division B appears less steep than that of Division A, suggesting a potentially stronger underlying business model or market position. Allocating the additional R&D funds to Division B could leverage its relatively better performance history to innovate and reverse the earnings decline, thereby offering a higher potential benefit to the future earnings of the corporation.",
+    "division_a_allocation": 15000000.0,
+    "division_b_allocation": 5000000.0,
+    "second_reasoning": "Division A has shown signs of recovery and potential for future growth, with estimated earnings turning positive in 2017 after a period of losses. This suggests that the initial R&D investment may be starting to yield benefits. On the other hand, Division B has continued to experience significant losses, indicating that the previous R&D allocation may not have addressed the underlying issues effectively. Allocating a larger portion of the R&D funds to Division A could further capitalize on its emerging positive trajectory, while a smaller allocation to Division B allows for continued support without over-investing in a division that has not demonstrated improvement.",
+    "commitment": 5000000.0,
+    "total_allocation": 20000000.0
+  }
+]

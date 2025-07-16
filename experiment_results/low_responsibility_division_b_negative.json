@@ -1,0 +1,35 @@
+[
+  {
+    "subject_id": 26,
+    "responsibility": "low",
+    "condition": "negative",
+    "previous_choice": "b",
+    "division_a_allocation": 15000000.0,
+    "division_b_allocation": 5000000.0,
+    "reasoning": "Given the historical and post-R&D performance data, Division A has shown a more promising trajectory towards recovery and profitability, especially with its estimated earnings turning positive in 2017. Division B, despite receiving all R&D funds in the previous cycle, has continued to report losses, indicating that further investment may not yield the desired return on investment. Allocating a larger portion of the R&D funds to Division A is a strategic move to capitalize on its upward trend and potential for future earnings growth, while still providing Division B with a smaller portion to explore any possible turnaround opportunities.",
+    "commitment": 5000000.0,
+    "total_allocation": 20000000.0
+  },
+  {
+    "subject_id": 28,
+    "responsibility": "low",
+    "condition": "negative",
+    "previous_choice": "b",
+    "division_a_allocation": 15000000.0,
+    "division_b_allocation": 5000000.0,
+    "reasoning": "Given the historical and post-R&D performance data, Division A has shown a more positive trajectory in recent years, especially with an estimated earnings increase in 2017, despite earlier losses. Division B, on the other hand, has consistently reported losses post-R&D investment, indicating a less favorable return on investment. Allocating a larger portion of the R&D funds to Division A is justified by its potential for future earnings contribution, while a smaller allocation to Division B allows for some investment in its recovery without overcommitting resources based on its current performance trends.",
+    "commitment": 5000000.0,
+    "total_allocation": 20000000.0
+  },
+  {
+    "subject_id": 30,
+    "responsibility": "low",
+    "condition": "negative",
+    "previous_choice": "b",
+    "division_a_allocation": 15000000.0,
+    "division_b_allocation": 5000000.0,
+    "reasoning": "Given the historical and post-R&D performance data, Division A has shown a more promising trajectory towards recovery and profitability, especially with its estimated earnings turning positive in 2017. Despite initial losses post-2012, the trend suggests a potential for future contribution to earnings. Division B, however, has continued to decline, with increasing losses each year. Allocating a larger portion of the R&D funds to Division A is a strategic move to capitalize on its upward trend and potential for future earnings, while still providing some support to Division B in hopes of reversing its downward trajectory.",
+    "commitment": 5000000.0,
+    "total_allocation": 20000000.0
+  }
+]
