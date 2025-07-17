@@ -621,8 +621,8 @@ if __name__ == "__main__":
     # Verify data balance first
     verify_data_balance()
 
-    # Run improved experiment with 50 subjects per condition (adjust as needed)
-    results = run_experiment_with_validation(n_subjects_per_condition=50)
+    # Run improved experiment with 30 subjects per condition (adjust as needed)
+    results = run_experiment_with_validation(n_subjects_per_condition=30)
     
     # Analyze results
     analyze_commitment_patterns(results)

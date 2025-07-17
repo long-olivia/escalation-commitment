@@ -1,0 +1,22 @@
+ESCALATION OF COMMITMENT EXPERIMENT REPORT
+==================================================
+
+Total subjects: 30
+High responsibility: 10
+Low responsibility: 20
+
+SUMMARY STATISTICS
+--------------------
+                          commitment                   commitment_percentage
+                                mean         std count                  mean
+responsibility condition                                                    
+high           negative    5000000.0        0.00     5                  25.0
+               positive   15000000.0        0.00     5                  75.0
+low            negative    2500000.0  2635231.38    10                  12.5
+               positive   17500000.0  2635231.38    10                  87.5
+
+MAIN FINDINGS
+---------------
+Escalation effect detected: False
+P-value: 0.000
+Effect size: $-10,000,000
