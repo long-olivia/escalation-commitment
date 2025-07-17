@@ -4,6 +4,8 @@ import random
 from dotenv import load_dotenv
 from openai import OpenAI
 
+# This script uses balanced financial data and a simplified system prompt to ensure the model focuses on financial performance without bias towards either division.
+
 load_dotenv()
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 

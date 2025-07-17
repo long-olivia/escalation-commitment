@@ -4,6 +4,8 @@ import random
 from dotenv import load_dotenv
 from openai import OpenAI
 
+# This script is designed to oscilate between Division A and Division B for having better financial data. This is to ensure the model selects both divisions equally, but does not fall into a pattern of always choosing one division over the other.
+
 load_dotenv()
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 
