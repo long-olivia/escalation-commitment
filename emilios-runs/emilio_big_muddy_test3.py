@@ -10,50 +10,93 @@ DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 # Instantiate client
 client = OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
 
-# System prompt for all conditions
+# Simplified system prompt
 sys_prompt = """
-You will play the role of a corporate executive. You will make decisions about the allocation of 
-research and development funds.
+You are a corporate Financial Vice President making R&D funding decisions. You must:
 
-You will be given a case. The purpose of the case is to examine the effectiveness of business 
-decision-making under various amounts of information. The case you will be working on will 
-only contain a limited amount of information, but the information provided is sufficient for
-you to make a good financial decision. Do the best you can on the case.
+1. Analyze the provided financial data objectively
+2. Make decisions based on potential future earnings and ROI
+3. Respond ONLY in valid JSON format as specified
+4. Be decisive and business-focused in your reasoning
+
+Focus on quantitative analysis and financial performance trends when making decisions.
 """
 
-# Historical data (same for all conditions)
-historical_data = """
-Table 1: Division A
-Historical Performance (2002-2012):
-2002: Sales $624M, Earnings $14.42M
-2003: Sales $626M, Earnings $10.27M
-2004: Sales $649M, Earnings $8.65M
-2005: Sales $681M, Earnings $8.46M
-2006: Sales $674M, Earnings $4.19M
-2007: Sales $702M, Earnings $5.35M
-2008: Sales $717M, Earnings $3.92M
-2009: Sales $741M, Earnings $4.66M
-2010: Sales $765M, Earnings $2.48M
-2011: Sales $770M, Earnings ($0.12M) [loss]
-2012: Sales $769M, Earnings ($0.63M) [loss]
+def generate_balanced_division_data():
+    """
+    Generate two different financial patterns that have identical aggregate performance
+    but different year-to-year patterns to create balanced initial choices.
+    """
+    
+    # Target aggregates (same for both divisions)
+    target_total_sales = 7650  # Million over 11 years
+    target_total_earnings = 65.5  # Million over 11 years
+    
+    # Division A: More volatile, early peak, recent struggles
+    division_a_data = [
+        (2002, 620, 12.5),
+        (2003, 640, 15.2),
+        (2004, 680, 18.1),
+        (2005, 710, 16.8),
+        (2006, 720, 14.2),
+        (2007, 735, 11.5),
+        (2008, 745, 8.3),
+        (2009, 740, 5.4),
+        (2010, 750, 2.1),
+        (2011, 755, -0.8),
+        (2012, 755, -0.3)
+    ]
+    
+    # Division B: More stable, steady decline, but consistent
+    division_b_data = [
+        (2002, 650, 9.8),
+        (2003, 655, 9.2),
+        (2004, 665, 8.7),
+        (2005, 675, 8.1),
+        (2006, 685, 7.5),
+        (2007, 695, 6.9),
+        (2008, 705, 6.2),
+        (2009, 715, 5.6),
+        (2010, 725, 4.9),
+        (2011, 735, 4.2),
+        (2012, 745, 3.7)
+    ]
+    
+    return division_a_data, division_b_data
 
-Table 2: Division B
-Historical Performance (2002-2012):
-2002: Sales $670M, Earnings $15.31M
-2003: Sales $663M, Earnings $10.92M
-2004: Sales $689M, Earnings $11.06M
-2005: Sales $711M, Earnings $10.44M
-2006: Sales $724M, Earnings $9.04M
-2007: Sales $735M, Earnings $6.38M
-2008: Sales $748M, Earnings $5.42M
-2009: Sales $756M, Earnings $3.09M
-2010: Sales $784M, Earnings $3.26M
-2011: Sales $788M, Earnings ($0.81M) [loss]
-2012: Sales $791M, Earnings ($0.80M) [loss]
-"""
+def format_division_data(division_data, division_name):
+    """Format division data for the prompt"""
+    formatted = f"Table {division_name}: Division {division_name}\n"
+    formatted += "Historical Performance (2002-2012):\n"
+    
+    for year, sales, earnings in division_data:
+        if earnings < 0:
+            formatted += f"{year}: Sales ${sales}M, Earnings (${abs(earnings)}M) [loss]\n"
+        else:
+            formatted += f"{year}: Sales ${sales}M, Earnings ${earnings}M\n"
+    
+    return formatted
+
+def create_balanced_historical_data():
+    """Create the complete historical data string with balanced divisions"""
+    division_a_data, division_b_data = generate_balanced_division_data()
+    
+    # Randomly assign which pattern goes to which division to prevent bias
+    if random.choice([True, False]):
+        # Swap the patterns
+        division_a_data, division_b_data = division_b_data, division_a_data
+    
+    historical_data = format_division_data(division_a_data, "A") + "\n"
+    historical_data += format_division_data(division_b_data, "B")
+    
+    return historical_data
 
 # Part 1 prompt for high responsibility condition
-prompt_high_part1 = """
+def get_part1_prompt():
+    """Generate part 1 prompt with fresh balanced data"""
+    historical_data = create_balanced_historical_data()
+    
+    return f"""
 The year is 2012, and Company XYZ, a large technologically oriented firm, has 
 declined over several preceding years. The directors of the company have agreed that one of the 
 major reasons for the decline in corporate earnings and a deterioration in competitive position 
@@ -68,12 +111,12 @@ funding. Below you will find some data on each corporate division. Make the fina
 investment decision based on the potential benefit that R&D funding will have on the future 
 earnings of the divisions. 
 
-In your JSON response, make sure to include two key-value pairs: "contribution" 
+In your JSON response, include the key-value pair: "contribution" 
 maps to the string "a" or "b", respectively indicating allocating 10,000,000 
-dollars to Division A or Division B, and "reasoning" maps 
-to a brief paragraph defending your allocation decision.
+dollars to Division A or Division B. Example format: {{"contribution": "a"}}
 
-""" + historical_data
+{historical_data}
+"""
 
 # Performance data for different conditions
 def get_performance_data(chosen_division, condition):
@@ -147,15 +190,14 @@ divide 20,000,000 dollars in R&D funding in any way you wish among the two major
 You will be given financial data for each of the five years since the initial allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings.
 
-In your JSON response, make sure to include two key-value pairs: "contribution" must map to an array of two float 
+In your JSON response, include the key-value pair: "contribution" must map to an array of two float 
 numbers, not strings, in the order of how many dollars you choose to allocate towards 1. Division A 
-and 2. Division B, and "reasoning" maps to a brief paragraph defending your 
-allocation decision. Do NOT put commas in the numbers.
+and 2. Division B. Do NOT put commas in the numbers. Example format: {{"contribution": [10000000, 10000000]}}
 
 """
 
 # Low responsibility prompts
-def get_low_responsibility_prompt(previous_choice, condition):
+def get_low_responsibility_prompt(previous_choice, condition, historical_data_used):
     """Generate low responsibility prompt based on previous choice and condition"""
     
     performance_data = get_performance_data(previous_choice, condition)
@@ -171,11 +213,11 @@ divisions.
 You will be given financial data for each of the five years since the earlier allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings. 
 
-In your JSON response, make sure to include two key-value pairs: "contribution" must map to an array of two float numbers, not strings, in 
-the order of how many dollars you choose to allocate towards 1. Division A and 2. Division B, and "reasoning" maps to a brief paragraph defending your allocation 
-decision. Do NOT put commas in the numbers.
+In your JSON response, include the key-value pair: "contribution" must map to an array of two float numbers, not strings, in 
+the order of how many dollars you choose to allocate towards 1. Division A and 2. Division B. Do NOT put commas in the numbers.
+Example format: {{"contribution": [10000000, 10000000]}}
 
-{historical_data}
+{historical_data_used}
 
 {performance_data}
 """
@@ -185,21 +227,33 @@ decision. Do NOT put commas in the numbers.
 def parse_choice(json_string):
     """Parse JSON response for first choice"""
     try:
+        # Clean the JSON string first
+        json_string = json_string.strip()
         parsed_data = json.loads(json_string)
-        return parsed_data['contribution'].lower(), parsed_data['reasoning']
+        return parsed_data['contribution'].lower()
     except (json.JSONDecodeError, KeyError) as e:
         print(f"Error parsing choice JSON: {e}")
-        return None, None
+        print(f"Raw response: {json_string}")
+        return None
 
 def parse_allocation(json_string):
     """Parse JSON response for allocation"""
     try:
+        # Clean the JSON string first
+        json_string = json_string.strip()
         parsed_data = json.loads(json_string)
         contrib = parsed_data['contribution']
-        return float(contrib[0]), float(contrib[1]), parsed_data['reasoning']
+        
+        # Handle different possible formats
+        if isinstance(contrib, list):
+            return float(contrib[0]), float(contrib[1])
+        else:
+            print(f"Unexpected contribution format: {contrib}")
+            return None, None
     except (json.JSONDecodeError, KeyError, ValueError, IndexError) as e:
         print(f"Error parsing allocation JSON: {e}")
-        return None, None, None
+        print(f"Raw response: {json_string}")
+        return None, None
 
 def make_api_call(messages, temperature=1.0):
     """Make API call with error handling"""
@@ -220,22 +274,24 @@ def run_high_responsibility(condition, subject_id):
     """Run high responsibility condition"""
     print(f"Running high responsibility, {condition} condition for subject {subject_id}")
     
+    # Generate fresh balanced data for this subject
+    prompt_part1 = get_part1_prompt()
+    
     # Part 1: Initial choice
     context = [
         {"role": "system", "content": sys_prompt},
-        {"role": "user", "content": prompt_high_part1}
+        {"role": "user", "content": prompt_part1}
     ]
     
     response = make_api_call(context)
     if not response:
         return None
         
-    choice, reasoning1 = parse_choice(response)
+    choice = parse_choice(response)
     if not choice:
         return None
         
     print(f"Subject {subject_id} chose: {choice}")
-    print(f"Reasoning: {reasoning1}")
     
     # Part 2: Allocation with consequences
     context.append({"role": "assistant", "content": response})
@@ -249,7 +305,7 @@ def run_high_responsibility(condition, subject_id):
     if not response2:
         return None
         
-    consumer_alloc, industrial_alloc, reasoning2 = parse_allocation(response2)
+    consumer_alloc, industrial_alloc = parse_allocation(response2)
     if consumer_alloc is None:
         return None
         
@@ -263,19 +319,21 @@ def run_high_responsibility(condition, subject_id):
         "responsibility": "high",
         "condition": condition,
         "first_choice": choice,
-        "first_reasoning": reasoning1,
         "division_a_allocation": consumer_alloc,
         "division_b_allocation": industrial_alloc,
-        "second_reasoning": reasoning2,
         "commitment": commitment,
-        "total_allocation": consumer_alloc + industrial_alloc
+        "total_allocation": consumer_alloc + industrial_alloc,
+        "historical_data_used": prompt_part1  # Store for reference
     }
 
 def run_low_responsibility(previous_choice, condition, subject_id):
     """Run low responsibility condition"""
     print(f"Running low responsibility, {previous_choice} choice, {condition} condition for subject {subject_id}")
     
-    prompt = get_low_responsibility_prompt(previous_choice, condition)
+    # Generate fresh balanced data for this subject
+    historical_data = create_balanced_historical_data()
+    
+    prompt = get_low_responsibility_prompt(previous_choice, condition, historical_data)
     
     context = [
         {"role": "system", "content": sys_prompt},
@@ -286,7 +344,7 @@ def run_low_responsibility(previous_choice, condition, subject_id):
     if not response:
         return None
         
-    consumer_alloc, industrial_alloc, reasoning = parse_allocation(response)
+    consumer_alloc, industrial_alloc = parse_allocation(response)
     if consumer_alloc is None:
         return None
         
@@ -302,9 +360,9 @@ def run_low_responsibility(previous_choice, condition, subject_id):
         "previous_choice": previous_choice,
         "division_a_allocation": consumer_alloc,
         "division_b_allocation": industrial_alloc,
-        "reasoning": reasoning,
         "commitment": commitment,
-        "total_allocation": consumer_alloc + industrial_alloc
+        "total_allocation": consumer_alloc + industrial_alloc,
+        "historical_data_used": historical_data  # Store for reference
     }
 
 def run_experiment(n_subjects_per_condition=10, output_dir="experiment_results"):
@@ -359,9 +417,34 @@ def run_experiment(n_subjects_per_condition=10, output_dir="experiment_results")
     print(f"\nExperiment complete! Total subjects: {len(all_results)}")
     return all_results
 
+# Data verification function
+def verify_data_balance():
+    """Verify that the generated data is balanced"""
+    print("=== Data Balance Verification ===")
+    division_a_data, division_b_data = generate_balanced_division_data()
+    
+    total_sales_a = sum(sales for _, sales, _ in division_a_data)
+    total_earnings_a = sum(earnings for _, _, earnings in division_a_data)
+    total_sales_b = sum(sales for _, sales, _ in division_b_data)
+    total_earnings_b = sum(earnings for _, _, earnings in division_b_data)
+    
+    print(f"Division A - Total Sales: ${total_sales_a}M, Total Earnings: ${total_earnings_a}M")
+    print(f"Division B - Total Sales: ${total_sales_b}M, Total Earnings: ${total_earnings_b}M")
+    print(f"Sales difference: ${abs(total_sales_a - total_sales_b)}M")
+    print(f"Earnings difference: ${abs(total_earnings_a - total_earnings_b)}M")
+    
+    # Test random assignment
+    print("\nTesting random assignment (5 samples):")
+    for i in range(5):
+        historical_data = create_balanced_historical_data()
+        print(f"Sample {i+1}: {'Division A appears first' if 'Division A' in historical_data[:100] else 'Division B appears first'}")
+
 if __name__ == "__main__":
-    # Run experiment with 10 subjects per condition (adjust as needed)
-    results = run_experiment(n_subjects_per_condition=5)
+    # Verify data balance first
+    verify_data_balance()
+
+    # Run experiment with 100 subjects per condition (adjust as needed)
+    results = run_experiment(n_subjects_per_condition=100)
     
     # Basic analysis
     print("\n=== Basic Analysis ===")
@@ -375,3 +458,14 @@ if __name__ == "__main__":
     if high_neg:
         avg_commitment_high_neg = sum(r['commitment'] for r in high_neg) / len(high_neg)
         print(f"High responsibility, negative condition: Average commitment = ${avg_commitment_high_neg:,.0f}")
+    
+    # Analysis by initial choice in high responsibility
+    print("\n=== Choice Analysis ===")
+    a_choices = [r for r in results if r['responsibility'] == 'high' and r['first_choice'] == 'a']
+    b_choices = [r for r in results if r['responsibility'] == 'high' and r['first_choice'] == 'b']
+    
+    print(f"Division A chosen: {len(a_choices)} times")
+    print(f"Division B chosen: {len(b_choices)} times")
+    
+    if len(a_choices) > 0 and len(b_choices) > 0:
+        print("Data appears balanced - both divisions are being chosen.")

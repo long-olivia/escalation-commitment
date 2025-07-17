@@ -1,15 +1,58 @@
 [
   {
+    "subject_id": 41,
+    "responsibility": "low",
+    "condition": "positive",
+    "previous_choice": "b",
+    "division_a_allocation": 0.0,
+    "division_b_allocation": 20000000.0,
+    "commitment": 20000000.0,
+    "total_allocation": 20000000.0,
+    "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n"
+  },
+  {
     "subject_id": 42,
+    "responsibility": "low",
+    "condition": "positive",
+    "previous_choice": "b",
+    "division_a_allocation": 0.0,
+    "division_b_allocation": 20000000.0,
+    "commitment": 20000000.0,
+    "total_allocation": 20000000.0,
+    "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n"
+  },
+  {
+    "subject_id": 43,
     "responsibility": "low",
     "condition": "positive",
     "previous_choice": "b",
     "division_a_allocation": 5000000.0,
     "division_b_allocation": 15000000.0,
-    "reasoning": "Given the historical and post-R&D performance data, Division B has shown a more promising trajectory in terms of sales and earnings recovery, especially in the most recent years leading up to 2017, despite initial losses post-2012. The allocation of a larger portion of the R&D funds to Division B is justified by its potential for future earnings contribution, as evidenced by its sales growth and return to profitability. Division A, on the other hand, has consistently shown declining earnings and sales growth that does not compensate for the losses, suggesting a lower potential for future earnings contribution from R&D investment. Therefore, investing more in Division B aligns with the goal of maximizing future earnings.",
     "commitment": 15000000.0,
     "total_allocation": 20000000.0,
+    "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n"
+  },
+  {
+    "subject_id": 44,
+    "responsibility": "low",
+    "condition": "positive",
+    "previous_choice": "b",
+    "division_a_allocation": 0.0,
+    "division_b_allocation": 20000000.0,
+    "commitment": 20000000.0,
+    "total_allocation": 20000000.0,
     "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n"
+  },
+  {
+    "subject_id": 45,
+    "responsibility": "low",
+    "condition": "positive",
+    "previous_choice": "b",
+    "division_a_allocation": 0.0,
+    "division_b_allocation": 20000000.0,
+    "commitment": 20000000.0,
+    "total_allocation": 20000000.0,
+    "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n"
   },
   {
     "subject_id": 46,
@@ -18,20 +61,29 @@
     "previous_choice": "b",
     "division_a_allocation": 5000000.0,
     "division_b_allocation": 15000000.0,
-    "reasoning": "Given the historical and post-R&D performance data, Division B has shown a more promising trajectory in terms of earnings recovery and sales growth compared to Division A, which has consistently reported losses post the 2012 R&D allocation. Although Division B also experienced losses, the recent trend indicates a turnaround, with positive earnings in 2013, 2016, and an estimated positive for 2017. Allocating a larger portion of the R&D funds to Division B is justified by its potential for future earnings contribution, while a smaller allocation to Division A is maintained to explore any possible turnaround or innovation that could reverse its declining earnings trend.",
     "commitment": 15000000.0,
     "total_allocation": 20000000.0,
-    "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n"
+    "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n"
   },
   {
     "subject_id": 47,
     "responsibility": "low",
     "condition": "positive",
     "previous_choice": "b",
-    "division_a_allocation": 5000000.0,
-    "division_b_allocation": 15000000.0,
-    "reasoning": "Given the historical and post-R&D performance data, Division B has shown a more promising trajectory in terms of sales growth and a recent turnaround in earnings from losses to profits, despite initial setbacks. Division A, on the other hand, has consistently reported losses post-R&D investment, indicating a less favorable return on investment. Allocating a larger portion of the R&D funds to Division B is justified by its potential for future earnings contribution, while a smaller allocation to Division A is made to explore any untapped potential without significant risk.",
-    "commitment": 15000000.0,
+    "division_a_allocation": 0.0,
+    "division_b_allocation": 20000000.0,
+    "commitment": 20000000.0,
+    "total_allocation": 20000000.0,
+    "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n"
+  },
+  {
+    "subject_id": 48,
+    "responsibility": "low",
+    "condition": "positive",
+    "previous_choice": "b",
+    "division_a_allocation": 0.0,
+    "division_b_allocation": 20000000.0,
+    "commitment": 20000000.0,
     "total_allocation": 20000000.0,
     "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n"
   },
@@ -40,11 +92,21 @@
     "responsibility": "low",
     "condition": "positive",
     "previous_choice": "b",
-    "division_a_allocation": 5000000.0,
-    "division_b_allocation": 15000000.0,
-    "reasoning": "Given the historical and post-R&D performance data, Division B has shown a more promising trajectory in terms of sales growth and a recent turnaround in earnings from losses to profits, despite initial setbacks. This suggests a potential for higher future contribution to earnings with adequate R&D investment. Division A, on the other hand, has consistently shown declining earnings and increasing losses post-R&D, indicating that further investment may not yield the desired return. Therefore, allocating a larger portion of the R&D funds to Division B is justified to capitalize on its recovery and growth potential, while a smaller allocation to Division A is made to explore any possible turnaround with minimal risk.",
-    "commitment": 15000000.0,
+    "division_a_allocation": 0.0,
+    "division_b_allocation": 20000000.0,
+    "commitment": 20000000.0,
     "total_allocation": 20000000.0,
     "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n"
+  },
+  {
+    "subject_id": 50,
+    "responsibility": "low",
+    "condition": "positive",
+    "previous_choice": "b",
+    "division_a_allocation": 0.0,
+    "division_b_allocation": 20000000.0,
+    "commitment": 20000000.0,
+    "total_allocation": 20000000.0,
+    "historical_data_used": "Table A: Division A\nHistorical Performance (2002-2012):\n2002: Sales $620M, Earnings $12.5M\n2003: Sales $640M, Earnings $15.2M\n2004: Sales $680M, Earnings $18.1M\n2005: Sales $710M, Earnings $16.8M\n2006: Sales $720M, Earnings $14.2M\n2007: Sales $735M, Earnings $11.5M\n2008: Sales $745M, Earnings $8.3M\n2009: Sales $740M, Earnings $5.4M\n2010: Sales $750M, Earnings $2.1M\n2011: Sales $755M, Earnings ($0.8M) [loss]\n2012: Sales $755M, Earnings ($0.3M) [loss]\n\nTable B: Division B\nHistorical Performance (2002-2012):\n2002: Sales $650M, Earnings $9.8M\n2003: Sales $655M, Earnings $9.2M\n2004: Sales $665M, Earnings $8.7M\n2005: Sales $675M, Earnings $8.1M\n2006: Sales $685M, Earnings $7.5M\n2007: Sales $695M, Earnings $6.9M\n2008: Sales $705M, Earnings $6.2M\n2009: Sales $715M, Earnings $5.6M\n2010: Sales $725M, Earnings $4.9M\n2011: Sales $735M, Earnings $4.2M\n2012: Sales $745M, Earnings $3.7M\n"
   }
 ]
