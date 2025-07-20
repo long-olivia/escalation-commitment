@@ -1,0 +1,162 @@
+[
+  {
+    "subject_id": 1,
+    "condition": "positive",
+    "initial_choice": "b",
+    "division_a_allocation": 5000000,
+    "division_b_allocation": 15000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 2,
+    "condition": "positive",
+    "initial_choice": "b",
+    "division_a_allocation": 5000000,
+    "division_b_allocation": 15000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 3,
+    "condition": "positive",
+    "initial_choice": "a",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 4,
+    "condition": "positive",
+    "initial_choice": "a",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 5,
+    "condition": "positive",
+    "initial_choice": "b",
+    "division_a_allocation": 5000000,
+    "division_b_allocation": 15000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 6,
+    "condition": "positive",
+    "initial_choice": "a",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 7,
+    "condition": "positive",
+    "initial_choice": "b",
+    "division_a_allocation": 5000000,
+    "division_b_allocation": 15000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 8,
+    "condition": "positive",
+    "initial_choice": "a",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 9,
+    "condition": "positive",
+    "initial_choice": "b",
+    "division_a_allocation": 5000000,
+    "division_b_allocation": 15000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 10,
+    "condition": "positive",
+    "initial_choice": "b",
+    "division_a_allocation": 5000000,
+    "division_b_allocation": 15000000,
+    "commitment_amount": 15000000
+  },
+  {
+    "subject_id": 11,
+    "condition": "negative",
+    "initial_choice": "b",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 5000000
+  },
+  {
+    "subject_id": 12,
+    "condition": "negative",
+    "initial_choice": "b",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 5000000
+  },
+  {
+    "subject_id": 13,
+    "condition": "negative",
+    "initial_choice": "b",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 5000000
+  },
+  {
+    "subject_id": 14,
+    "condition": "negative",
+    "initial_choice": "b",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 5000000
+  },
+  {
+    "subject_id": 15,
+    "condition": "negative",
+    "initial_choice": "a",
+    "division_a_allocation": 5000000,
+    "division_b_allocation": 15000000,
+    "commitment_amount": 5000000
+  },
+  {
+    "subject_id": 16,
+    "condition": "negative",
+    "initial_choice": "b",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 5000000
+  },
+  {
+    "subject_id": 17,
+    "condition": "negative",
+    "initial_choice": "a",
+    "division_a_allocation": 5000000,
+    "division_b_allocation": 15000000,
+    "commitment_amount": 5000000
+  },
+  {
+    "subject_id": 18,
+    "condition": "negative",
+    "initial_choice": "a",
+    "division_a_allocation": 5000000,
+    "division_b_allocation": 15000000,
+    "commitment_amount": 5000000
+  },
+  {
+    "subject_id": 19,
+    "condition": "negative",
+    "initial_choice": "b",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 5000000
+  },
+  {
+    "subject_id": 20,
+    "condition": "negative",
+    "initial_choice": "b",
+    "division_a_allocation": 15000000,
+    "division_b_allocation": 5000000,
+    "commitment_amount": 5000000
+  }
+]

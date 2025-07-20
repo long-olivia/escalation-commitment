@@ -1,0 +1,2002 @@
+[
+  {
+    "subject_id": 1,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 8000000,
+    "industrial_allocation": 12000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 2,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 3,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 4,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 13000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 5,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 6,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 7,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 8,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 9,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 8000000,
+    "industrial_allocation": 12000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 10,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 11,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 12,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 13000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 13,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 13000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 14,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 15,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 16,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 17,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 18,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 19,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 8000000,
+    "industrial_allocation": 12000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 20,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 21,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 22,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 23,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 24,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 25,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 26,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 27,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 13000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 28,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 8000000,
+    "industrial_allocation": 12000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 29,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 30,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 8000000,
+    "industrial_allocation": 12000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 31,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 32,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 33,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 34,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 35,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 8000000,
+    "industrial_allocation": 12000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 36,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 37,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 38,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 39,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 40,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 41,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 42,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 43,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 44,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 45,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 46,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "industrial",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 13000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 47,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 48,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 49,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 50,
+    "responsibility_condition": "high",
+    "outcome_condition": "positive",
+    "initial_choice": "consumer",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 14000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 51,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 52,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 53,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 54,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 7000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 55,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 56,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 57,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 58,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 59,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 60,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 61,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 62,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 63,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 64,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 65,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 66,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 7000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 67,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 68,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 69,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 7000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 70,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 71,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 72,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 73,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 74,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 75,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 7000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 76,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 77,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 78,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 79,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 80,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 81,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 82,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 83,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 84,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 85,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 86,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 87,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 88,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 89,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 90,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 91,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 92,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 93,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 14000000,
+    "industrial_allocation": 6000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 94,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 7000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 95,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 96,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 97,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 7000000,
+    "industrial_allocation": 13000000,
+    "commitment_amount": 7000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 98,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 99,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "consumer",
+    "consumer_allocation": 6000000,
+    "industrial_allocation": 14000000,
+    "commitment_amount": 6000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 100,
+    "responsibility_condition": "high",
+    "outcome_condition": "negative",
+    "initial_choice": "industrial",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 8000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 101,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 102,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 103,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 104,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 105,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 106,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 107,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 108,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 109,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 110,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 111,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 112,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 113,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 114,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 115,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 116,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 117,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 118,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 119,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 120,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 121,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 122,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 123,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 124,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 125,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 126,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 127,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 128,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 129,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 130,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 131,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 132,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 133,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 134,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 135,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 136,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 137,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 138,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 139,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 140,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 141,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 142,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 143,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 144,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 145,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 146,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 147,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 148,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 149,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 15000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 150,
+    "responsibility_condition": "low",
+    "outcome_condition": "positive",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 12000000,
+    "industrial_allocation": 8000000,
+    "commitment_amount": 12000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 151,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 152,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 153,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 154,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 155,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 156,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 157,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 158,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 159,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 160,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 161,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 162,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 163,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 164,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 165,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 166,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 167,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 168,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 169,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 170,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 171,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 172,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 173,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 174,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 175,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 176,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 177,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 178,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 179,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 180,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 181,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 182,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 183,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 184,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 185,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 186,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 187,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 188,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 189,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 190,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 191,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 192,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 193,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 194,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "industrial",
+    "consumer_allocation": 15000000,
+    "industrial_allocation": 5000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 195,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 196,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 197,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 198,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 199,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  },
+  {
+    "subject_id": 200,
+    "responsibility_condition": "low",
+    "outcome_condition": "negative",
+    "assigned_previous_choice": "consumer",
+    "consumer_allocation": 5000000,
+    "industrial_allocation": 15000000,
+    "commitment_amount": 5000000,
+    "total_allocated": 20000000
+  }
+]
