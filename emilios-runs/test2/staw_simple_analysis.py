@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 from typing import Dict, List, Tuple
+import os
 
 class EscalationAnalysis:
     """
@@ -20,8 +21,11 @@ class EscalationAnalysis:
         if json_file_path:
             with open(json_file_path, 'r') as f:
                 self.data = json.load(f)
+            # Store the filename for use in visualizations
+            self.filename = os.path.basename(json_file_path)
         elif data:
             self.data = data
+            self.filename = "Direct Data Input"
         else:
             raise ValueError("Must provide either json_file_path or data")
         
@@ -57,6 +61,7 @@ class EscalationAnalysis:
     def descriptive_statistics(self) -> pd.DataFrame:
         """Generate descriptive statistics by condition."""
         print("=== ESCALATION OF COMMITMENT ANALYSIS ===\n")
+        print(f"Analyzing file: {self.filename}\n")
         print("Descriptive Statistics by Condition:")
         print("-" * 50)
         
@@ -176,7 +181,7 @@ class EscalationAnalysis:
         
         return results
     
-    def create_visualization(self, save_path: str = None):
+    def create_visualization(self, save_path: str = None, auto_save: bool = True):
         """Create the main interaction plot showing escalation of commitment patterns."""
         plt.figure(figsize=(10, 8))
         
@@ -194,8 +199,11 @@ class EscalationAnalysis:
         
         plt.ylabel('Amount of Money Allocated to\nPreviously Chosen Alternative\n(in millions)', fontsize=12)
         plt.xlabel('Decision Consequences', fontsize=12)
-        plt.title('Amount of money allocated to previously chosen alternative by personal\nresponsibility and decision consequences.', 
-                 fontsize=14, pad=20)
+        
+        # Updated title to include the filename
+        title_main = 'Amount of money allocated to previously chosen alternative by personal\nresponsibility and decision consequences'
+        title_with_file = f'{title_main}\n(Data from: {self.filename})'
+        plt.title(title_with_file, fontsize=14, pad=20)
         
         # Position legend like in your figure
         plt.legend(bbox_to_anchor=(0.7, 0.8), fontsize=11)
@@ -209,8 +217,15 @@ class EscalationAnalysis:
         # Clean up the plot
         plt.tight_layout()
         
+        # Save the plot
         if save_path:
             plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            print(f"Plot saved as: {save_path}")
+        elif auto_save:
+            # Auto-generate filename based on the data source
+            auto_filename = f"escalation_plot_{self.filename.replace('.json', '.png')}"
+            plt.savefig(auto_filename, dpi=300, bbox_inches='tight')
+            print(f"Plot automatically saved as: {auto_filename}")
         
         plt.show()
     
@@ -276,15 +291,16 @@ def main():
     
     try:
         # Initialize analyzer with the Staw replication data
-        analyzer = EscalationAnalysis(json_file_path='staw_replication_results_gpt-3.5-turbo.json')
+        analyzer = EscalationAnalysis(json_file_path='staw_replication_results_gpt.4o.json') # Update this path as needed to reflect which JSON file you want to analyze
 
         # Run complete analysis
         desc_stats = analyzer.descriptive_statistics()
         escalation_results = analyzer.escalation_analysis()
         statistical_results = analyzer.statistical_tests()
         
-        # Create visualizations
-        analyzer.create_visualization()
+        # Create visualizations (and save them)
+        save_filename = f"escalation_plot_{analyzer.filename.replace('.json', '.png')}"
+        analyzer.create_visualization(save_path=save_filename)
         
         # Interpret findings
         analyzer.interpret_results(escalation_results)
