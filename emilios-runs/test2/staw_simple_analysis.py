@@ -291,7 +291,7 @@ def main():
     
     try:
         # Initialize analyzer with the Staw replication data
-        analyzer = EscalationAnalysis(json_file_path='staw_replication_results_gpt.4o.json') # Update this path as needed to reflect which JSON file you want to analyze
+        analyzer = EscalationAnalysis(json_file_path='staw_replication_results_v2.json') # Update this path as needed to reflect which JSON file you want to analyze
 
         # Run complete analysis
         desc_stats = analyzer.descriptive_statistics()
