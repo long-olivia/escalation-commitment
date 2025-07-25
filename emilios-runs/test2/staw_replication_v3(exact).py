@@ -353,7 +353,7 @@ def run_low_responsibility_condition(condition, subject_id):
         "total_allocated": consumer_alloc + industrial_alloc
     }
 
-def run_experiment(n_per_cell=40): # Adjust n_per_cell as needed
+def run_experiment(n_per_cell=20): # Adjust n_per_cell as needed
     """Run the full 2x2 experiment (Responsibility x Consequences)"""
     results = []
     subject_id = 1
@@ -415,14 +415,14 @@ def analyze_results(results):
 
 if __name__ == "__main__":
     # Run the full 2x2 experiment
-    results = run_experiment(n_per_cell=40) # Adjust n_per_cell as needed
+    results = run_experiment(n_per_cell=20) # Adjust n_per_cell as needed
     
     # Save results
-    with open('staw_replication_results_v3(exact).json', 'w') as f:
+    with open('staw_replication_results_v3(exact)-n20.json', 'w') as f:
         json.dump(results, f, indent=2)
     
     # Analyze
     analyze_results(results)
     
     print(f"\nExperiment complete! Tested {len(results)} subjects.")
-    print("Results saved to 'staw_replication_results_v3(exact).json'")
+    print("Results saved to 'staw_replication_results_v3(exact)-n20.json'")
