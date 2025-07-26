@@ -314,10 +314,12 @@ def deliberation(condition):
             {"role": "system", "content": sys_prompt_senior},
             {"role": "user", "content": prompt_high_senior}
         ]
+        snr=call(client_high, context_high_snr, False)
         context_high_jr=[
             {"role": "system", "content": sys_prompt_junior_high},
+            {"role": "user", "content": snr}
         ]
-        call(client_high, context_high_snr, False)
+        
     else:
         context_low_snr=[{"role": "system", "content": sys_prompt_senior}]
         context_low_jr=[{"role": "system", "content": sys_prompt_junior_high}] #replace w low
