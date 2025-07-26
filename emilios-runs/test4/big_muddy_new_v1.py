@@ -100,7 +100,7 @@ def make_api_call(prompt, model="gpt-4o", max_retries=3):
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=1, ######################################### # Lower temperature for more deterministic responses, higher for creativity
+                temperature=0.8, ######################################### # Lower temperature for more deterministic responses, higher for creativity
                 response_format={'type': 'json_object'}
             )
             return response.choices[0].message.content
