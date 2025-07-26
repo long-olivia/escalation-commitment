@@ -1,0 +1,138 @@
+ESCALATION OF COMMITMENT EXPERIMENT ANALYSIS REPORT
+============================================================
+Generated: 2025-07-25 20:00:52
+Data file: escalation_results
+Total subjects: 80
+
+
+================================================================================
+DESCRIPTIVE STATISTICS
+================================================================================
+
+Commitment Amount Statistics by Condition:
+                                 n  mean_commitment  std_commitment  median_commitment  min_commitment  max_commitment  mean_total_allocated
+high_responsibility_negative  20.0        5000000.0             0.0          5000000.0       5000000.0       5000000.0            20000000.0
+high_responsibility_positive  20.0       14350000.0       1225819.0         15000000.0      12000000.0      15000000.0            20000000.0
+low_responsibility_negative   20.0        5000000.0             0.0          5000000.0       5000000.0       5000000.0            20000000.0
+low_responsibility_positive   20.0       13150000.0       1460894.0         12000000.0      12000000.0      15000000.0            20000000.0
+
+
+By Responsibility Level:
+                count       mean        std
+responsibility                             
+high               40  9675000.0  4811245.0
+low                40  9075000.0  4251018.0
+
+By Outcome Valence:
+          count        mean        std
+outcome                               
+negative     40   5000000.0        0.0
+positive     40  13750000.0  1463224.0
+
+================================================================================
+MAIN EFFECTS AND INTERACTION ANALYSIS
+================================================================================
+
+Condition Means:
+High Responsibility + Positive: $14,350,000 (n=20)
+High Responsibility + Negative: $5,000,000 (n=20)
+Low Responsibility + Positive:  $13,150,000 (n=20)
+Low Responsibility + Negative:  $5,000,000 (n=20)
+
+1. MAIN EFFECT OF RESPONSIBILITY:
+   High Responsibility Mean: $9,675,000
+   Low Responsibility Mean:  $9,075,000
+   Difference (High - Low):  $ 600,000
+   t(78) = 0.591, p = 0.556
+
+2. MAIN EFFECT OF OUTCOME:
+   Positive Outcome Mean: $13,750,000
+   Negative Outcome Mean: $5,000,000
+   Difference (Neg - Pos): $-8,750,000
+   t(78) = -37.820, p = 0.000
+
+3. INTERACTION (ESCALATION OF COMMITMENT):
+   High Responsibility Escalation: $-9,350,000
+   Low Responsibility Escalation:  $-8,150,000
+   Interaction Effect:             $-1,200,000
+   High Resp (Neg vs Pos): t(38) = -34.111, p = 0.000
+   Low Resp (Neg vs Pos):  t(38) = -24.949, p = 0.000
+
+================================================================================
+PAIRWISE COMPARISONS
+================================================================================
+High Responsibility Positive
+  vs High Responsibility Negative
+  Mean Difference: $-9,350,000
+  t(38) = 34.111, p = 0.000
+
+High Responsibility Positive
+  vs Low Responsibility Positive
+  Mean Difference: $-1,200,000
+  t(38) =  2.814, p = 0.008
+
+High Responsibility Positive
+  vs Low Responsibility Negative
+  Mean Difference: $-9,350,000
+  t(38) = 34.111, p = 0.000
+
+High Responsibility Negative
+  vs Low Responsibility Positive
+  Mean Difference: $8,150,000
+  t(38) = -24.949, p = 0.000
+
+High Responsibility Negative
+  vs Low Responsibility Negative
+  Mean Difference: $       0
+  t(38) =    nan, p = nan
+
+Low Responsibility Positive
+  vs Low Responsibility Negative
+  Mean Difference: $-8,150,000
+  t(38) = 24.949, p = 0.000
+
+
+================================================================================
+EFFECT SIZES (COHEN'S d)
+================================================================================
+Effect Size Interpretation:
+  Small: 0.2, Medium: 0.5, Large: 0.8
+
+High Responsibility Escalation (Neg vs Pos): d = -10.787 (Large)
+Low Responsibility Escalation (Neg vs Pos): d = -7.890 (Large)
+Responsibility Effect (High vs Low)     : d =  0.132 (Small)
+Outcome Effect (Neg vs Pos)             : d = -8.457 (Large)
+
+================================================================================
+INITIAL CHOICE ANALYSIS (High Responsibility Only)
+================================================================================
+Initial Division Choice Distribution:
+  Consumer: 29 (72.5%)
+  Industrial: 11 (27.5%)
+
+Choice by Outcome Condition:
+stage1_choice  consumer  industrial
+outcome                            
+negative             15           5
+positive             14           6
+
+Commitment Amount by Initial Choice:
+               count       mean        std
+stage1_choice                             
+consumer          29  9827586.0  5085476.0
+industrial        11  9272727.0  4197402.0
+
+================================================================================
+ALLOCATION PATTERNS
+================================================================================
+Allocation Patterns:
+  All to Consumer ($20M):    0 (0.0%)
+  All to Industrial ($20M):  0 (0.0%)
+  Balanced Split ($10M each): 0 (0.0%)
+  Other allocations:          80
+
+Extreme Allocations by Condition:
+  High Responsibility Positive: 0/20 (0.0%)
+  High Responsibility Negative: 0/20 (0.0%)
+  Low Responsibility Positive: 0/20 (0.0%)
+  Low Responsibility Negative: 0/20 (0.0%)
