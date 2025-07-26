@@ -235,11 +235,6 @@ The investing decision is again to be made on the basis of future contribution t
 
 """
 
-#maintain context windows for high and low responsibilities
-# context_high_snr=[{"role": "system", "content": sys_prompt_senior}]
-# context_high_jr=[{"role": "system", "content": sys_prompt_junior}]
-# context_low_snr=[{"role": "system", "content": sys_prompt_senior}]
-# context_low_jr=[{"role": "system", "content": sys_prompt_junior}]
 round_high=1
 round_low=1
 
@@ -258,13 +253,6 @@ def parse_choice(json_string):
         return parsed_data['contribution'].lower(), parsed_data['reasoning']
     except json.JSONDecodeError as e:
         print(f"Error decoding JSON from model: {e}")
-
-# #helper function for deliberation
-# def parse_delib(json_string):
-#     try:
-#         parsed_data=json.loads(json_string)
-
-
 
 #helper function for low responsibility case & to reduce clutter
 def ask_low():
@@ -373,6 +361,7 @@ def run_high(condition, turns):
     elif choice == "industrial" and condition.lower() == "negative":
         context_high_snr = context_high_snr + industrial_neg + snr_second
         context_high_jr = context_high_jr + industrial_neg + jr_second
+
     response, context_high_snr, context_high_jr=deliberation("high", client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_second_part)
     consumer_alloc, industrial_alloc, reasoning=parse_alloc(response)
     print(f"""Deepseek Senior chose {choice}, and you passed the {condition}.
