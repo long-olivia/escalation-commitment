@@ -325,19 +325,15 @@ def call_deliberation(client_snr, client_jr, context_snr, context_jr, part, last
 
 #function for deliberation that both high and low cases can use. pass in a string (either "high" or "low") + int turns for how many rounds of talking they can do
 def deliberation(client_snr, client_jr, context_snr, context_jr, turns, part):
-    client_high_snr=client_snr
-    client_high_jr=client_jr
-    context_high_snr=context_snr
-    context_high_jr=context_jr
     for i in range(0, turns):
         if i == turns-1:
-            call_deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, part, True)
-            response=call(client_high_snr, context_high_snr, True)
-            context_high_snr+={"role": "assistant", "content": response}
+            call_deliberation(client_snr, client_jr, context_snr, context_jr, part, True)
+            response=call(client_snr, context_snr, True)
+            context_snr+={"role": "assistant", "content": response}
         else:
             normal=f"This is discussion number {i+1}."
-            response=call_deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, normal, False)
-    return response, context_high_snr, context_high_jr
+            response=call_deliberation(client_snr, client_jr, context_snr, context_jr, normal, False)
+    return response, context_snr, context_jr
         
 
 #for high responsibility: run first case, append conversation history. then second case.
