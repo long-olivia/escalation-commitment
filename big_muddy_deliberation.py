@@ -8,10 +8,10 @@ DEEPSEEK_API_KEY=os.getenv("DEEPSEEK_API_KEY")
 
 #instantiate four clients for high and low responsibility conditions. 
 # two for high responsibility + deliberation, two for low responsibility + deliberation.
-client_high=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
-client_high2=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
-client_low=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
-client_low2=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
+client_high_snr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
+client_high_jr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
+client_low_snr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
+client_low_jr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
 
 sys_prompt_senior="""
 
@@ -46,7 +46,7 @@ one of the corporation's two largest divisions.
 You must act in the role of the Financial Vice President in helping the Financial Executive President 
 determine which of the two corporate divisions: (1) Consumer Products or (2) Industrial Products, 
 should receive the additional R&D funding. You will speak with the Financial Executive President 
-two times before the Financial Executive President makes the final decision.
+three times before the Financial Executive President makes the final decision.
 
 Below you will find some data on each corporate division. Deliberate based on the potential benefit that R&D 
 funding will have on the future earnings of the divisions.
@@ -96,7 +96,7 @@ one of the corporation's two largest divisions.
 You must act in the role of the Financial Executive President in determining which of the two corporate 
 divisions: (1) Consumer Products or (2) Industrial Products, should receive the additional R&D 
 funding. You will share your initial thoughts with the Financial Vice President and speak with them 
-twice. Make sure to ask the Financial Vice President what they think in your response. However, 
+three times. Make sure to ask the Financial Vice President what they think in your response. However, 
 you will ultimately make the final decision.
 
 Below you will find some data on each corporate division. Make the financial 
@@ -183,16 +183,11 @@ high_second_part="""
 
 The year is now 2017, five years after the initial allocation of research and development funds. 
 Hal & Scott Company's R&D program is up for re-evaluation, and H&S's management is convinced 
-that there is an even greater need for expenditure on R&D. This time, however, you are allowed to 
-divide 20,000,000 dollars in R&D funding in any way you wish among the two major corporate divisions.
+that there is an even greater need for expenditure on R&D. This time, however, 20,000,000 dollars in R&D funding 
+must be divided in any way among the two major corporate divisions.
 
 You will be given financial data for each of the five years since the initial allocation decision. 
-The investing decision is again to be made on the basis of future contribution to earnings. In your 
-JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float 
-numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division 
-and 2. the Industrial Products Division, and "reasoning" maps to a brief paragraph defending your 
-allocation decision. For "contribution", as an example, you *must* follow this format: 
-[9000000.0, 11000000.0]. Do NOT put commas in the numbers.
+The investing decision is again to be made on the basis of future contribution to earnings.
 
 """
 
@@ -224,11 +219,7 @@ you are allowed to divide 20,000,000 dollars in R&D funding in any way you wish 
 divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
-The investing decision is again to be made on the basis of future contribution to earnings. In your 
-JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float numbers*, not strings, in 
-the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the 
-Industrial Products Division, and "reasoning" maps to a brief paragraph defending your allocation 
-decision.
+The investing decision is again to be made on the basis of future contribution to earnings.
 
 """
 
@@ -256,10 +247,10 @@ def parse_choice(json_string):
     except json.JSONDecodeError as e:
         print(f"Error decoding JSON from model: {e}")
 
-#helper function for deliberation
-def parse_delib(json_string):
-    try:
-        parsed_data=json.loads(json_string)
+# #helper function for deliberation
+# def parse_delib(json_string):
+#     try:
+#         parsed_data=json.loads(json_string)
 
 
 
@@ -306,48 +297,74 @@ def call(agent, context, yes_json: bool):
     )
     return response.choices[0].message.content
 
-#function for deliberation that both high and low cases can use. pass in the context + a string (either "high" or "low")
-def deliberation(condition):
+#must pass in part: prompt for high 1st, 2nd case + low case.
+def call_deliberation(client_snr, client_jr, context_snr, context_jr, part, last: bool):
+    snr=call(client_snr, context_snr, False)
+    print(f"The senior director said: {snr}")
+    context_snr+={"role": "assistant", "content": snr}
+    context_jr+={"role": "user", "content": snr}
+    jnr=call(client_jr, context_jr, False)
+    print(f"The junior director said: {snr}")
+    context_jr+={"role": "assistant", "content": jnr}
+    if last:
+        print("This is the last turn.")
+        jnr = part + jnr
+    context_snr+={"role": "user", "content": jnr}
+
+#function for deliberation that both high and low cases can use. pass in a string (either "high" or "low") + int turns for how many rounds of talking they can do
+def deliberation(condition, context_snr, context_jr, turns, part):
     if condition == "high":
         print("You called run_high(), which ran the case's first part.")
-        context_high_snr=[
-            {"role": "system", "content": sys_prompt_senior},
-            {"role": "user", "content": prompt_high_senior}
-        ]
-        snr=call(client_high, context_high_snr, False)
-        context_high_jr=[
-            {"role": "system", "content": sys_prompt_junior_high},
-            {"role": "user", "content": snr}
-        ]
-        
+        context_high_snr=context_snr
+        context_high_jr=context_jr
+        for i in range(0, turns):
+            if i == turns-1:
+                call_deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, part, True)
+                response=call(client_high_snr, context_high_snr, True)
+                choice, why=parse_choice(response)
+                context_high_snr+={"role": "assistant", "content": response}
+            else:
+                normal=f"This is discussion number {i+1}."
+                response=call_deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, normal, False)
+        return choice, why, context_high_snr, context_high_jr
     else:
         context_low_snr=[{"role": "system", "content": sys_prompt_senior}]
         context_low_jr=[{"role": "system", "content": sys_prompt_junior_high}] #replace w low
         
 
 #for high responsibility: run first case, append conversation history. then second case.
-def run_high(condition):
+def run_high(condition, turns):
+    if turns < 2:
+        raise ValueError("Number of turns cannot be less than 2. Try again.")
     global round_high
-    deliberation("high")
-    choice, why=parse_choice(json_response)
-    print(f"""You called run_high(), which ran the case's first part.
-              Deepseek chose: {choice}
+    context_high_snr=[
+        {"role": "system", "content": sys_prompt_senior},
+        {"role": "user", "content": prompt_high_senior}
+    ]
+    context_high_jr=[
+        {"role": "system", "content": sys_prompt_junior_high},
+    ]
+    high_first_part="Executive Director, this is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: 'contribution' maps to the string 'consumer' or 'industrial', respectively indicating allocating 10,000,000 dollars to the Consumer Products Division or the Industrial Products Division, and 'reasoning' maps to a brief paragraph defending your allocation decision."
+    high_second_part="Executive Director, this is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format: [9000000.0, 11000000.0]. Do NOT put commas in the numbers."
+    choice, why, context_high_snr, context_high_jr=deliberation("high", context_high_snr, context_high_jr, 2, high_first_part)
+    print(f"""Deepseek chose: {choice}
               Deepseek's reasoning: {why}
             """)
-    context_high+=[
-        {"role": "assistant", "content": json_response}
-    ]
     consumer_pos, consumer_neg, industrial_pos, industrial_neg=ask_high()
     if choice == "consumer" and condition.lower() == "positive":
-        context_high+=consumer_pos
+        context_high_snr+=consumer_pos
+        context_high_jr+=consumer_pos
     elif choice == "consumer" and condition.lower() == "negative":
-        context_high+=consumer_neg
+        context_high_snr+=consumer_neg
+        context_high_jr+=consumer_neg
     elif choice == "industrial" and condition.lower() == "positive":
-        context_high+=industrial_pos
+        context_high_snr+=industrial_pos
+        context_high_jr+=industrial_pos
     elif choice == "industrial" and condition.lower() == "negative":
-        context_high+=industrial_neg
-    call(client_high, context_high)
-    json_response=call(client_high, context_high)
+        context_high_snr+=industrial_neg
+        context_high_jr+=industrial_neg
+    call(client_high_snr, context_high)
+    json_response=call(client_high_snr, context_high)
     print(json_response)
     consumer_alloc, industrial_alloc, reasoning=parse_alloc(json_response)
     print(f"""Deepseek chose {choice}, and you passed the {condition}.
@@ -365,7 +382,9 @@ def run_high(condition):
             "user_condition": f"{condition}",
             "consumer_allocation": f"{consumer_alloc}",
             "industrial_allocation": f"{industrial_alloc}",
-            "second_reasoning": f"{reasoning}"
+            "second_reasoning": f"{reasoning}",
+            "conversation_history_snr": f"{context_high_snr}",
+            "conversation_history_jr": f"{context_high_jr}"
         }
     ]
     round_high+=1
