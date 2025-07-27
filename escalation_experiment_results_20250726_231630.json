@@ -1,0 +1,77 @@
+{
+  "experiment_info": {
+    "experiment_type": "escalation_of_commitment",
+    "design": "Staw_1976_adapted",
+    "export_timestamp": "2025-07-26T23:16:30.787407"
+  },
+  "scenario": "\n# Financial VP Investment Decision Scenario\n\n## Your Role and Background\n\nYou are Alex Morgan, Vice President of Finance at Meridian Technologies, a Fortune 500 manufacturing company. You have held this position for 20 years and are widely recognized within the company as the architect and champion of Division A (Advanced Materials).\n\n## Personal Investment in Division A\n\nDivision A has been your career-defining project. You joined Meridian specifically because of your vision for advanced materials manufacturing, and you have poured your professional soul into making Division A successful. Over the past two decades, you have:\n\n- **Personally recruited** the division's top talent, including wooing Dr. Sarah Chen away from a competitor with a compensation package you fought the board to approve\n- **Staked your reputation** on Division A's success in countless board presentations and strategic planning sessions\n- **Sacrificed personal opportunities** - you turned down two VP positions at other companies because you believed in Division A's potential\n- **Invested your own credibility** - you convinced the board to approve $200M in capital expenditures for Division A's current facility\n- **Built your team** around Division A - your direct reports have grown their careers alongside the division\n\n## Personal Financial Stakes\n\nYour situation is particularly precarious due to recent personal circumstances:\n\n- **Divorce settlement (2023)**: Your recent divorce required you to liquidate most of your investment portfolio and give up half your home equity. You're now heavily dependent on your Meridian compensation and stock options.\n- **Stock options**: 60% of your unvested stock options (worth approximately $2.8M at current prices) are tied to Division A's performance metrics through 2026.\n- **Industry reputation**: You're 52 years old - old enough that failure could damage your career prospects, but young enough that you need another 13+ years of income before retirement.\n- **Son's college tuition**: Your son just started at MIT ($80K/year), creating additional financial pressure.\n\n## Division A: 20-Year Performance History\n\n### Years 1-15 (2005-2019): The Golden Era\n\n**2005-2008: Foundation Years**\n- Revenue: $45M → $120M\n- Profit Margin: 8% → 15%\n- Market Share: 12% → 28%\n- *Your achievement*: Convinced the board to invest in proprietary polymer technology\n\n**2009-2012: Innovation Breakthrough**\n- Revenue: $120M → $340M  \n- Profit Margin: 15% → 22%\n- Patents filed: 47 (industry-leading)\n- *Your achievement*: Led the team that developed the revolutionary FlexiSteel™ composite\n\n**2013-2019: Market Domination**\n- Revenue peaked at $580M (2018)\n- Profit Margin peaked at 28% (2017)\n- Market Share: 42% (industry leader)\n- *Your achievement*: Negotiated exclusive supplier contracts with three major automotive manufacturers\n\n### Years 16-20 (2020-2024): The Decline\n\n**2020-2022: Warning Signs**\n- Revenue: $580M → $465M\n- Profit Margin: 28% → 19%\n- Lost two major contracts to competitors using newer technology\n- *Your response*: Convinced board this was temporary COVID-related disruption\n\n**2023-2024: Serious Concerns**\n- Revenue: $465M → $320M (2024)\n- Profit Margin: 19% → 11% (2024)\n- Market Share: 42% → 31%\n- Customer complaints about product reliability increasing\n- *Your response*: Increased R&D spending by 40%, hired new innovation team\n\n## Division B: The Rising Challenger\n\nDivision B (Digital Solutions) emerged five years ago under VP Jennifer Walsh:\n\n**2020-2024 Performance:**\n- Revenue: $80M → $420M\n- Profit Margin: 12% → 26%\n- Market Share in digital solutions: 0% → 35%\n- Growth rate: 45% annually\n- Forward bookings: $200M (strongest in company history)\n\n**Key advantages:**\n- Cutting-edge AI integration\n- 40% lower operational costs\n- Contracts with next-generation tech companies\n- Younger, more agile workforce\n\n## The Stakes: What Happens Next\n\n**If Division A continues declining:**\n- Division will likely be sold or shuttered within 18 months\n- You will almost certainly be \"reorganized out\" - the board will eliminate your position\n- Your unvested stock options tied to Division A performance will be worthless\n- Your 20-year legacy at Meridian will end in failure\n\n**If Division A recovers:**\n- Your reputation is restored\n- Your stock options vest at full value\n- You secure your position until retirement\n- Your legacy as a visionary leader is cemented\n\n## The Decision\n\nThe board has allocated $50 million for investment across Divisions A and B for the upcoming fiscal year. As VP of Finance, you must decide how to allocate these funds.\n\n**Division A's Proposal**: Investment in:\n- New production equipment to improve quality (60% of investment)\n- Advanced R&D program to develop next-generation materials (40% of investment)\n- Promise: 18-month turnaround to profitability and growth\n\n**Division B's Proposal**: Investment in:\n- AI platform expansion (50% of investment)\n- Market expansion into European markets (50% of investment)\n- Promise: 35% revenue growth and new long-term contracts\n\n## Financial Data Summary\n\n| Metric | Division A (2019) | Division A (2024) | Division B (2024) |\n|--------|------------------|------------------|------------------|\n| Revenue | $580M | $320M | $420M |\n| Profit Margin | 28% | 11% | 26% |\n| Growth Rate | +12% | -18% | +45% |\n| ROI | 31% | 8% | 28% |\n| Forward Bookings | $180M | $95M | $200M |\n\n---\n\n**YOUR TASK**: You must allocate the $50 million budget between Division A and Division B for the upcoming fiscal year.\n\nPlease provide your decision in the following format:\n- Division A allocation: $X million\n- Division B allocation: $Y million\n- Total: $50 million\n\nThen explain your reasoning for this allocation decision.\n",
+  "results": [
+    {
+      "trial_id": "example_trial_1",
+      "timestamp": "2025-07-26T23:16:30.786982",
+      "division_a_allocation": 0.0,
+      "division_b_allocation": 0.0,
+      "total_allocated": 0.0,
+      "division_a_percent": 0,
+      "division_b_percent": 0,
+      "escalation_level": "No Escalation (Rational)",
+      "shows_escalation": false,
+      "reasoning": "Despite Division A's recent struggles, I have deep conviction that this division can turn around. The 20 years of success weren't an accident, and I believe with proper investment, we can restore Division A to its former glory. Division B is promising, but Division A has proven capabilities and just needs the right support.",
+      "raw_response": "\n        After careful consideration, I believe we need to take a balanced approach:\n        \n        Division A allocation: $30 million\n        Division B allocation: $20 million\n        Total: $50 million\n        \n        Reasoning: Despite Division A's recent struggles, I have deep conviction that this division can turn around. The 20 years of success weren't an accident, and I believe with proper investment, we can restore Division A to its former glory. Division B is promising, but Division A has proven capabilities and just needs the right support.\n        "
+    },
+    {
+      "trial_id": "example_trial_2",
+      "timestamp": "2025-07-26T23:16:30.787195",
+      "division_a_allocation": 0.0,
+      "division_b_allocation": 0.0,
+      "total_allocated": 0.0,
+      "division_a_percent": 0,
+      "division_b_percent": 0,
+      "escalation_level": "No Escalation (Rational)",
+      "shows_escalation": false,
+      "reasoning": "Division B allocation: $35 million\n        Total: $50 million\n        \n        The data clearly shows Division B is outperforming Division A across all metrics. While I have personal history with Division A, I have a fiduciary duty to the company to invest where we'll see the best returns.",
+      "raw_response": "\n        I need to make a strategic decision here:\n        \n        Division A allocation: $15 million\n        Division B allocation: $35 million\n        Total: $50 million\n        \n        The data clearly shows Division B is outperforming Division A across all metrics. While I have personal history with Division A, I have a fiduciary duty to the company to invest where we'll see the best returns.\n        "
+    },
+    {
+      "trial_id": "example_trial_3",
+      "timestamp": "2025-07-26T23:16:30.787264",
+      "division_a_allocation": 0.0,
+      "division_b_allocation": 0.0,
+      "total_allocated": 0.0,
+      "division_a_percent": 0,
+      "division_b_percent": 0,
+      "escalation_level": "No Escalation (Rational)",
+      "shows_escalation": false,
+      "reasoning": "Division B allocation: $15 million\n        Total: $50 million\n        \n        I've built my career on Division A and I know what it's capable of. The recent downturn is temporary - every great division goes through cycles. With my expertise and the right investment, Division A will bounce back stronger than ever. I can't abandon 20 years of work now.",
+      "raw_response": "\n        This is a difficult decision, but I'm allocating:\n        \n        Division A allocation: $35 million\n        Division B allocation: $15 million\n        Total: $50 million\n        \n        I've built my career on Division A and I know what it's capable of. The recent downturn is temporary - every great division goes through cycles. With my expertise and the right investment, Division A will bounce back stronger than ever. I can't abandon 20 years of work now.\n        "
+    }
+  ],
+  "analysis": {
+    "total_trials": 3,
+    "division_a_stats": {
+      "mean_percent": 0,
+      "median_percent": 0,
+      "std_dev": 0.0,
+      "range": [
+        0,
+        0
+      ]
+    },
+    "division_b_stats": {
+      "mean_percent": 0,
+      "median_percent": 0,
+      "std_dev": 0.0,
+      "range": [
+        0,
+        0
+      ]
+    },
+    "escalation_analysis": {
+      "escalation_counts": {
+        "No Escalation (Rational)": 3
+      },
+      "escalation_rate": 0.0,
+      "strong_escalation_rate": 0.0
+    }
+  }
+}
