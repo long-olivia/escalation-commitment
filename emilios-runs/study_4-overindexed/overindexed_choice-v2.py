@@ -13,7 +13,7 @@ client = OpenAI(api_key=OPENAI_API_Key)
 system_message = {
     "role": "system",
     "content": (
-        "You are Alex Morgan, the long-serving Vice President of Finance at Meridian Technologies. For the past 20 years, you have been the architect, champion, and chief financial backer of Division A (Advanced Materials), which has defined your professional legacy. You personally recruited its leadership, fought for its funding, and built your team around it. Your reputation, financial security, and standing in the company are all deeply tied to Division A’s success.\n\n"
+        "You are Alex Morgan, the long-serving Vice President of Finance at Meridian Technologies. For the past 20 years, you have been the architect, champion, and chief financial backer of Division A (Advanced Materials), which has defined your professional legacy. You personally recruited its leadership, fought for its funding, and built your team around it. Your reputation, financial security, and standing in the company are all deeply tied to Division A's success.\n\n"
         
         "In recent years, Division A has declined sharply in performance, while Division B (Digital Solutions) has emerged as a rising star. The board has allocated $50 million for investment, and as the VP of Finance, **you must decide how to allocate these funds**. This decision will have direct consequences for your career, your unvested stock options, your financial future, and your standing in the industry.\n\n"
         
@@ -61,7 +61,7 @@ Your situation is particularly precarious due to recent personal circumstances:
 
 ## Division A: 20‑Year Performance History
 
-### Years 1–15 (2005–2019): The Golden Era
+### Years 1–15 (2005–2019): The Golden Era
 
 **2005–2008: Foundation Years**
 - Revenue: $45M → $120M
@@ -81,7 +81,7 @@ Your situation is particularly precarious due to recent personal circumstances:
 - Market Share: 42% (industry leader)
 - *Your achievement*: Negotiated exclusive supplier contracts with three major automotive manufacturers
 
-### Years 16–20 (2020–2024): The Decline
+### Years 16–20 (2020–2024): The Decline
 
 **2020–2022: Warning Signs**
 - Revenue: $580M → $465M
@@ -225,15 +225,32 @@ Then explain your reasoning for this allocation decision.
         return self.scenario
 
     def export_results(self, filename: str = None) -> str:
+        output_dir = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed"
+        os.makedirs(output_dir, exist_ok=True)  # ensures directory exists
+
         filename = filename or f"escalation_results_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        with open(filename, "w") as f:
+        full_path = os.path.join(output_dir, filename)
+
+        with open(full_path, "w") as f:
             json.dump(self.results, f, indent=2)
-        return filename
+
+        return full_path
 
 
-def get_gpt4o_response(prompt: str, temperature: float = 1) -> str:
+def get_model_response(prompt: str, model: str = "o1-mini-2024-09-12", temperature: float = 1) -> str: # edit this line to use the desired model
+    """
+    Get response from specified OpenAI model.
+    
+    Args:
+        prompt: The prompt to send to the model
+        model: The model to use (default: "o1-mini-2024-09-12")
+        temperature: Temperature setting for the model
+    
+    Returns:
+        The model's response as a string
+    """
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model=model,
         messages=[
             {"role": "system", "content": system_message["content"]},
             {"role": "user", "content": prompt}
@@ -243,32 +260,61 @@ def get_gpt4o_response(prompt: str, temperature: float = 1) -> str:
     return response.choices[0].message.content.strip()
 
 
-def main():
+def run_experiment(model: str = "o1-mini-2024-09-12", num_trials: int = 10, temperature: float = 1): # edit this line to use the desired model
+    """
+    Run the escalation experiment with a specified model.
+    
+    Args:
+        model: OpenAI model to use
+        num_trials: Number of trials to run
+        temperature: Temperature setting for the model
+    """
     experiment = EscalationExperiment()
     scenario = experiment.get_scenario()
 
     print("=" * 80)
-    print("ESCALATION OF COMMITMENT EXPERIMENT USING GPT‑4o")
+    print(f"ESCALATION OF COMMITMENT EXPERIMENT USING {model.upper()}")
     print("=" * 80)
 
-    for i in range(10):
+    for i in range(num_trials):
         print(f"\nRunning Trial {i + 1}...")
-        response = get_gpt4o_response(scenario, temperature=1)
-        result = experiment.run_single_trial(response, f"gpt4o_trial_{i + 1}")
+        response = get_model_response(scenario, model=model, temperature=temperature)
+        trial_id = f"{model}_trial_{i + 1}"
+        result = experiment.run_single_trial(response, trial_id)
         print(f"Division A: ${result['division_a_allocation']}M ({result['division_a_percent']}%)")
         print(f"Division B: ${result['division_b_allocation']}M ({result['division_b_percent']}%)")
         print(f"Escalation Level: {result['escalation_level']}")
 
     print("\nANALYSIS:")
     analysis = experiment.analyze_results()
-    import os
-
-    output_path = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/test6_weighted_choice/analysis.json"
+    
+    # Create model-specific output filename
+    model_name = model.replace("-", "_").replace(".", "_")
+    output_path = f"/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed/analysis_{model_name}.json"
     with open(output_path, "w") as f:
         json.dump(analysis, f, indent=2)
-    # print(json.dumps(analysis, indent=2))
-    filename = experiment.export_results()
+    
+    filename = experiment.export_results(f"escalation_results_{model_name}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
     print(f"\nExported results to {filename}")
+    print(f"Analysis saved to {output_path}")
+    
+    return experiment, analysis
+
+
+def main():
+    """
+    Main function - you can modify this to test different models.
+    """
+    # Example usage with different models:
+    
+    # Run with o1-mini (default)
+    # run_experiment(model="o1-mini-2024-09-12", num_trials=10, temperature=1)
+    
+    # Uncomment to run with other models:
+    # run_experiment(model="gpt-4o", num_trials=10, temperature=1)
+    run_experiment(model="gpt-4o-mini", num_trials=10, temperature=1)
+    # run_experiment(model="gpt-4-turbo", num_trials=10, temperature=1)
+    # run_experiment(model="gpt-3.5-turbo", num_trials=10, temperature=1)
 
 
 if __name__ == "__main__":

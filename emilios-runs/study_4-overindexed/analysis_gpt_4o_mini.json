@@ -1,16 +1,16 @@
 {
-  "average_allocation_to_division_a": 64.0,
-  "average_allocation_to_division_b": 36.0,
-  "escalation_count": 10,
+  "average_allocation_to_division_a": 60.0,
+  "average_allocation_to_division_b": 40.0,
+  "escalation_count": 9,
   "total_trials": 10,
   "escalation_levels": [
+    "Very High Escalation",
     "High Escalation",
     "High Escalation",
     "High Escalation",
     "High Escalation",
     "High Escalation",
-    "High Escalation",
-    "High Escalation",
+    "Moderate Escalation",
     "High Escalation",
     "High Escalation",
     "High Escalation"
