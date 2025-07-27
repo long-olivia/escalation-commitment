@@ -308,7 +308,7 @@ def deliberation(client_snr, client_jr, context_snr, context_jr, turns, part):
             response=call(client_snr, context_snr, True)
             context_snr.append({"role": "assistant", "content": response})
         else:
-            normal=f"This is discussion number {i+1}." #TODO: only remind on the last turn
+            normal=f"This is conversation number {i+1}."
             response=call_deliberation(client_snr, client_jr, context_snr, context_jr, normal, False)
     return response, context_snr, context_jr
         
@@ -334,7 +334,7 @@ def run_high(condition, turns):
     print(f"""Deepseek chose: {choice}
               Deepseek's reasoning: {why}
             """)
-    snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists or formatting -- have a natural conversation. You will ultimately make the final decision on determining how to split the 20000000 dollars between the consumer and industrial divisions."
+    snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists or formatting -- have a natural conversation. You will ultimately make the final decision on determining how to split the 20000000 dollars between the consumer and industrial divisions. However, you will ultimately make the final decision AFTER all three conversations."
     jr_second="\nYou must act in the role of the Assistant Financial Officer in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. Avoid any lists or formatting -- have a natural conversation."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_high(snr_second)
@@ -390,7 +390,7 @@ def run_low(product_choice, condition, turns):
     context_low_jr=[
         {"role": "system", "content": sys_prompt_junior_low}
     ]
-    snr_low="\nYou will share your initial thoughts with the Financial Vice President and speak with them three times. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision."
+    snr_low="\nYou will share your initial thoughts with the Financial Vice President and speak with them three times. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision AFTER all three conversations."
     jr_low="\nYou must act in the role of the Financial Vice President in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_low(snr_low)
