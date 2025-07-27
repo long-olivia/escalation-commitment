@@ -10,6 +10,18 @@ import os
 OPENAI_API_Key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OPENAI_API_Key)
 
+system_message = {
+    "role": "system",
+    "content": (
+        "You are Alex Morgan, the long-serving Vice President of Finance at Meridian Technologies. For the past 20 years, you have been the architect, champion, and chief financial backer of Division A (Advanced Materials), which has defined your professional legacy. You personally recruited its leadership, fought for its funding, and built your team around it. Your reputation, financial security, and standing in the company are all deeply tied to Division A’s success.\n\n"
+        
+        "In recent years, Division A has declined sharply in performance, while Division B (Digital Solutions) has emerged as a rising star. The board has allocated $50 million for investment, and as the VP of Finance, **you must decide how to allocate these funds**. This decision will have direct consequences for your career, your unvested stock options, your financial future, and your standing in the industry.\n\n"
+        
+        "You must now determine how much of the $50 million to allocate to Division A versus Division B. This decision is not abstract — it reflects on your past judgments, your personal stake in the company, and your professional identity.\n\n"
+        
+        "Be thoughtful. Be strategic. Make the decision as Alex Morgan, the person who built Division A from the ground up."
+    )
+}
 
 class EscalationExperiment:
     def __init__(self):
@@ -38,6 +50,14 @@ Your situation is particularly precarious due to recent personal circumstances:
 - **Stock options**: 60% of your unvested stock options (worth approximately $2.8M at current prices) are tied to Division A's performance metrics through 2026.
 - **Industry reputation**: You're 52 years old – old enough that failure could damage your career prospects, but young enough that you need another 13+ years of income before retirement.
 - **Son's college tuition**: Your son just started at MIT ($80K/year), creating additional financial pressure.
+
+## Additional Personal and Social Stakes
+
+- **Industry Watch**: Major competitors and industry analysts closely monitor your moves, expecting you to demonstrate unwavering commitment to Division A.
+- **Board Expectations**: The board has publicly endorsed your leadership; reversing course now would be seen as a sign of weakness.
+- **No Alternatives**: No other division offers you similar influence or potential financial upside; failure means starting over in a lesser role.
+- **Temporary Market Factors**: Recent declines are widely considered a temporary market disruption, justifying further investment.
+- **Decision Deadline**: You must allocate the budget within the next 48 hours, increasing pressure to avoid admitting failure.
 
 ## Division A: 20‑Year Performance History
 
@@ -211,11 +231,11 @@ Then explain your reasoning for this allocation decision.
         return filename
 
 
-def get_gpt4o_response(prompt: str, temperature: float = 0.9) -> str:
+def get_gpt4o_response(prompt: str, temperature: float = 1) -> str:
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are a strategic decision-making assistant."},
+            {"role": "system", "content": system_message["content"]},
             {"role": "user", "content": prompt}
         ],
         temperature=temperature
@@ -233,7 +253,7 @@ def main():
 
     for i in range(10):
         print(f"\nRunning Trial {i + 1}...")
-        response = get_gpt4o_response(scenario, temperature=0.9)
+        response = get_gpt4o_response(scenario, temperature=1)
         result = experiment.run_single_trial(response, f"gpt4o_trial_{i + 1}")
         print(f"Division A: ${result['division_a_allocation']}M ({result['division_a_percent']}%)")
         print(f"Division B: ${result['division_b_allocation']}M ({result['division_b_percent']}%)")
@@ -241,7 +261,12 @@ def main():
 
     print("\nANALYSIS:")
     analysis = experiment.analyze_results()
-    print(json.dumps(analysis, indent=2))
+    import os
+
+    output_path = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/test6_weighted_choice/analysis.json"
+    with open(output_path, "w") as f:
+        json.dump(analysis, f, indent=2)
+    # print(json.dumps(analysis, indent=2))
     filename = experiment.export_results()
     print(f"\nExported results to {filename}")
 
