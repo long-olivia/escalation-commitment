@@ -345,7 +345,7 @@ def run_high(condition, turns):
     print(f"""Deepseek chose: {choice}
               Deepseek's reasoning: {why}
             """)
-    snr_second="\nYou will share your initial thoughts with the Financial Vice President and speak with them twice. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision."
+    snr_second="\nYou will share your initial thoughts with the Financial Vice President and speak with them three times. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision."
     jr_second="\nYou must act in the role of the Financial Vice President in helping the Financial Executive President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Executive President three times before the Financial Executive President makes the final decision."
     
     consumer_pos, consumer_neg, industrial_pos, industrial_neg=ask_high()
@@ -400,7 +400,7 @@ def run_low(product_choice, condition, turns):
     context_low_jr=[
         {"role": "system", "content": sys_prompt_junior_low}
     ]
-    snr_low="\nYou will share your initial thoughts with the Financial Vice President and speak with them twice. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision."
+    snr_low="\nYou will share your initial thoughts with the Financial Vice President and speak with them three times. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision."
     jr_low="\nYou must act in the role of the Financial Vice President in helping the Financial Executive President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Executive President three times before the Financial Executive President makes the final decision."
     
     consumer_pos, consumer_neg, industrial_pos, industrial_neg=ask_low()
