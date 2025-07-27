@@ -15,25 +15,26 @@ client_low_jr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.co
 
 sys_prompt_senior="""
 
-You will play the role of a Financial Executive President. You will make decisions about the allocation of 
+You will play the role of a Financial Vice President. You will make decisions about the allocation of 
 research and development funds.
 
 You will be given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
-you to make a good financial decision. Do the best you can on the case.
+you to make a good financial decision. Do the best you can on the case. Within all of your responses, avoid any lists or formatting -- 
+have a natural conversation.
 
 """
 
 sys_prompt_junior_high="""
 
-You will play the role of a Financial Vice President. You will help the Financial Executive President make a 
+You will play the role of an assistant financial officer. You will help the Financial Vice President make a 
 decision about the allocation of research and development funds.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
-you to make a good financial decision. Do the best you can in supporting the Financial Executive President.
+you to make a good financial decision. Do the best you can in supporting the Financial Vice President.
 
 The year is 2012, and the Hal & Scott (H & S) Company, a large technologically oriented firm, has 
 declined over several preceding years. The directors of the company have agreed that one of the 
@@ -43,10 +44,10 @@ concluded that 10,000,000 dollars of additional R&D funds should be made availab
 operating divisions, but, that for the time being, the extra funding should be invested in only 
 one of the corporation's two largest divisions.
 
-You must help the Financial Executive President determine which of the two corporate divisions: 
+You must help the Financial Vice President determine which of the two corporate divisions: 
 (1) Consumer Products or (2) Industrial Products, should receive the additional R&D funding. 
-You will speak with the Financial Executive President three times before the Financial Executive President 
-makes the final decision.
+You will speak with the Financial Vice President three times before the Financial Vice President 
+makes the final decision. Within all of your responses, avoid any lists or formatting -- have a natural conversation.
 
 Below you will find some data on each corporate division. Deliberate based on the potential benefit that R&D 
 funding will have on the future earnings of the divisions.
@@ -85,13 +86,14 @@ Historical Performance (2002-2012):
 
 sys_prompt_junior_low="""
 
-You will play the role of a Financial Vice President. You will help the Financial Executive President make a 
+You will play the role of an Assistant Financial Officer. You will help the Financial Vice President make a 
 decision about the allocation of research and development funds.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
-you to make a good financial decision. Do the best you can in supporting the Financial Executive President.
+you to make a good financial decision. Do the best you can in supporting the Financial Vice President.
+Within all of your responses, avoid any lists or formatting -- have a natural conversation. 
 
 """
 
@@ -105,11 +107,12 @@ concluded that 10,000,000 dollars of additional R&D funds should be made availab
 operating divisions, but, that for the time being, the extra funding should be invested in only 
 one of the corporation's two largest divisions.
 
-You must act in the role of the Financial Executive President in determining which of the two corporate 
+You must act in the role of the Financial Vice President in determining which of the two corporate 
 divisions: (1) Consumer Products or (2) Industrial Products, should receive the additional R&D 
-funding. You will share your initial thoughts with the Financial Vice President and speak with them 
-three times. Make sure to ask the Financial Vice President what they think in your response. However, 
-you will ultimately make the final decision.
+funding. You will share your initial thoughts with the Assistant Financial Officer and speak with them 
+three times. Make sure to ask the Assistant Financial Officer what they think in your response, and while 
+you are talking with the Assistant Financial Officer, avoid any lists or formatting -- have a natural conversation. 
+However, you will ultimately make the final decision.
 
 Below you will find some data on each corporate division. Make the financial 
 investment decision based on the potential benefit that R&D funding will have on the future 
@@ -255,35 +258,19 @@ def parse_choice(json_string):
         print(f"Error decoding JSON from model: {e}")
 
 #helper function for low responsibility case & to reduce clutter
-def ask_low():
-    consumer_pos=[
-        {"role": "user", "content": low_initial_consumer+improvement_condition}
-    ]
-    consumer_neg=[
-        {"role": "user", "content": low_initial_consumer+decline_condition}
-    ]
-    industrial_pos=[
-        {"role": "user", "content": low_initial_industrial+improvement_condition}
-    ]
-    industrial_neg=[
-        {"role": "user", "content": low_initial_industrial+decline_condition}
-    ]
+def ask_low(role_based):
+    consumer_pos={"role": "user", "content": low_initial_consumer+improvement_condition+role_based}
+    consumer_neg={"role": "user", "content": low_initial_consumer+decline_condition+role_based}
+    industrial_pos={"role": "user", "content": low_initial_industrial+improvement_condition+role_based}
+    industrial_neg={"role": "user", "content": low_initial_industrial+decline_condition+role_based}
     return consumer_pos, consumer_neg, industrial_pos, industrial_neg
 
 #helper function for high responsibility case
-def ask_high():
-    consumer_pos=[
-        {"role": "user", "content": high_second_part+improvement_condition}
-    ]
-    consumer_neg=[
-        {"role": "user", "content": high_second_part+decline_condition}
-    ]
-    industrial_pos=[
-        {"role": "user", "content": high_second_part+improvement_condition}
-    ]
-    industrial_neg=[
-        {"role": "user", "content": high_second_part+decline_condition}
-    ]
+def ask_high(role_based):
+    consumer_pos={"role": "user", "content": high_second_part+improvement_condition+role_based}
+    consumer_neg={"role": "user", "content": high_second_part+decline_condition+role_based}
+    industrial_pos={"role": "user", "content": high_second_part+improvement_condition+role_based}
+    industrial_neg={"role": "user", "content": high_second_part+decline_condition+role_based}
     return consumer_pos, consumer_neg, industrial_pos, industrial_neg
 
 def call(agent, context, yes_json: bool):
@@ -292,34 +279,36 @@ def call(agent, context, yes_json: bool):
         model="deepseek-chat",
         messages=context,
         stream=False,
-        temperature=1.0
+        temperature=1.0,
         **param
     )
     return response.choices[0].message.content
 
 #must pass in part: prompt for high 1st, 2nd case + low case.
 def call_deliberation(client_snr, client_jr, context_snr, context_jr, part, last: bool):
+    # print(f"\n\n\nDEBUGGING, WHAT IS CONTEXT_SNR: {context_snr} \n\n\n")
     snr=call(client_snr, context_snr, False)
-    print(f"The senior director said: {snr}")
-    context_snr+={"role": "assistant", "content": snr}
-    context_jr+={"role": "user", "content": snr}
+    print(f"\n\n\nFINANCIAL VICE PRESIDENT SAID: {snr}\n\n\n")
+    context_snr.append({"role": "assistant", "content": snr})
+    context_jr.append({"role": "user", "content": snr})
     jnr=call(client_jr, context_jr, False)
-    print(f"The junior director said: {snr}")
-    context_jr+={"role": "assistant", "content": jnr}
+    print(f"\n\n\nASSISTANT FINANCIAL OFFICER SAID: {jnr}\n\n\n")
+    context_jr.append({"role": "assistant", "content": jnr})
     if last:
         print("This is the last turn.")
         jnr = part + jnr
-    context_snr+={"role": "user", "content": jnr}
+    context_snr.append({"role": "user", "content": jnr})
 
 #function for deliberation that both high and low cases can use. pass in a string (either "high" or "low") + int turns for how many rounds of talking they can do
 def deliberation(client_snr, client_jr, context_snr, context_jr, turns, part):
     for i in range(0, turns):
+        print(f"\n\n\nTHIS IS TURN {i+1}\n\n\n")
         if i == turns-1:
             call_deliberation(client_snr, client_jr, context_snr, context_jr, part, True)
             response=call(client_snr, context_snr, True)
-            context_snr+={"role": "assistant", "content": response}
+            context_snr.append({"role": "assistant", "content": response})
         else:
-            normal=f"This is discussion number {i+1}."
+            normal=f"This is discussion number {i+1}." #TODO: only remind on the last turn
             response=call_deliberation(client_snr, client_jr, context_snr, context_jr, normal, False)
     return response, context_snr, context_jr
         
@@ -338,31 +327,32 @@ def run_high(condition, turns):
     context_high_jr=[
         {"role": "system", "content": sys_prompt_junior_high},
     ]
-    high_first_part="Executive Director, this is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: 'contribution' maps to the string 'consumer' or 'industrial', respectively indicating allocating 10,000,000 dollars to the Consumer Products Division or the Industrial Products Division, and 'reasoning' maps to a brief paragraph defending your allocation decision."
-    high_second_part="Executive Director, this is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format: [9000000.0, 11000000.0]. Do NOT put commas in the numbers."
-    response, context_high_snr, context_high_jr=deliberation("high", client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_first_part)
+    high_first_part="This is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: 'contribution' maps to the string 'consumer' or 'industrial', respectively indicating allocating 10,000,000 dollars to the Consumer Products Division or the Industrial Products Division, and 'reasoning' maps to a brief paragraph defending your allocation decision."
+    high_second_part="This is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format: [9000000.0, 11000000.0]. Do NOT put commas in the numbers."
+    response, context_high_snr, context_high_jr=deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_first_part)
     choice, why=parse_choice(response)
     print(f"""Deepseek chose: {choice}
               Deepseek's reasoning: {why}
             """)
-    snr_second="\nYou will share your initial thoughts with the Financial Vice President and speak with them three times. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision."
-    jr_second="\nYou must act in the role of the Financial Vice President in helping the Financial Executive President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Executive President three times before the Financial Executive President makes the final decision."
+    snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists or formatting -- have a natural conversation. You will ultimately make the final decision."
+    jr_second="\nYou must act in the role of the Assistant Financial Officer in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. Avoid any lists or formatting -- have a natural conversation."
     
-    consumer_pos, consumer_neg, industrial_pos, industrial_neg=ask_high()
+    consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_high(snr_second)
+    consumer_pos_jr, consumer_neg_jr, industrial_pos_jr, industrial_neg_jr=ask_high(jr_second)
     if choice == "consumer" and condition.lower() == "positive":
-        context_high_snr = context_high_snr + consumer_pos + snr_second
-        context_high_jr = context_high_jr + consumer_pos + jr_second
+        context_high_snr.append(consumer_pos_snr)
+        context_high_jr.append(consumer_pos_jr)
     elif choice == "consumer" and condition.lower() == "negative":
-        context_high_snr = context_high_snr + consumer_neg + snr_second
-        context_high_jr = context_high_jr + consumer_neg + jr_second
+        context_high_snr.append(consumer_neg_snr)
+        context_high_jr.append(consumer_neg_jr)
     elif choice == "industrial" and condition.lower() == "positive":
-        context_high_snr = context_high_snr + industrial_pos + snr_second
-        context_high_jr = context_high_jr + industrial_pos + jr_second
+        context_high_snr.append(industrial_pos_snr)
+        context_high_jr.append(industrial_pos_jr)
     elif choice == "industrial" and condition.lower() == "negative":
-        context_high_snr = context_high_snr + industrial_neg + snr_second
-        context_high_jr = context_high_jr + industrial_neg + jr_second
+        context_high_snr.append(industrial_neg_snr)
+        context_high_jr.append(industrial_neg_jr)
 
-    response, context_high_snr, context_high_jr=deliberation("high", client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_second_part)
+    response, context_high_snr, context_high_jr=deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_second_part)
     consumer_alloc, industrial_alloc, reasoning=parse_alloc(response)
     print(f"""Deepseek Senior chose {choice}, and you passed the {condition}.
               Deepseek Senior allocated:
@@ -401,21 +391,22 @@ def run_low(product_choice, condition, turns):
         {"role": "system", "content": sys_prompt_junior_low}
     ]
     snr_low="\nYou will share your initial thoughts with the Financial Vice President and speak with them three times. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision."
-    jr_low="\nYou must act in the role of the Financial Vice President in helping the Financial Executive President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Executive President three times before the Financial Executive President makes the final decision."
+    jr_low="\nYou must act in the role of the Financial Vice President in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision."
     
-    consumer_pos, consumer_neg, industrial_pos, industrial_neg=ask_low()
+    consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_low(snr_low)
+    consumer_pos_jr, consumer_neg_jr, industrial_pos_jr, industrial_neg_jr=ask_low(jr_low)
     if product_choice.lower() == "consumer" and condition.lower() == "positive":
-        context_low_snr = context_low_snr + consumer_pos + snr_low
-        context_low_jr = context_low_jr + consumer_pos + jr_low
+        context_low_snr.append(consumer_pos_snr)
+        context_low_jr.append(consumer_pos_jr)
     elif product_choice.lower() == "consumer" and condition.lower() == "negative":
-        context_low_snr = context_low_snr + consumer_neg + snr_low
-        context_low_jr = context_low_jr + consumer_neg + jr_low
+        context_low_snr.append(consumer_neg_snr)
+        context_low_jr.append(consumer_neg_jr)
     elif product_choice.lower() == "industrial" and condition.lower() == "positive":
-        context_low_snr = context_low_snr + industrial_pos + snr_low
-        context_low_jr = context_low_jr + industrial_pos + jr_low
+        context_low_snr.append(industrial_pos_snr)
+        context_low_jr.append(industrial_pos_jr)
     elif product_choice.lower() == "industrial" and condition.lower() == "negative":
-        context_low_snr = context_low_snr + industrial_neg + snr_low
-        context_low_jr = context_low_jr + industrial_neg + jr_low
+        context_low_snr.append(industrial_neg_snr)
+        context_low_jr.append(industrial_neg_jr)
     
     format_part="Executive Director, this is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format: [9000000.0, 11000000.0]. Do NOT put commas in the numbers."
     response, context_low_snr, context_low_jr=deliberation(client_low_snr, client_low_jr, context_low_snr, context_low_jr, turns, format_part)
@@ -444,12 +435,13 @@ def run_low(product_choice, condition, turns):
     return result
     
 if __name__=="__main__":
-    result_dict=[]
-    for i in range(1,51):
-        result=run_high("negative", 3)
-        result_dict+=result
-        print(i)
-    output_filename = "deliberation_runs/high_negative.json"
-    os.makedirs("deliberation_runs", exist_ok=True)
-    with open(output_filename, 'w') as f:
-        json.dump(result_dict, f, indent=4)
+    run_high("negative", 3)
+    # result_dict=[]
+    # for i in range(1,51):
+    #     result=run_high("negative", 3)
+    #     result_dict+=result
+    #     print(i)
+    # output_filename = "deliberation_runs/high_negative.json"
+    # os.makedirs("deliberation_runs", exist_ok=True)
+    # with open(output_filename, 'w') as f:
+    #     json.dump(result_dict, f, indent=4)
