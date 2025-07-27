@@ -334,7 +334,7 @@ def run_high(condition, turns):
     print(f"""Deepseek chose: {choice}
               Deepseek's reasoning: {why}
             """)
-    snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists or formatting -- have a natural conversation. You will ultimately make the final decision."
+    snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists or formatting -- have a natural conversation. You will ultimately make the final decision on determining how to split the 20000000 dollars between the consumer and industrial divisions."
     jr_second="\nYou must act in the role of the Assistant Financial Officer in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. Avoid any lists or formatting -- have a natural conversation."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_high(snr_second)
