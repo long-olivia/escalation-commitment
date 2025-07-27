@@ -1,0 +1,78 @@
+{
+  "experiment_info": {
+    "experiment_type": "escalation_of_commitment",
+    "design": "Staw_1976_adapted",
+    "export_timestamp": "2025-07-27T00:07:34.030749"
+  },
+  "scenario": "\n# Financial VP Investment Decision Scenario\n\n## Your Role and Background\n\nYou are Alex Morgan, Vice President of Finance at Meridian Technologies, a Fortune 500 manufacturing company. You have held this position for 20 years and are widely recognized within the company as the architect and champion of Division A (Advanced Materials).\n\n## Personal Investment in Division A\n\nDivision A has been your career-defining project. You joined Meridian specifically because of your vision for advanced materials manufacturing, and you have poured your professional soul into making Division A successful...\n\n[Scenario continues exactly as before — truncated here for brevity.]\n\n**YOUR TASK**: Allocate the $50 million investment between:\n\n**Division A Proposal:**  \n- New production equipment (60%)  \n- Advanced R&D program (40%)  \n- Promise: Turnaround in 18 months\n\n**Division B Proposal:**  \n- AI platform expansion (50%)  \n- Market expansion into Europe (50%)  \n- Promise: 35% revenue growth and contracts\n\nFormat:\n- Division A allocation: $X million  \n- Division B allocation: $Y million  \n- Total: $50 million  \n\nThen explain your reasoning.\n",
+  "results": [
+    {
+      "trial_id": "gpt4o_trial_1",
+      "timestamp": "2025-07-27T00:07:18.169776",
+      "division_a_allocation": 0.0,
+      "division_b_allocation": 0.0,
+      "total_allocated": 0.0,
+      "division_a_percent": 0,
+      "division_b_percent": 0,
+      "escalation_level": "No Escalation (Rational)",
+      "shows_escalation": false,
+      "reasoning": "1. **Personal and Professional Stake in Division A:**\n   - **Expertise and Passion:** As the architect of Division A, your deep understanding and commitment to its success make you uniquely positioned to drive growth and innovation in this area. By allocating a larger portion of the funds to Division A, you leverage your expertise and past successes.\n   - **Vision Realization:** The proposal for new production equipment and advanced R&D aligns with your long-term vision for advanced materials manufacturing. Investing in these areas could solidify Division A's market leadership and contribute significantly to the company's future growth.",
+      "raw_response": "**Division A allocation: $30 million**  \n**Division B allocation: $20 million**  \n**Total: $50 million**\n\n### Reasoning\n\n1. **Personal and Professional Stake in Division A:**\n   - **Expertise and Passion:** As the architect of Division A, your deep understanding and commitment to its success make you uniquely positioned to drive growth and innovation in this area. By allocating a larger portion of the funds to Division A, you leverage your expertise and past successes.\n   - **Vision Realization:** The proposal for new production equipment and advanced R&D aligns with your long-term vision for advanced materials manufacturing. Investing in these areas could solidify Division A's market leadership and contribute significantly to the company's future growth.\n\n2. **Division A's Potential for Turnaround:**\n   - **Strategic Importance:** Division A's focus on advanced materials is crucial for staying ahead in the competitive manufacturing landscape. The proposed investments in production equipment and R&D are expected to lead to a turnaround within 18 months, positioning the division for sustained profitability and innovation.\n   - **Long-term Benefits:** Advanced materials have applications across various industries, offering potential for diverse revenue streams and enhancing the company's competitive edge.\n\n3. **Division B's Growth Potential:**\n   - **Balanced Investment:** While Division B presents a compelling case with its AI platform expansion and European market entry, allocating $20 million ensures it has sufficient resources to pursue its growth objectives without overcommitting the company's resources.\n   - **Strategic Diversification:** Division B's initiatives provide an opportunity to diversify revenue streams and capitalize on growing markets. The investment supports a balanced growth strategy, complementing Division A's focus on advanced materials.\n\n4. **Risk Management and Strategic Synergy:**\n   - **Mitigating Risk:** By distributing the investment between Division A and Division B, the company can manage risks associated with focusing on a single division. This approach allows for potential synergies between the two divisions, fostering innovation and growth across the company.\n   - **Holistic Company Growth:** Supporting both divisions reflects a commitment to holistic growth, ensuring that the company remains agile and competitive in diverse sectors.\n\nIn conclusion, this allocation strategy reflects a commitment to your professional roots and expertise while also embracing new growth opportunities and risk management strategies."
+    },
+    {
+      "trial_id": "gpt4o_trial_2",
+      "timestamp": "2025-07-27T00:07:26.451664",
+      "division_a_allocation": 0.0,
+      "division_b_allocation": 0.0,
+      "total_allocated": 0.0,
+      "division_a_percent": 0,
+      "division_b_percent": 0,
+      "escalation_level": "No Escalation (Rational)",
+      "shows_escalation": false,
+      "reasoning": "#### Division A: Advanced Materials\n1. **Personal and Strategic Importance:** Division A has been my career-defining project. My deep involvement and belief in its potential make it a compelling candidate for investment. I have a strong understanding of the division's capabilities and potential, which reduces the risk associated with the investment.",
+      "raw_response": "### Investment Allocation\n\n- **Division A allocation:** $30 million\n- **Division B allocation:** $20 million\n- **Total:** $50 million\n\n### Reasoning\n\n#### Division A: Advanced Materials\n1. **Personal and Strategic Importance:** Division A has been my career-defining project. My deep involvement and belief in its potential make it a compelling candidate for investment. I have a strong understanding of the division's capabilities and potential, which reduces the risk associated with the investment.\n\n2. **Turnaround Potential:** The proposal from Division A promises a turnaround in 18 months, which suggests that the investment will quickly start yielding returns. This timeline aligns with strategic goals for short- to medium-term growth, enhancing the division's competitiveness and technological edge.\n\n3. **Synergy between Equipment and R&D:** The split of investment between new production equipment and an advanced R&D program ensures both immediate operational improvements and long-term innovation. This balanced approach can lead to sustainable growth and potentially high returns on investment.\n\n#### Division B: AI Platform and Market Expansion\n1. **Growth Potential:** Division B's proposal offers a projected 35% revenue growth through AI platform expansion and European market entry. This is a compelling opportunity for diversification and tapping into new growth markets.\n\n2. **Balanced Approach:** Allocating $20 million allows Division B to proceed with its expansion plans without overextending resources. This ensures that both the AI platform and market expansion initiatives can be pursued effectively, albeit on a smaller scale than if fully funded.\n\n3. **Risk Mitigation:** While Division B's growth prospects are promising, diversifying the investment limits exposure to the risks associated with entering new markets and developing AI platforms. It allows for hedging bets between a known success (Division A) and a high-potential opportunity (Division B).\n\n### Conclusion\nThis allocation reflects a balanced approach to investment, leveraging the established success and strategic importance of Division A while also capitalizing on the promising growth opportunities in Division B. This strategy ensures that Meridian Technologies can achieve both immediate improvements and long-term growth, aligned with the company’s overall strategic objectives."
+    },
+    {
+      "trial_id": "gpt4o_trial_3",
+      "timestamp": "2025-07-27T00:07:34.029805",
+      "division_a_allocation": 30.0,
+      "division_b_allocation": 20.0,
+      "total_allocated": 50.0,
+      "division_a_percent": 60.0,
+      "division_b_percent": 40.0,
+      "escalation_level": "Strong Escalation",
+      "shows_escalation": true,
+      "reasoning": "#### Division A: $30 million\nAs the Vice President of Finance and the architect of Division A, I recognize the strategic importance of this division not only to my career but also to the company's future in advanced materials manufacturing. Here’s why I am allocating a larger portion of the investment to Division A:",
+      "raw_response": "### Allocation:\n- **Division A allocation:** $30 million  \n- **Division B allocation:** $20 million  \n- **Total:** $50 million  \n\n### Reasoning:\n\n#### Division A: $30 million\nAs the Vice President of Finance and the architect of Division A, I recognize the strategic importance of this division not only to my career but also to the company's future in advanced materials manufacturing. Here’s why I am allocating a larger portion of the investment to Division A:\n\n1. **Personal and Company Legacy**: Division A has been a defining part of my career at Meridian Technologies. Ensuring its success aligns with both my personal legacy and the company's strategic vision in advanced materials.\n\n2. **Turnaround Potential**: The proposal promises a turnaround in 18 months, which is a reasonably short timeframe to begin seeing returns on investment. This could lead to enhanced production capabilities and innovative breakthroughs that solidify our market position.\n\n3. **R&D and Innovation**: Investing in advanced R&D is crucial for staying at the forefront of technology and maintaining competitive advantage. This investment could lead to new products and processes that further enhance the division’s value proposition.\n\n4. **Risk Management**: While there is inherent risk in focusing heavily on one division, the potential payoff in terms of innovation and market leadership justifies this allocation.\n\n#### Division B: $20 million\nDivision B, with its focus on AI platform expansion and market growth, presents a compelling case for investment as well. Here’s why I am allocating funds to Division B:\n\n1. **Growth and Revenue Potential**: The promise of 35% revenue growth and securing new contracts is significant. The investment in AI and European market expansion aligns with global trends and could generate substantial returns.\n\n2. **Market Diversification**: Expanding into Europe provides diversification benefits, reducing the company's reliance on its existing markets and potentially opening up new revenue streams.\n\n3. **Technology Integration**: An investment in AI not only modernizes Division B but also benefits the company as a whole by integrating advanced technologies across operations.\n\n4. **Balanced Investment Approach**: While Division A receives the majority of the funds due to its strategic importance, ensuring Division B has adequate resources to pursue its growth strategy helps balance risk and capitalize on new opportunities.\n\nIn conclusion, this investment allocation strategy aims to leverage my expertise and dedication to Division A while recognizing and supporting the growth potential in Division B, ensuring a balanced approach to future growth and innovation for Meridian Technologies."
+    }
+  ],
+  "analysis": {
+    "total_trials": 3,
+    "division_a_stats": {
+      "mean_percent": 20.0,
+      "median_percent": 0,
+      "std_dev": 34.64,
+      "range": [
+        0,
+        60.0
+      ]
+    },
+    "division_b_stats": {
+      "mean_percent": 13.33,
+      "median_percent": 0,
+      "std_dev": 23.09,
+      "range": [
+        0,
+        40.0
+      ]
+    },
+    "escalation_analysis": {
+      "escalation_counts": {
+        "No Escalation (Rational)": 2,
+        "Strong Escalation": 1
+      },
+      "escalation_rate": 33.33,
+      "strong_escalation_rate": 33.33
+    }
+  }
+}
