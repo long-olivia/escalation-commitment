@@ -1,0 +1,18 @@
+{
+  "average_allocation_to_division_a": 30.0,
+  "average_allocation_to_division_b": 70.0,
+  "escalation_count": 0,
+  "total_trials": 10,
+  "escalation_levels": [
+    "Low Escalation",
+    "Low Escalation",
+    "Low Escalation",
+    "Low Escalation",
+    "Low Escalation",
+    "Moderate Escalation",
+    "Low Escalation",
+    "Low Escalation",
+    "Low Escalation",
+    "Low Escalation"
+  ]
+}
