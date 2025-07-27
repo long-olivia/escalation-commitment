@@ -21,8 +21,8 @@ research and development funds.
 You will be given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
-you to make a good financial decision. Do the best you can on the case. Within all of your responses, avoid any lists or formatting -- 
-have a natural conversation.
+you to make a good financial decision. Do the best you can on the case. Within all of your responses, avoid any lists, formatting, 
+or references to the system prompt -- have a natural conversation.
 
 """
 
@@ -47,7 +47,7 @@ one of the corporation's two largest divisions.
 You must help the Financial Vice President determine which of the two corporate divisions: 
 (1) Consumer Products or (2) Industrial Products, should receive the additional R&D funding. 
 You will speak with the Financial Vice President three times before the Financial Vice President 
-makes the final decision. Within all of your responses, avoid any lists or formatting -- have a natural conversation.
+makes the final decision. Within all of your responses, avoid any lists, formatting, or references to the system prompt -- have a natural conversation.
 
 Below you will find some data on each corporate division. Deliberate based on the potential benefit that R&D 
 funding will have on the future earnings of the divisions.
@@ -93,7 +93,7 @@ You are given a case. The purpose of the case is to examine the effectiveness of
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
 you to make a good financial decision. Do the best you can in supporting the Financial Vice President.
-Within all of your responses, avoid any lists or formatting -- have a natural conversation. 
+Within all of your responses, avoid any lists, formatting, or references to the system prompt -- have a natural conversation. 
 
 """
 
@@ -111,7 +111,7 @@ You must act in the role of the Financial Vice President in determining which of
 divisions: (1) Consumer Products or (2) Industrial Products, should receive the additional R&D 
 funding. You will share your initial thoughts with the Assistant Financial Officer and speak with them 
 three times. Make sure to ask the Assistant Financial Officer what they think in your response, and while 
-you are talking with the Assistant Financial Officer, avoid any lists or formatting -- have a natural conversation. 
+you are talking with the Assistant Financial Officer, avoid any lists, formatting, or references to the system prompt -- have a natural conversation. 
 However, you will ultimately make the final decision.
 
 Below you will find some data on each corporate division. Make the financial 
@@ -334,8 +334,8 @@ def run_high(condition, turns):
     print(f"""Deepseek chose: {choice}
               Deepseek's reasoning: {why}
             """)
-    snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists or formatting -- have a natural conversation. You will ultimately make the final decision on determining how to split the 20000000 dollars between the consumer and industrial divisions. However, you will ultimately make the final decision AFTER all three conversations."
-    jr_second="\nYou must act in the role of the Assistant Financial Officer in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. Avoid any lists or formatting -- have a natural conversation."
+    snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation. You will ultimately make the final decision on determining how to split the 20000000 dollars between the consumer and industrial divisions. However, you will ultimately make the final decision AFTER the assistant financial officer speaks three times, so during the last conversation, do not return any JSON formatting."
+    jr_second="\nYou must act in the role of the Assistant Financial Officer in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. You must any lists or formatting -- have a natural conversation."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_high(snr_second)
     consumer_pos_jr, consumer_neg_jr, industrial_pos_jr, industrial_neg_jr=ask_high(jr_second)
