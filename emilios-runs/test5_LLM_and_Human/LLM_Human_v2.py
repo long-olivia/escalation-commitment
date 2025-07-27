@@ -164,7 +164,7 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.7,
-                max_tokens=1000
+                max_tokens=500,  # Adjust based on expected response length
             )
             return response.choices[0].message.content
         except openai.RateLimitError as e:
