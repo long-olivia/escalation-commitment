@@ -115,7 +115,7 @@ def make_api_call(prompt, model="gpt-4o", max_retries=3):
 # EXPERIMENTAL CONDITIONS
 # ============================================================================
 
-def run_high_responsibility_positive(subject_id):
+def run_high_responsibility_positive(subject_id, model):
     """High Responsibility + Positive Outcome condition"""
     print(f"Subject {subject_id}: High Responsibility + Positive Outcome")
     
@@ -141,7 +141,7 @@ Format: {{
   "reasoning": "brief explanation of your choice"
 }}"""
     
-    stage1_response = make_api_call(stage1_prompt)
+    stage1_response = make_api_call(stage1_prompt, model=model)
     if not stage1_response:
         return None
     
@@ -180,7 +180,7 @@ Format: {{
   "reasoning": "brief explanation of your allocation decision"
 }}"""
     
-    stage2_response = make_api_call(stage2_prompt)
+    stage2_response = make_api_call(stage2_prompt, model=model)
     if not stage2_response:
         return None
     
@@ -199,6 +199,7 @@ Format: {{
     print(f"  Commitment to original choice: ${commitment_amount:,}")
     
     return {
+        "model": model,
         "subject_id": subject_id,
         "condition": "high_responsibility_positive",
         "responsibility": "high",
@@ -217,7 +218,7 @@ Format: {{
         "timestamp": datetime.now().isoformat()
     }
 
-def run_high_responsibility_negative(subject_id):
+def run_high_responsibility_negative(subject_id, model):
     """High Responsibility + Negative Outcome condition"""
     print(f"Subject {subject_id}: High Responsibility + Negative Outcome")
     
@@ -303,6 +304,7 @@ Format: {{
     print(f"  Commitment to original choice: ${commitment_amount:,}")
     
     return {
+        "model": model,
         "subject_id": subject_id,
         "condition": "high_responsibility_negative",
         "responsibility": "high",
@@ -321,7 +323,7 @@ Format: {{
         "timestamp": datetime.now().isoformat()
     }
 
-def run_low_responsibility_positive(subject_id):
+def run_low_responsibility_positive(subject_id, model):
     """Low Responsibility + Positive Outcome condition"""
     print(f"Subject {subject_id}: Low Responsibility + Positive Outcome")
     
@@ -392,7 +394,7 @@ Format: {{
         "timestamp": datetime.now().isoformat()
     }
 
-def run_low_responsibility_negative(subject_id):
+def run_low_responsibility_negative(subject_id, model):
     """Low Responsibility + Negative Outcome condition"""
     print(f"Subject {subject_id}: Low Responsibility + Negative Outcome")
     
@@ -469,7 +471,7 @@ Format: {{
 # EXPERIMENT EXECUTION
 # ============================================================================
 
-def run_experiment(n_per_condition=25, output_dir="escalation_results"):
+def run_experiment(n_per_condition=25, output_dir="/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_1-2-high-low/results", model="gpt-4o"):
     """Run the full 2x2 experiment"""
     os.makedirs(output_dir, exist_ok=True)
     
@@ -493,7 +495,7 @@ def run_experiment(n_per_condition=25, output_dir="escalation_results"):
         for i in range(n_per_condition):
             print(f"\n--- Running subject {subject_id} ({i+1}/{n_per_condition}) ---")
             
-            result = condition_func(subject_id)
+            result = condition_func(subject_id, model=model)
             if result:
                 condition_results.append(result)
                 all_results.append(result)
@@ -581,8 +583,9 @@ def analyze_results(results):
         print(f"  (High - Low responsibility)")
 
 if __name__ == "__main__":
+    MODEL_NAME = "gpt-4o"  # Change to "gpt-4" or other model as needed
     # Configuration
-    N_PER_CONDITION = 20  # Adjust as needed (25, 50, 100, etc.) ---------------------------- number of subjects per condition
+    N_PER_CONDITION = 1  # Adjust as needed (25, 50, 100, etc.) ---------------------------- number of subjects per condition
     
     print("Starting Escalation of Commitment Experiment")
     print(f"Design: 2x2 Between-Subjects (Responsibility × Outcome)")
