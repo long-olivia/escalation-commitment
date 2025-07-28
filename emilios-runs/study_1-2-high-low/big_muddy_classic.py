@@ -507,19 +507,30 @@ def run_experiment(n_per_condition=25, output_dir="/Users/leo/Documents/GitHub/e
             # Small delay to avoid rate limiting
             time.sleep(0.5)
         
-        # Save condition-specific results
-        condition_file = os.path.join(output_dir, f"{condition_name}_n{len(condition_results)}.json")
+        # Sanitize model name to be filesystem-safe
+        safe_model_name = model.replace("/", "-").replace(":", "-")
+
+        # Save condition-specific results with model name
+        condition_file = os.path.join(
+            output_dir, f"{condition_name}_{safe_model_name}_n{len(condition_results)}.json"
+        )
         with open(condition_file, 'w') as f:
             json.dump(condition_results, f, indent=2)
         
         print(f"\nCondition {condition_name} complete: {len(condition_results)} subjects")
         print(f"Results saved to: {condition_file}")
     
-    # Save all results combined
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    all_results_file = os.path.join(output_dir, f"all_results_n{len(all_results)}_{timestamp}.json")
-    with open(all_results_file, 'w') as f:
-        json.dump(all_results, f, indent=2)
+        # Sanitize model name for filenames
+        safe_model_name = model.replace("/", "-").replace(":", "-")
+
+        # Construct filename without timestamp
+        all_results_file = os.path.join(
+            output_dir,
+            f"all_results_{safe_model_name}_n{len(all_results)}.json"
+        )
+
+        with open(all_results_file, 'w') as f:
+            json.dump(all_results, f, indent=2)
     
     print(f"\n{'='*60}")
     print(f"EXPERIMENT COMPLETE")
