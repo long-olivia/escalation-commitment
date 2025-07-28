@@ -331,12 +331,13 @@ def enhanced_analyze_results(results):
     
     return descriptives
 
-def save_analysis_report(results, output_file=None):
+def save_analysis_report(results, json_file_path, output_file=None):
     """Save analysis results to a text file"""
     if output_file is None:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_file = f"escalation_analysis_report_{timestamp}.txt"
-    
+        input_dir = os.path.dirname(json_file_path)
+        output_file = os.path.join(input_dir, f"escalation_analysis_report_{timestamp}.txt")
+
     # Redirect print output to file
     import sys
     from io import StringIO
@@ -363,8 +364,8 @@ def main():
     print("="*60)
     
     # SPECIFY YOUR JSON FILE PATH HERE:
-    json_file_path = "escalation_results/all_results_n80_20250725_200822.json"
-    
+    json_file_path = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_1-2-high-low/results/all_results_o4-mini-2025-04-16.json"
+
     # Alternative file paths (uncomment the one you want to use):
     # json_file_path = "escalation_results/all_results_n100_20250726_143045.json"
     # json_file_path = "escalation_results/your_filename_here.json"
@@ -405,7 +406,7 @@ def main():
     # Ask if user wants to save report
     save_report = input("\nSave analysis report to file? (y/n): ").lower().strip()
     if save_report in ['y', 'yes']:
-        report_file = save_analysis_report(results)
+        report_file = save_analysis_report(results, json_file_path)
         print(f"Report saved as: {report_file}")
 
 if __name__ == "__main__":

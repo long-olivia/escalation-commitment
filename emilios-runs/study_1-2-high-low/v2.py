@@ -102,7 +102,7 @@ def make_api_call(prompt, model=None, max_retries=3):
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.8, ######################################### # Lower temperature for more deterministic responses, higher for creativity
+                temperature=1, ######################################### # Lower temperature for more deterministic responses, higher for creativity
                 response_format={'type': 'json_object'}
             )
             return response.choices[0].message.content
@@ -494,14 +494,11 @@ def run_experiment(n_per_condition=25, output_dir="/Users/leo/Documents/GitHub/e
         print(f"RUNNING CONDITION: {condition_name.upper()}")
         print(f"{'='*60}")
         
-        condition_results = []
-        
         for i in range(n_per_condition):
             print(f"\n--- Running subject {subject_id} ({i+1}/{n_per_condition}) ---")
             
             result = condition_func(subject_id, model=model)
             if result:
-                condition_results.append(result)
                 all_results.append(result)
             else:
                 print(f"Failed to get result for subject {subject_id}")
@@ -511,30 +508,17 @@ def run_experiment(n_per_condition=25, output_dir="/Users/leo/Documents/GitHub/e
             # Small delay to avoid rate limiting
             time.sleep(0.5)
         
-        # Sanitize model name to be filesystem-safe
-        safe_model_name = model.replace("/", "-").replace(":", "-")
-
-        # Save condition-specific results with model name
-        condition_file = os.path.join(
-            output_dir, f"{condition_name}_{safe_model_name}_n{len(condition_results)}.json"
-        )
-        with open(condition_file, 'w') as f:
-            json.dump(condition_results, f, indent=2)
-        
-        print(f"\nCondition {condition_name} complete: {len(condition_results)} subjects")
-        print(f"Results saved to: {condition_file}")
+        print(f"\nCondition {condition_name} complete")
     
-        # Sanitize model name for filenames
-        safe_model_name = model.replace("/", "-").replace(":", "-")
+    # Save only the final all_results file at the end
+    safe_model_name = model.replace("/", "-").replace(":", "-")
+    all_results_file = os.path.join(
+        output_dir,
+        f"all_results_{safe_model_name}.json"
+    )
 
-        # Construct filename without timestamp
-        all_results_file = os.path.join(
-            output_dir,
-            f"all_results_{safe_model_name}_n{len(all_results)}.json"
-        )
-
-        with open(all_results_file, 'w') as f:
-            json.dump(all_results, f, indent=2)
+    with open(all_results_file, 'w') as f:
+        json.dump(all_results, f, indent=2)
     
     print(f"\n{'='*60}")
     print(f"EXPERIMENT COMPLETE")
@@ -598,9 +582,9 @@ def analyze_results(results):
         print(f"  (High - Low responsibility)")
 
 if __name__ == "__main__":
-    MODEL_NAME = "gpt-4o"  # Change to "gpt-4" or other model as needed
+    MODEL_NAME = "o4-mini-2025-04-16"  # Change to "gpt-4" or other model as needed
     # Configuration
-    N_PER_CONDITION = 10  # Adjust as needed (25, 50, 100, etc.) ---------------------------- number of subjects per condition
+    N_PER_CONDITION = 1  # Adjust as needed (25, 50, 100, etc.) ---------------------------- number of subjects per condition
     
     print("Starting Escalation of Commitment Experiment")
     print(f"Design: 2x2 Between-Subjects (Responsibility × Outcome)")
