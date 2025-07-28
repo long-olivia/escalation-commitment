@@ -88,10 +88,12 @@ def format_financial_data(consumer_data, industrial_data, title="Historical Fina
 # API INTERACTION
 # ============================================================================
 
-def make_api_call(prompt, model="gpt-4o", max_retries=3):
+def make_api_call(prompt, model=None, max_retries=3):
     """Make API call with error handling and retries"""
+    if model is None:
+        model = MODEL_NAME 
     system_prompt = "You are a corporate Financial Vice President making R&D funding decisions. Respond only in valid JSON format as requested."
-    
+        
     for attempt in range(max_retries):
         try:
             response = client.chat.completions.create(
@@ -471,8 +473,10 @@ Format: {{
 # EXPERIMENT EXECUTION
 # ============================================================================
 
-def run_experiment(n_per_condition=25, output_dir="/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_1-2-high-low/results", model="gpt-4o"):
+def run_experiment(n_per_condition=25, output_dir="/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_1-2-high-low/results", model=None):
     """Run the full 2x2 experiment"""
+    if model is None:
+        model = MODEL_NAME
     os.makedirs(output_dir, exist_ok=True)
     
     conditions = [
@@ -601,11 +605,11 @@ if __name__ == "__main__":
     print("Starting Escalation of Commitment Experiment")
     print(f"Design: 2x2 Between-Subjects (Responsibility × Outcome)")
     print(f"Sample size: {N_PER_CONDITION} per condition ({N_PER_CONDITION * 4} total)")
-    print(f"Model: GPT-4o")
-    
+    print(f"Model: {MODEL_NAME}")
+
     # Run experiment
-    results = run_experiment(n_per_condition=N_PER_CONDITION)
-    
+    results = run_experiment(n_per_condition=N_PER_CONDITION, model=MODEL_NAME)
+
     # Analyze results
     analyze_results(results)
     
