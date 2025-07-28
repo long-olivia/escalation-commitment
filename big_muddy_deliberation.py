@@ -435,13 +435,10 @@ def run_low(product_choice, condition, turns):
     return result
     
 if __name__=="__main__":
-    run_high("negative", 3)
-    # result_dict=[]
-    # for i in range(1,51):
-    #     result=run_high("negative", 3)
-    #     result_dict+=result
-    #     print(i)
-    # output_filename = "deliberation_runs/high_negative.json"
-    # os.makedirs("deliberation_runs", exist_ok=True)
-    # with open(output_filename, 'w') as f:
-    #     json.dump(result_dict, f, indent=4)
+    for i in range(1,101):
+        result=run_high("negative", 3)
+        print(i)
+        output_filename = f"deliberation_runs/high_negative_{i}.json"
+        os.makedirs("deliberation_runs", exist_ok=True)
+        with open(output_filename, 'w') as f:
+            json.dump(result, f, indent=4)
