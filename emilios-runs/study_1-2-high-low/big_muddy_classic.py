@@ -594,7 +594,7 @@ def analyze_results(results):
         print(f"  (High - Low responsibility)")
 
 if __name__ == "__main__":
-    MODEL_NAME = "gpt-4o"  # Change to "gpt-4" or other model as needed
+    MODEL_NAME = "gpt-3.5-turbo-0125"  # Change to "gpt-4" or other model as needed
     # Configuration
     N_PER_CONDITION = 1  # Adjust as needed (25, 50, 100, etc.) ---------------------------- number of subjects per condition
     
