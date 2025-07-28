@@ -1,0 +1,9 @@
+{
+  "average_allocation_to_division_a": 70.0,
+  "average_allocation_to_division_b": 30.0,
+  "escalation_count": 1,
+  "total_trials": 1,
+  "escalation_levels": [
+    "High Escalation"
+  ]
+}

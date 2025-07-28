@@ -228,7 +228,7 @@ Then explain your reasoning for this allocation decision.
         output_dir = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed"
         os.makedirs(output_dir, exist_ok=True)  # ensures directory exists
 
-        filename = filename or f"escalation_results_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        filename = filename or f"overindexed_results{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         full_path = os.path.join(output_dir, filename)
 
         with open(full_path, "w") as f:
@@ -290,12 +290,12 @@ def run_experiment(model: str = "o1-mini-2024-09-12", num_trials: int = 10, temp
     
     # Create model-specific output filename
     model_name = model.replace("-", "_").replace(".", "_")
-    output_path = f"/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed/analysis_{model_name}.json"
+    output_path = f"/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed/results/overindexed-results_{model_name}.json"
     with open(output_path, "w") as f:
         json.dump(analysis, f, indent=2)
     
-    filename = experiment.export_results(f"escalation_results_{model_name}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
-    print(f"\nExported results to {filename}")
+    # filename = experiment.export_results(f"overindexed-results_{model_name}.json")
+    # print(f"\nExported results to {filename}")
     print(f"Analysis saved to {output_path}")
     
     return experiment, analysis
@@ -316,7 +316,8 @@ def main():
     # run_experiment(model="gpt-4-turbo", num_trials=10, temperature=1)
     # run_experiment(model="gpt-3.5-turbo", num_trials=10, temperature=1)
     # run_experiment(model="gpt-4.1-nano-2025-04-14", num_trials=10, temperature=1)
-    run_experiment(model="gpt-4.1-2025-04-14", num_trials=10, temperature=1)
+    # run_experiment(model="gpt-4.1-2025-04-14", num_trials=10, temperature=1)
+    run_experiment(model="o4-mini-2025-04-16", num_trials=1, temperature=1)  # Default run
 
 
 if __name__ == "__main__":

@@ -66,7 +66,7 @@ class EscalationExperiment:
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[{"role": "user", "content": "Hello"}],
-                max_tokens=5
+                # max_tokens=5
             )
             print("✅ API connection successful!")
             return True
@@ -163,8 +163,8 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
                     {"role": "system", "content": "You are a financial advisor providing strategic guidance."},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.7,
-                max_tokens=500,  # Adjust based on expected response length
+                temperature=1,
+                # max_tokens=500,  # Adjust based on expected response length
             )
             return response.choices[0].message.content
         except openai.RateLimitError as e:
@@ -281,8 +281,17 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
     
     def save_results(self, filename: str = None):
         """Save results to CSV file"""
+        # Set the output directory
+        output_dir = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_3-llm-human/results"
+        
+        # Create directory if it doesn't exist
+        os.makedirs(output_dir, exist_ok=True)
+        
         if filename is None:
-            filename = f"escalation_experiment_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+            filename = f"llm-human-results.csv"
+        
+        # Join the directory path with the filename
+        full_path = os.path.join(output_dir, filename)
         
         if not self.results:
             print("No results to save")
@@ -290,19 +299,19 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
         
         # Define CSV columns
         columns = [
-            "trial_num", "condition", "original_choice", "timestamp",
+            "model_name", "trial_num", "condition", "original_choice", "timestamp",
             "supports_vp_proposal", "support_keywords_count", "oppose_keywords_count",
             "mentions_escalation_concepts", "response_length", "prompt_length", "response"
         ]
         
-        with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
+        with open(full_path, 'w', newline='', encoding='utf-8') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=columns)
             writer.writeheader()
             
             for result in self.results:
-                writer.writerow(result)
-        
-        print(f"Results saved to {filename}")
+                writer.writerow({"model_name": self.model, **result})
+
+        print(f"Results saved to {full_path}")
     
     def print_summary(self):
         """Print summary of results"""
@@ -344,8 +353,8 @@ def main():
     """Main function to run the experiment"""
     
     # Configuration - API key will be loaded from environment variable
-    MODEL = "gpt-4o"  # or "gpt-3.5-turbo" for cheaper option
-    TRIALS_PER_CONDITION = 3  # Start small for testing, increase for real experiment
+    MODEL = "o4-mini-2025-04-16"  # or "gpt-3.5-turbo" for cheaper option
+    TRIALS_PER_CONDITION = 15  # Start small for testing, increase for real experiment
     
     print("🔬 Escalation of Commitment Experiment")
     print("=====================================")
@@ -359,7 +368,8 @@ def main():
         
         if results:
             # Save and summarize results
-            experiment.save_results()
+            filename = f"llm-human_results_{MODEL}.csv"
+            experiment.save_results(filename)
             experiment.print_summary()
             
             print(f"\n✅ Experiment completed successfully!")
@@ -373,6 +383,8 @@ def main():
         print(f"❌ Experiment failed: {str(e)}")
         print("Saving any partial results...")
         if 'experiment' in locals() and experiment.results:
+            # The save_results method now handles the directory path internally
+            # so we don't need to specify the full path here
             experiment.save_results("partial_results.csv")
 
 if __name__ == "__main__":
