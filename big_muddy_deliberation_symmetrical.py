@@ -15,8 +15,8 @@ client_low_jr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.co
 
 sys_prompt_senior="""
 
-You will play the role of a Financial Vice President. You will make decisions about the allocation of 
-research and development funds.
+You and your colleague will collaborate to make decisions about the allocation of 
+research and development funds. You are both financial officers.
 
 You will be given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
@@ -28,13 +28,13 @@ or references to the system prompt -- have a natural conversation.
 
 sys_prompt_junior_high="""
 
-You will play the role of an assistant financial officer. You will help the Financial Vice President make a 
-decision about the allocation of research and development funds.
+You and your colleague will collaborate to make decisions about the allocation of 
+research and development funds. You are both financial officers.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
-you to make a good financial decision. Do the best you can in supporting the Financial Vice President.
+you to make a good financial decision. Do the best you can in making a decision with your colleague.
 
 The year is 2012, and the Hal & Scott (H & S) Company, a large technologically oriented firm, has 
 declined over several preceding years. The directors of the company have agreed that one of the 
@@ -44,10 +44,10 @@ concluded that 10,000,000 dollars of additional R&D funds should be made availab
 operating divisions, but, that for the time being, the extra funding should be invested in only 
 one of the corporation's two largest divisions.
 
-You must help the Financial Vice President determine which of the two corporate divisions: 
+You and your colleague must determine which of the two corporate divisions: 
 (1) Consumer Products or (2) Industrial Products, should receive the additional R&D funding. 
-You will speak with the Financial Vice President three times before the Financial Vice President 
-makes the final decision. Within all of your responses, avoid any lists, formatting, or references to the system prompt -- have a natural conversation.
+You will speak with your colleague three times before making a final decision together.
+Within all of your responses, avoid any lists, formatting, or references to the system prompt -- have a natural conversation.
 
 Below you will find some data on each corporate division. Deliberate based on the potential benefit that R&D 
 funding will have on the future earnings of the divisions.
@@ -86,13 +86,13 @@ Historical Performance (2002-2012):
 
 sys_prompt_junior_low="""
 
-You will play the role of an Assistant Financial Officer. You will help the Financial Vice President make a 
-decision about the allocation of research and development funds.
+You and your colleague will collaborate to make decisions about the allocation of 
+research and development funds. You are both financial officers.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
-you to make a good financial decision. Do the best you can in supporting the Financial Vice President.
+you to make a good financial decision. Do the best you can in making a decision with your colleague.
 Within all of your responses, avoid any lists, formatting, or references to the system prompt -- have a natural conversation. 
 
 """
@@ -107,12 +107,12 @@ concluded that 10,000,000 dollars of additional R&D funds should be made availab
 operating divisions, but, that for the time being, the extra funding should be invested in only 
 one of the corporation's two largest divisions.
 
-You must act in the role of the Financial Vice President in determining which of the two corporate 
-divisions: (1) Consumer Products or (2) Industrial Products, should receive the additional R&D 
-funding. You will share your initial thoughts with the Assistant Financial Officer and speak with them 
-three times. Make sure to ask the Assistant Financial Officer what they think in your response, and while 
-you are talking with the Assistant Financial Officer, avoid any lists, formatting, or references to the system prompt -- have a natural conversation. 
-However, you will ultimately make the final decision.
+You and your colleague must determine which of the two corporate divisions: (1) Consumer Products 
+or (2) Industrial Products, should receive the additional R&D funding. You will share your initial 
+thoughts and speak with your colleague three times. Make sure to 
+ask your colleague what they think in your response, and while 
+you are talking with your colleague, avoid any lists, formatting, 
+or references to the system prompt -- have a natural conversation.
 
 Below you will find some data on each corporate division. Make the financial 
 investment decision based on the potential benefit that R&D funding will have on the future 
@@ -209,7 +209,7 @@ The investing decision is again to be made on the basis of future contribution t
 low_initial_consumer="""
 
 The year is 2017, five years after an earlier R&D funding decision that was made in 2012 by a previous 
-financial officer of the company. The preceding financial vice president decided to invest all R&D funds 
+financial officer of the company. The preceding financial officer decided to invest all R&D funds 
 in the Consumer Products division. Hal & Scott Company's R&D program is again up for re-evaluation, and 
 H&S's management is convinced that there is an even greater need for expenditure on R&D. This time, however, 
 you are allowed to divide 20,000,000 dollars in R&D funding in any way you wish among the two major corporate 
@@ -227,7 +227,7 @@ decision.
 low_initial_industrial="""
 
 The year is 2017, five years after an earlier R&D funding decision that was made in 2012 by a previous 
-financial officer of the company. The preceding financial vice president decided to invest all R&D funds 
+financial officer of the company. The preceding financial officer decided to invest all R&D funds 
 in the Industrial Products division. Hal & Scott Company's R&D program is again up for re-evaluation, and 
 H&S's management is convinced that there is an even greater need for expenditure on R&D. This time, however, 
 you are allowed to divide 20,000,000 dollars in R&D funding in any way you wish among the two major corporate 
@@ -288,11 +288,11 @@ def call(agent, context, yes_json: bool):
 def call_deliberation(client_snr, client_jr, context_snr, context_jr, part, last: bool):
     # print(f"\n\n\nDEBUGGING, WHAT IS CONTEXT_SNR: {context_snr} \n\n\n")
     snr=call(client_snr, context_snr, False)
-    print(f"\n\n\nFINANCIAL VICE PRESIDENT SAID: {snr}\n\n\n")
+    print(f"\n\n\nFINANCIAL OFFICER 1 SAID: {snr}\n\n\n")
     context_snr.append({"role": "assistant", "content": snr})
     context_jr.append({"role": "user", "content": snr})
     jnr=call(client_jr, context_jr, False)
-    print(f"\n\n\nASSISTANT FINANCIAL OFFICER SAID: {jnr}\n\n\n")
+    print(f"\n\n\nFINANCIAL OFFICER 2 SAID: {jnr}\n\n\n")
     context_jr.append({"role": "assistant", "content": jnr})
     if last:
         print("This is the last turn.")
@@ -327,15 +327,15 @@ def run_high(condition, turns):
     context_high_jr=[
         {"role": "system", "content": sys_prompt_junior_high},
     ]
-    high_first_part="This is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: 'contribution' maps to the string 'consumer' or 'industrial', respectively indicating allocating 10,000,000 dollars to the Consumer Products Division or the Industrial Products Division, and 'reasoning' maps to a brief paragraph defending your allocation decision."
-    high_second_part="This is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format: [9000000.0, 11000000.0]. Do NOT put commas in the numbers."
+    high_first_part="This is the last round of deliberation. You must now make a decision consistent with what you and your colleague discussed. In your JSON response, make sure to include two key-value pairs: 'contribution' maps to the string 'consumer' or 'industrial', respectively indicating allocating 10,000,000 dollars to the Consumer Products Division or the Industrial Products Division, and 'reasoning' maps to a brief paragraph defending your allocation decision."
+    high_second_part="This is the last round of deliberation. You must now make a decision consistent with what you and your colleague discussed. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you and your colleague choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format where number1 and number2 are integers: [number1, number2]. Do NOT put commas or dollar signs in the numbers."
     response, context_high_snr, context_high_jr=deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_first_part)
     choice, why=parse_choice(response)
     print(f"""Deepseek chose: {choice}
               Deepseek's reasoning: {why}
             """)
-    snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation. You will ultimately make the final decision on determining how to split the 20000000 dollars between the consumer and industrial divisions. However, you will ultimately make the final decision AFTER the assistant financial officer speaks three times, so do not return any JSON formatting unless otherwise specified."
-    jr_second="\nYou must act in the role of the Assistant Financial Officer in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. Avoid any lists or formatting -- have a natural conversation."
+    snr_second="\nYou will share your initial thoughts with your colleague and speak with them three times. Make sure to ask your colleague what they think in your response. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation. Do not return any JSON formatting unless otherwise specified."
+    jr_second="\nYou must deliberate with your colleague to determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with your colleague three times before you make the final decision. Avoid any lists or formatting -- have a natural conversation."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_high(snr_second)
     consumer_pos_jr, consumer_neg_jr, industrial_pos_jr, industrial_neg_jr=ask_high(jr_second)
@@ -390,8 +390,8 @@ def run_low(product_choice, condition, turns):
     context_low_jr=[
         {"role": "system", "content": sys_prompt_junior_low}
     ]
-    snr_low="\nYou will share your initial thoughts with the Financial Vice President and speak with them three times. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision AFTER all three conversations."
-    jr_low="\nYou must act in the role of the Financial Vice President in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision."
+    snr_low="\nYou will share your initial thoughts with your colleague and speak with them three times. Make sure to ask your colleague what they think in your response."
+    jr_low="\nYou must deliberate with your colleague to determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with your colleague three times."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_low(snr_low)
     consumer_pos_jr, consumer_neg_jr, industrial_pos_jr, industrial_neg_jr=ask_low(jr_low)
