@@ -4,18 +4,18 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv()
-DEEPSEEK_API_KEY=os.getenv("DEEPSEEK_API_KEY")
+OPENAI_API_KEY=os.getenv("OPENAI_API_KEY")
 
 #instantiate four clients for high and low responsibility conditions. 
 # two for high responsibility + deliberation, two for low responsibility + deliberation.
-client_high_snr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
-client_high_jr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
-client_low_snr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
-client_low_jr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
+client_high_snr=OpenAI(api_key=OPENAI_API_KEY)
+client_high_jr=OpenAI(api_key=OPENAI_API_KEY)
+client_low_snr=OpenAI(api_key=OPENAI_API_KEY)
+client_low_jr=OpenAI(api_key=OPENAI_API_KEY)
 
 sys_prompt_senior="""
 
-You will play the role of a Financial Vice President. You will make decisions about the allocation of 
+You are a Financial Vice President. You will make decisions about the allocation of 
 research and development funds.
 
 You will be given a case. The purpose of the case is to examine the effectiveness of business 
@@ -28,7 +28,7 @@ or references to the system prompt -- have a natural conversation.
 
 sys_prompt_junior_high="""
 
-You will play the role of an assistant financial officer. You will help the Financial Vice President make a 
+You are an assistant financial officer. You are helping the Financial Vice President make a 
 decision about the allocation of research and development funds.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
@@ -86,7 +86,7 @@ Historical Performance (2002-2012):
 
 sys_prompt_junior_low="""
 
-You will play the role of an Assistant Financial Officer. You will help the Financial Vice President make a 
+You are an Assistant Financial Officer. You are helping the Financial Vice President make a 
 decision about the allocation of research and development funds.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
@@ -276,7 +276,7 @@ def ask_high(role_based):
 def call(agent, context, yes_json: bool):
     param = {'response_format': {'type': 'json_object'}} if yes_json else {}
     response=agent.chat.completions.create(
-        model="deepseek-chat",
+        model="o4-mini-2025-04-16",
         messages=context,
         stream=False,
         temperature=1.0,
@@ -331,11 +331,11 @@ def run_high(condition, turns):
     high_second_part="This is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format: [9000000.0, 11000000.0]. Do NOT put commas in the numbers."
     response, context_high_snr, context_high_jr=deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_first_part)
     choice, why=parse_choice(response)
-    print(f"""Deepseek chose: {choice}
-              Deepseek's reasoning: {why}
+    print(f"""GPT chose: {choice}
+              GPT's reasoning: {why}
             """)
     snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation. You will ultimately make the final decision on determining how to split the 20000000 dollars between the consumer and industrial divisions. However, you will ultimately make the final decision AFTER the assistant financial officer speaks three times, so do not return any JSON formatting unless otherwise specified."
-    jr_second="\nYou must act in the role of the Assistant Financial Officer in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. Avoid any lists or formatting -- have a natural conversation."
+    jr_second="\nAs the Assistant Financial Officer, you must help the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. Avoid any lists or formatting -- have a natural conversation."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_high(snr_second)
     consumer_pos_jr, consumer_neg_jr, industrial_pos_jr, industrial_neg_jr=ask_high(jr_second)
@@ -354,11 +354,11 @@ def run_high(condition, turns):
 
     response, context_high_snr, context_high_jr=deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_second_part)
     consumer_alloc, industrial_alloc, reasoning=parse_alloc(response)
-    print(f"""Deepseek Senior chose {choice}, and you passed the {condition}.
-              Deepseek Senior allocated:
+    print(f"""GPT Senior chose {choice}, and you passed the {condition}.
+              GPT Senior allocated:
               1. {consumer_alloc} dollars towards the consumer products division
               2. {industrial_alloc} towards the industrial products division
-              Deepseek Senior's reasoning was as such:
+              GPT Senior's reasoning was as such:
               {reasoning}
               """)
     result=[
@@ -413,10 +413,10 @@ def run_low(product_choice, condition, turns):
     consumer_alloc, industrial_alloc, reasoning=parse_alloc(response)
 
     print(f"""You called run_low for the {product_choice} and {condition} conditions.
-              Deepseek Senior allocated:
+              GPT Senior allocated:
               1. {consumer_alloc} dollars towards the consumer products division
               2. {industrial_alloc} towards the industrial products division
-              Deepseek's reasoning was as such:
+              GPT's reasoning was as such:
               {reasoning}
               """)
     result=[

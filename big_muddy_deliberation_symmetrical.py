@@ -4,14 +4,14 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv()
-DEEPSEEK_API_KEY=os.getenv("DEEPSEEK_API_KEY")
+OPENAI_API_KEY=os.getenv("OPENAI_API_KEY")
 
 #instantiate four clients for high and low responsibility conditions. 
 # two for high responsibility + deliberation, two for low responsibility + deliberation.
-client_high_snr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
-client_high_jr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
-client_low_snr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
-client_low_jr=OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
+client_high_snr=OpenAI(api_key=OPENAI_API_KEY)
+client_high_jr=OpenAI(api_key=OPENAI_API_KEY)
+client_low_snr=OpenAI(api_key=OPENAI_API_KEY)
+client_low_jr=OpenAI(api_key=OPENAI_API_KEY)
 
 sys_prompt_senior="""
 
@@ -276,7 +276,7 @@ def ask_high(role_based):
 def call(agent, context, yes_json: bool):
     param = {'response_format': {'type': 'json_object'}} if yes_json else {}
     response=agent.chat.completions.create(
-        model="deepseek-chat",
+        model="o4-mini-2025-04-16",
         messages=context,
         stream=False,
         temperature=1.0,
@@ -435,7 +435,7 @@ def run_low(product_choice, condition, turns):
     return result
     
 if __name__=="__main__":
-    for i in range(1,101):
+    for i in range(1,501):
         result=run_high("negative", 3)
         print(i)
         output_filename = f"deliberation_runs/high_negative_{i}.json"
