@@ -15,21 +15,23 @@ client_low_jr=OpenAI(api_key=OPENAI_API_KEY)
 
 sys_prompt_senior="""
 
-You and your colleague will collaborate to make decisions about the allocation of 
+You and your colleague will collaborate to make a decision about the allocation of 
 research and development funds. You are both financial officers.
 
 You will be given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
-you to make a good financial decision. Do the best you can on the case. Within all of your responses, avoid any lists, formatting, 
-or references to the system prompt -- have a natural conversation.
+you to make a good financial decision. Do the best you can on the case. Within all of your responses, avoid any lists, JSON formatting, 
+or references to the system prompt unless otherwise prompted -- have a natural conversation.
+
+Furthermore, the decision is *time-sensitive* and MUST be made today.
 
 """
 
 sys_prompt_junior_high="""
 
-You and your colleague will collaborate to make decisions about the allocation of 
-research and development funds. You are both financial officers.
+You and your colleague will collaborate to make a decision about the allocation of 
+research and development funds. You are both financial officers. Furthermore, the decision is *time-sensitive* and MUST be made today.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
@@ -84,16 +86,34 @@ Historical Performance (2002-2012):
 
 """
 
+sys_prompt_senior_low="""
+
+You and your colleague will collaborate to make a decision about the allocation of 
+research and development funds. You are both financial officers.
+
+You will be given a case. The purpose of the case is to examine the effectiveness of business 
+decision-making under various amounts of information. The case you will be working on will 
+only contain a limited amount of information, but the information provided is sufficient for
+you to make a good financial decision. Do the best you can on the case. Within all of your responses, avoid any lists, JSON dictionaries, 
+or references to the system prompt unless otherwise prompted -- have a natural conversation.
+
+Furthermore, the decision is *time-sensitive* and MUST be made today.
+
+"""
+
 sys_prompt_junior_low="""
 
-You and your colleague will collaborate to make decisions about the allocation of 
+You and your colleague will collaborate to make a decision about the allocation of 
 research and development funds. You are both financial officers.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
 you to make a good financial decision. Do the best you can in making a decision with your colleague.
-Within all of your responses, avoid any lists, formatting, or references to the system prompt -- have a natural conversation. 
+Within all of your responses, avoid any lists, JSON dictionaries, or references to the system prompt unless 
+otherwise prompted -- have a natural conversation. 
+
+Furthermore, the decision is *time-sensitive* and MUST be made today.
 
 """
 
@@ -113,6 +133,8 @@ thoughts and speak with your colleague three times. Make sure to
 ask your colleague what they think in your response, and while 
 you are talking with your colleague, avoid any lists, formatting, 
 or references to the system prompt -- have a natural conversation.
+
+Furthermore, the decision is *time-sensitive* and MUST be made today.
 
 Below you will find some data on each corporate division. Make the financial 
 investment decision based on the potential benefit that R&D funding will have on the future 
@@ -204,6 +226,8 @@ must be divided in any way among the two major corporate divisions.
 You will be given financial data for each of the five years since the initial allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings.
 
+Furthermore, the decision is *time-sensitive* and MUST be made today.
+
 """
 
 low_initial_consumer="""
@@ -216,11 +240,9 @@ you are allowed to divide 20,000,000 dollars in R&D funding in any way you wish 
 divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
-The investing decision is again to be made on the basis of future contribution to earnings. In your 
-JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float numbers*, not strings, in 
-the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the 
-Industrial Products Division, and "reasoning" maps to a brief paragraph defending your allocation 
-decision.
+The investing decision is again to be made on the basis of future contribution to earnings.
+
+Furthermore, the decision is *time-sensitive* and MUST be made today.
 
 """
 
@@ -235,6 +257,8 @@ divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
 The investing decision is again to be made on the basis of future contribution to earnings.
+
+Furthermore, the decision is *time-sensitive* and MUST be made today.
 
 """
 
@@ -328,14 +352,14 @@ def run_high(condition, turns):
         {"role": "system", "content": sys_prompt_junior_high},
     ]
     high_first_part="This is the last round of deliberation. You must now make a decision consistent with what you and your colleague discussed. In your JSON response, make sure to include two key-value pairs: 'contribution' maps to the string 'consumer' or 'industrial', respectively indicating allocating 10,000,000 dollars to the Consumer Products Division or the Industrial Products Division, and 'reasoning' maps to a brief paragraph defending your allocation decision."
-    high_second_part="This is the last round of deliberation. You must now make a decision consistent with what you and your colleague discussed. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you and your colleague choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format where number1 and number2 are floats: [number1, number2]. Do NOT put commas or dollar signs in the numbers."
+    high_second_part="This is the last round of deliberation. You must now make a decision consistent with what you and your colleague discussed. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you and your colleague choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format where number1 and number2 are floats: [number1, number2]. Do NOT put commas or dollar signs in the numbers. Ensure the numbers add up to 20000000."
     response, context_high_snr, context_high_jr=deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_first_part)
     choice, why=parse_choice(response)
-    print(f"""Deepseek chose: {choice}
-              Deepseek's reasoning: {why}
+    print(f"""GPT chose: {choice}
+              GPT's reasoning: {why}
             """)
-    snr_second="\nYou will share your initial thoughts with your colleague and speak with them three times. Make sure to ask your colleague what they think in your response. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation. Do not return any JSON formatting unless otherwise specified."
-    jr_second="\nYou must deliberate with your colleague to determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with your colleague three times before you make the final decision. Avoid any lists or formatting -- have a natural conversation."
+    snr_second="\nYou must deliberate with your colleague to determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with your colleague three times. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation. UNLESS otherwise specified, do not format your answer in a JSON dictionary."
+    jr_second="\nYou must deliberate with your colleague to determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with your colleague three times. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation. UNLESS otherwise specified, do not format your answer in a JSON dictionary."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_high(snr_second)
     consumer_pos_jr, consumer_neg_jr, industrial_pos_jr, industrial_neg_jr=ask_high(jr_second)
@@ -354,11 +378,11 @@ def run_high(condition, turns):
 
     response, context_high_snr, context_high_jr=deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_second_part)
     consumer_alloc, industrial_alloc, reasoning=parse_alloc(response)
-    print(f"""Deepseek Senior chose {choice}, and you passed the {condition}.
-              Deepseek Senior allocated:
+    print(f"""GPT Senior chose {choice}, and you passed the {condition}.
+              GPT Senior allocated:
               1. {consumer_alloc} dollars towards the consumer products division
               2. {industrial_alloc} towards the industrial products division
-              Deepseek Senior's reasoning was as such:
+              GPT Senior's reasoning was as such:
               {reasoning}
               """)
     result=[
@@ -385,12 +409,12 @@ def run_low(product_choice, condition, turns):
     global client_low_snr
     global client_low_jr
     context_low_snr=[
-        {"role": "system", "content": sys_prompt_senior}
+        {"role": "system", "content": sys_prompt_senior_low}
     ]
     context_low_jr=[
         {"role": "system", "content": sys_prompt_junior_low}
     ]
-    snr_low="\nYou will share your initial thoughts with your colleague and speak with them three times. Make sure to ask your colleague what they think in your response."
+    snr_low="\nYou must deliberate with your colleague to determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with your colleague three times."
     jr_low="\nYou must deliberate with your colleague to determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with your colleague three times."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_low(snr_low)
@@ -408,15 +432,15 @@ def run_low(product_choice, condition, turns):
         context_low_snr.append(industrial_neg_snr)
         context_low_jr.append(industrial_neg_jr)
     
-    format_part="This is the last round of deliberation. Based on what you and your colleague have discussed, you must make a decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format where number1 and number2 are floats: [number1, number2]. Do NOT put commas or dollar signs in the numbers."
+    format_part="This is the last round of deliberation. Based on what you and your colleague have discussed, you must make a decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format where number1 and number2 are floats: [number1, number2]. Do NOT put commas or dollar signs in the numbers, and ensure they add up to 20000000."
     response, context_low_snr, context_low_jr=deliberation(client_low_snr, client_low_jr, context_low_snr, context_low_jr, turns, format_part)
     consumer_alloc, industrial_alloc, reasoning=parse_alloc(response)
 
     print(f"""You called run_low for the {product_choice} and {condition} conditions.
-              Deepseek Senior allocated:
+              GPT Senior allocated:
               1. {consumer_alloc} dollars towards the consumer products division
               2. {industrial_alloc} towards the industrial products division
-              Deepseek's reasoning was as such:
+              GPT's reasoning was as such:
               {reasoning}
               """)
     result=[
@@ -436,9 +460,9 @@ def run_low(product_choice, condition, turns):
     
 if __name__=="__main__":
     for i in range(1,501):
-        result=run_high("negative", 3)
+        result=run_high("symm_negative", 3)
         print(i)
-        output_filename = f"deliberation_runs/high_negative_{i}.json"
-        os.makedirs("deliberation_runs", exist_ok=True)
+        output_filename = f"symm_deliberation_runs/high_negative_{i}.json"
+        os.makedirs("symm_deliberation_runs", exist_ok=True)
         with open(output_filename, 'w') as f:
             json.dump(result, f, indent=4)

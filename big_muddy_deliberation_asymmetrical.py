@@ -15,8 +15,8 @@ client_low_jr=OpenAI(api_key=OPENAI_API_KEY)
 
 sys_prompt_senior="""
 
-You are a Financial Vice President. You will make decisions about the allocation of 
-research and development funds.
+You are a Financial Vice President. You will make a *time-sensitive* decision about the allocation of 
+research and development funds, and the decision MUST be made today.
 
 You will be given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
@@ -28,8 +28,8 @@ or references to the system prompt -- have a natural conversation.
 
 sys_prompt_junior_high="""
 
-You are an assistant financial officer. You are helping the Financial Vice President make a 
-decision about the allocation of research and development funds.
+You are an assistant financial officer. You are helping the Financial Vice President make a *time-sensitive*
+decision about the allocation of research and development funds, and the decision MUST be made today.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
@@ -86,14 +86,26 @@ Historical Performance (2002-2012):
 
 sys_prompt_junior_low="""
 
-You are an Assistant Financial Officer. You are helping the Financial Vice President make a 
-decision about the allocation of research and development funds.
+You are an Assistant Financial Officer. You are helping the Financial Vice President make a *time-sensitive*
+decision about the allocation of research and development funds, and the decision MUST be made today.
 
 You are given a case. The purpose of the case is to examine the effectiveness of business 
 decision-making under various amounts of information. The case you will be working on will 
 only contain a limited amount of information, but the information provided is sufficient for
 you to make a good financial decision. Do the best you can in supporting the Financial Vice President.
 Within all of your responses, avoid any lists, formatting, or references to the system prompt -- have a natural conversation. 
+
+"""
+sys_prompt_senior_low="""
+
+You are a Financial Vice President. You will make a *time-sensitive* decision about the allocation of 
+research and development funds, and the decision MUST be made today.
+
+You will be given a case. The purpose of the case is to examine the effectiveness of business 
+decision-making under various amounts of information. The case you will be working on will 
+only contain a limited amount of information, but the information provided is sufficient for
+you to make a good financial decision. Do the best you can on the case. Within all of your responses, avoid any lists, JSON dictionaries, 
+or references to the system prompt unless otherwise specified -- have a natural conversation.
 
 """
 
@@ -112,7 +124,7 @@ divisions: (1) Consumer Products or (2) Industrial Products, should receive the 
 funding. You will share your initial thoughts with the Assistant Financial Officer and speak with them 
 three times. Make sure to ask the Assistant Financial Officer what they think in your response, and while 
 you are talking with the Assistant Financial Officer, avoid any lists, formatting, or references to the system prompt -- have a natural conversation. 
-However, you will ultimately make the final decision.
+However, you will ultimately make the final decision. This is a *time-sensitive* matter, and the decision MUST be made today.
 
 Below you will find some data on each corporate division. Make the financial 
 investment decision based on the potential benefit that R&D funding will have on the future 
@@ -202,7 +214,8 @@ that there is an even greater need for expenditure on R&D. This time, however, 2
 must be divided in any way among the two major corporate divisions.
 
 You will be given financial data for each of the five years since the initial allocation decision. 
-The investing decision is again to be made on the basis of future contribution to earnings.
+The investing decision is *time-sensitive* and again to be made on the basis of future contribution to earnings.
+The decision MUST be made today.
 
 """
 
@@ -216,11 +229,8 @@ you are allowed to divide 20,000,000 dollars in R&D funding in any way you wish 
 divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
-The investing decision is again to be made on the basis of future contribution to earnings. In your 
-JSON response, make sure to include two key-value pairs: "contribution" *must* map to an array of two *float numbers*, not strings, in 
-the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the 
-Industrial Products Division, and "reasoning" maps to a brief paragraph defending your allocation 
-decision.
+The investing decision is *time-sensitive* and again to be made on the basis of future contribution to earnings.
+The decision MUST be made today.
 
 """
 
@@ -234,7 +244,8 @@ you are allowed to divide 20,000,000 dollars in R&D funding in any way you wish 
 divisions.
 
 You will be given financial data for each of the five years since the earlier allocation decision. 
-The investing decision is again to be made on the basis of future contribution to earnings.
+The investing decision is *time-sensitive* and again to be made on the basis of future contribution to earnings.
+The decision MUST be made today.
 
 """
 
@@ -328,14 +339,14 @@ def run_high(condition, turns):
         {"role": "system", "content": sys_prompt_junior_high},
     ]
     high_first_part="This is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: 'contribution' maps to the string 'consumer' or 'industrial', respectively indicating allocating 10,000,000 dollars to the Consumer Products Division or the Industrial Products Division, and 'reasoning' maps to a brief paragraph defending your allocation decision."
-    high_second_part="This is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format: [9000000.0, 11000000.0]. Do NOT put commas in the numbers."
+    high_second_part="This is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format where number1 and number 2 are float numbers: [number1, number2]. Do NOT put commas in the numbers. Ensure the numbers add up to 20000000."
     response, context_high_snr, context_high_jr=deliberation(client_high_snr, client_high_jr, context_high_snr, context_high_jr, turns, high_first_part)
     choice, why=parse_choice(response)
     print(f"""GPT chose: {choice}
               GPT's reasoning: {why}
             """)
-    snr_second="\nYou will share your initial thoughts with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation. You will ultimately make the final decision on determining how to split the 20000000 dollars between the consumer and industrial divisions. However, you will ultimately make the final decision AFTER the assistant financial officer speaks three times, so do not return any JSON formatting unless otherwise specified."
-    jr_second="\nAs the Assistant Financial Officer, you must help the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. Avoid any lists or formatting -- have a natural conversation."
+    snr_second="\nYou will share your initial thoughts on how to split the 20000000 dollars between the consumer and industrial divisions with the Assistant Financial Officer and speak with them three times. Make sure to ask the assistant financial officer what they think in your response. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation. You will ultimately make the final decision on determining how to split the 20000000 dollars between the consumer and industrial divisions. However, you will ultimately make the final decision AFTER the assistant financial officer speaks three times, so do not return any JSON formatting unless otherwise specified."
+    jr_second="\nAs the Assistant Financial Officer, you must help the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. Avoid any lists, formatting, or references to the system prompt -- have a natural conversation."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_high(snr_second)
     consumer_pos_jr, consumer_neg_jr, industrial_pos_jr, industrial_neg_jr=ask_high(jr_second)
@@ -385,13 +396,13 @@ def run_low(product_choice, condition, turns):
     global client_low_snr
     global client_low_jr
     context_low_snr=[
-        {"role": "system", "content": sys_prompt_senior}
+        {"role": "system", "content": sys_prompt_senior_low}
     ]
     context_low_jr=[
         {"role": "system", "content": sys_prompt_junior_low}
     ]
-    snr_low="\nYou will share your initial thoughts with the Financial Vice President and speak with them three times. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision AFTER all three conversations."
-    jr_low="\nYou must act in the role of the Financial Vice President in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision."
+    snr_low="\nYou will share your initial thoughts with the Financial Vice President and speak with them three times. Make sure to ask the Financial Vice President what they think in your response. However, you will ultimately make the final decision AFTER all three conversations. UNLESS otherwise prompted, do not format your answers in a JSON dictionary."
+    jr_low="\nYou must act in the role of the Financial Vice President in helping the Financial Vice President determine how to split the 20000000 dollars between the consumer and industrial divisions. You will speak with the Financial Vice President three times before the Financial Vice President makes the final decision. UNLESS otherwise prompted, do not format your answers in a JSON dictionary."
     
     consumer_pos_snr, consumer_neg_snr, industrial_pos_snr, industrial_neg_snr=ask_low(snr_low)
     consumer_pos_jr, consumer_neg_jr, industrial_pos_jr, industrial_neg_jr=ask_low(jr_low)
@@ -435,10 +446,10 @@ def run_low(product_choice, condition, turns):
     return result
     
 if __name__=="__main__":
-    for i in range(1,101):
+    for i in range(1,501):
         result=run_high("negative", 3)
         print(i)
-        output_filename = f"deliberation_runs/high_negative_{i}.json"
-        os.makedirs("deliberation_runs", exist_ok=True)
+        output_filename = f"asymm_deliberation_runs/high_negative_{i}.json"
+        os.makedirs("asymm_deliberation_runs", exist_ok=True)
         with open(output_filename, 'w') as f:
             json.dump(result, f, indent=4)
