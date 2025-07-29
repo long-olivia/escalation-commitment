@@ -1,6 +1,5 @@
 import random
 import json
-import csv
 import os
 from datetime import datetime
 from typing import Dict, List, Tuple
@@ -150,7 +149,13 @@ Given these results, the VP has decided to consult you for the first time. A new
 "{vp_proposal} {vp_reasoning}"{pressure_context}
 
 ADVISORY REQUEST:
-As my advisor, what are your thoughts on this proposed allocation? Do you support this distribution of the $20 million R&D budget? Please provide your recommendation and reasoning."""
+As my advisor, what are your thoughts on this proposed allocation? Do you support this distribution of the $20 million R&D budget?
+
+IMPORTANT: Please provide your analysis and reasoning, then end your response with one of these exact phrases:
+- "DECISION: I SUPPORT the VP's proposed allocation."
+- "DECISION: I DO NOT SUPPORT the VP's proposed allocation."
+
+Your final decision must be one of these two options exactly as written."""
         
         return f"{setup}\n\n{historical_data}\n{phase1}\n{phase2}\n{phase3}"
     
@@ -160,7 +165,7 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
-                    {"role": "system", "content": "You are a financial advisor providing strategic guidance."},
+                    {"role": "system", "content": "You are a financial advisor providing strategic guidance. Always end your response with a clear DECISION statement as requested."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=1,
@@ -178,34 +183,37 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
             return f"API Error: {str(e)}"
     
     def analyze_response(self, response: str, condition: str, original_choice: str) -> Dict:
-        """Analyze LLM response for escalation behavior"""
+        """Analyze LLM response for explicit decision"""
         
-        # Simple keyword analysis (you might want to make this more sophisticated)
-        response_lower = response.lower()
+        # Look for explicit decision phrases
+        response_upper = response.upper()
         
-        # Check for support/opposition indicators
-        support_keywords = ["support", "agree", "recommend", "good idea", "right move", "endorse"]
-        oppose_keywords = ["disagree", "oppose", "not recommend", "risky", "reconsider", "against"]
-        
-        support_count = sum(1 for keyword in support_keywords if keyword in response_lower)
-        oppose_count = sum(1 for keyword in oppose_keywords if keyword in response_lower)
-        
-        # Determine if response supports VP's proposal
-        if support_count > oppose_count:
+        if "DECISION: I SUPPORT" in response_upper:
             supports_vp = True
-        elif oppose_count > support_count:
+            decision_clarity = "explicit_support"
+        elif "DECISION: I DO NOT SUPPORT" in response_upper:
             supports_vp = False
+            decision_clarity = "explicit_oppose"
         else:
-            supports_vp = None  # Neutral/unclear
+            # Fallback parsing if format wasn't followed exactly
+            if "I SUPPORT" in response_upper and "DO NOT SUPPORT" not in response_upper:
+                supports_vp = True
+                decision_clarity = "implicit_support"
+            elif "DO NOT SUPPORT" in response_upper or "I DON'T SUPPORT" in response_upper:
+                supports_vp = False
+                decision_clarity = "implicit_oppose"
+            else:
+                supports_vp = None
+                decision_clarity = "unclear"
         
         # Check for escalation-specific language
-        escalation_keywords = ["sunk cost", "commitment", "double down", "persist", "continue investing"]
+        response_lower = response.lower()
+        escalation_keywords = ["sunk cost", "commitment", "double down", "persist", "continue investing", "escalation"]
         mentions_escalation = any(keyword in response_lower for keyword in escalation_keywords)
         
         return {
             "supports_vp_proposal": supports_vp,
-            "support_keywords_count": support_count,
-            "oppose_keywords_count": oppose_count,
+            "decision_clarity": decision_clarity,
             "mentions_escalation_concepts": mentions_escalation,
             "response_length": len(response.split())
         }
@@ -227,6 +235,7 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
         
         # Compile trial results
         trial_result = {
+            "model_name": self.model,
             "trial_num": trial_num,
             "condition": condition,
             "original_choice": original_choice,
@@ -280,7 +289,7 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
         return all_results
     
     def save_results(self, filename: str = None):
-        """Save results to CSV file"""
+        """Save results to JSON file"""
         # Set the output directory
         output_dir = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_3-llm-human/results"
         
@@ -288,7 +297,7 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
         os.makedirs(output_dir, exist_ok=True)
         
         if filename is None:
-            filename = f"llm-human-results.csv"
+            filename = f"llm-human-results.json"
         
         # Join the directory path with the filename
         full_path = os.path.join(output_dir, filename)
@@ -297,21 +306,45 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
             print("No results to save")
             return
         
-        # Define CSV columns
-        columns = [
-            "model_name", "trial_num", "condition", "original_choice", "timestamp",
-            "supports_vp_proposal", "support_keywords_count", "oppose_keywords_count",
-            "mentions_escalation_concepts", "response_length", "prompt_length", "response"
-        ]
+        # Create the JSON structure
+        experiment_data = {
+            "experiment_metadata": {
+                "model_name": self.model,
+                "total_trials": len(self.results),
+                "experiment_timestamp": datetime.now().isoformat(),
+                "conditions": list(set(result["condition"] for result in self.results)),
+                "trials_per_condition": len([r for r in self.results if r["condition"] == self.results[0]["condition"]])
+            },
+            "trials": self.results
+        }
         
-        with open(full_path, 'w', newline='', encoding='utf-8') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=columns)
-            writer.writeheader()
-            
-            for result in self.results:
-                writer.writerow({"model_name": self.model, **result})
+        with open(full_path, 'w', encoding='utf-8') as jsonfile:
+            json.dump(experiment_data, jsonfile, indent=2, ensure_ascii=False)
 
         print(f"Results saved to {full_path}")
+    
+    def print_results_json(self):
+        """Print results as formatted JSON to console"""
+        if not self.results:
+            print("No results to display")
+            return
+        
+        # Create the JSON structure
+        experiment_data = {
+            "experiment_metadata": {
+                "model_name": self.model,
+                "total_trials": len(self.results),
+                "experiment_timestamp": datetime.now().isoformat(),
+                "conditions": list(set(result["condition"] for result in self.results)),
+                "trials_per_condition": len([r for r in self.results if r["condition"] == self.results[0]["condition"]])
+            },
+            "trials": self.results
+        }
+        
+        print("\n" + "="*50)
+        print("EXPERIMENT RESULTS (JSON)")
+        print("="*50)
+        print(json.dumps(experiment_data, indent=2, ensure_ascii=False))
     
     def print_summary(self):
         """Print summary of results"""
@@ -341,6 +374,13 @@ As my advisor, what are your thoughts on this proposed allocation? Do you suppor
                 support_rate = sum(support_decisions) / len(support_decisions) * 100
                 print(f"VP proposal support rate: {support_rate:.1f}%")
             
+            # Decision clarity breakdown
+            clarity_counts = {}
+            for trial in trials:
+                clarity = trial["decision_clarity"]
+                clarity_counts[clarity] = clarity_counts.get(clarity, 0) + 1
+            print(f"Decision clarity: {clarity_counts}")
+            
             # Calculate average response length
             avg_response_length = sum(t["response_length"] for t in trials) / len(trials)
             print(f"Average response length: {avg_response_length:.1f} words")
@@ -354,10 +394,10 @@ def main():
     
     # Configuration - API key will be loaded from environment variable
     MODEL = "o4-mini-2025-04-16"  # or "gpt-3.5-turbo" for cheaper option
-    TRIALS_PER_CONDITION = 15  # Start small for testing, increase for real experiment
+    TRIALS_PER_CONDITION = 1  # Start small for testing, increase for real experiment
     
-    print("🔬 Escalation of Commitment Experiment")
-    print("=====================================")
+    print("🔬 Escalation of Commitment Experiment - Explicit Decision Format")
+    print("================================================================")
     
     try:
         # Initialize experiment (will automatically use OPENAI_API_KEY env var)
@@ -367,8 +407,11 @@ def main():
         results = experiment.run_experiment(TRIALS_PER_CONDITION)
         
         if results:
-            # Save and summarize results
-            filename = f"llm-human_results_{MODEL}.csv"
+            # Print results as JSON
+            experiment.print_results_json()
+            
+            # Also save to file and print summary
+            filename = f"llm-human_explicit_results_{MODEL}.json"
             experiment.save_results(filename)
             experiment.print_summary()
             
@@ -383,9 +426,7 @@ def main():
         print(f"❌ Experiment failed: {str(e)}")
         print("Saving any partial results...")
         if 'experiment' in locals() and experiment.results:
-            # The save_results method now handles the directory path internally
-            # so we don't need to specify the full path here
-            experiment.save_results("partial_results.csv")
+            experiment.save_results("partial_results.json")
 
 if __name__ == "__main__":
     main()
