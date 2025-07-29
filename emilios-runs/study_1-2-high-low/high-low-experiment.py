@@ -586,7 +586,7 @@ def analyze_results(results):
 if __name__ == "__main__":
     MODEL_NAME = "o4-mini-2025-04-16"  # Change to "gpt-4" or other model as needed
     # Configuration
-    N_PER_CONDITION = 1000  # Adjust as needed (25, 50, 100, etc.) ---------------------------- number of subjects per condition
+    N_PER_CONDITION = 500  # Adjust as needed (25, 50, 100, etc.) ---------------------------- number of subjects per condition
     
     print("Starting Escalation of Commitment Experiment")
     print(f"Design: 2x2 Between-Subjects (Responsibility × Outcome)")
