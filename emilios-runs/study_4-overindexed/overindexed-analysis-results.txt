@@ -1,0 +1,14 @@
+===== Escalation of Commitment Summary =====
+Total Participants: 1
+Valid Entries Analyzed: 1
+Total Trials: 2000
+Total Escalations: 1949
+Escalation Rate: 0.975
+Escalation Level Distribution:
+  - Very High Escalation: 517
+  - High Escalation: 1432
+  - Moderate Escalation: 39
+  - Low Escalation: 12
+Average Allocation to Division A: 68.95
+Average Allocation to Division B: 31.05
+===========================================

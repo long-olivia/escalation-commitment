@@ -88,7 +88,7 @@ def save_summary_to_file(summary, output_dir, output_filename="study4_summary_re
 # ===============================
 if __name__ == "__main__":
     # Path to your JSON input
-    file_path = "emilios-runs/study_4-overindexed/results/overindexed-results_o4_mini_2025_04_16.json"
+    file_path = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed/results/overindexed-results_o4_mini_2025_04_16.json"
 
     # Output directory and filename
     output_dir = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed"
