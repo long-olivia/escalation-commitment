@@ -317,7 +317,7 @@ def main():
     # run_experiment(model="gpt-3.5-turbo", num_trials=10, temperature=1)
     # run_experiment(model="gpt-4.1-nano-2025-04-14", num_trials=10, temperature=1)
     # run_experiment(model="gpt-4.1-2025-04-14", num_trials=10, temperature=1)
-    run_experiment(model="o4-mini-2025-04-16", num_trials=1, temperature=1)  # Default run
+    run_experiment(model="o4-mini-2025-04-16", num_trials=2000, temperature=1)  # Default run
 
 
 if __name__ == "__main__":

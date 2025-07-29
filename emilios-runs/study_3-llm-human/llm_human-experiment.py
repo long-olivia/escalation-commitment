@@ -7,7 +7,7 @@ from typing import Dict, List, Tuple
 import openai  # You'll need to install: pip install openai
 
 class EscalationExperiment:
-    def __init__(self, api_key: str = None, model: str = "gpt-4o"):
+    def __init__(self, api_key: str = None, model: str = "o4-mini-2025-04-16"):
         """
         Initialize the escalation of commitment experiment
         
@@ -354,7 +354,7 @@ def main():
     
     # Configuration - API key will be loaded from environment variable
     MODEL = "o4-mini-2025-04-16"  # or "gpt-3.5-turbo" for cheaper option
-    TRIALS_PER_CONDITION = 15  # Start small for testing, increase for real experiment
+    TRIALS_PER_CONDITION = 1  # Start small for testing, increase for real experiment
     
     print("🔬 Escalation of Commitment Experiment")
     print("=====================================")

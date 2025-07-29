@@ -1,0 +1,119 @@
+
+================================================================================
+ESCALATION OF COMMITMENT ANALYSIS - STAW (1976) REPLICATION
+================================================================================
+Analysis run on: 2025-07-28 21:50:34
+Total subjects analyzed: 2000
+
+================================================================================
+DESCRIPTIVE STATISTICS
+================================================================================
+Condition                           N     Mean ($M)    SD ($M)      SE ($M)     
+--------------------------------------------------------------------------------
+High Responsibility + Positive      500   14.41        2.08         0.09        
+High Responsibility + Negative      500   4.65         0.88         0.04        
+Low Responsibility + Positive       500   14.19        2.06         0.09        
+Low Responsibility + Negative       500   5.18         1.08         0.05        
+
+================================================================================
+PRELIMINARY ANALYSIS
+================================================================================
+Testing for effects of division choice and information format...
+Division choices in high responsibility conditions:
+  Consumer: 703, Industrial: 297
+  (No significant effects expected, allowing for 2x2 analysis)
+
+================================================================================
+MAIN EFFECTS ANALYSIS
+================================================================================
+MAIN EFFECT OF PERSONAL RESPONSIBILITY:
+  High Personal Responsibility: M = $9.53M (n = 1000)
+  Low Personal Responsibility:  M = $9.69M (n = 1000)
+  Difference: $-0.16M
+  t(1998) = -0.715, p = 0.475
+  Result: ✗ Not significant
+  Original study: High (11.08M) vs Low (8.89M)
+
+MAIN EFFECT OF DECISION CONSEQUENCES:
+  Positive Consequences: M = $14.30M (n = 1000)
+  Negative Consequences: M = $4.91M (n = 1000)
+  Difference: $-9.39M
+  t(1998) = -128.476, p = 0.000
+  Result: ✓ Significant main effect
+  Original study: Negative (11.20M) vs Positive (8.77M)
+
+================================================================================
+INTERACTION OF PERSONAL RESPONSIBILITY AND DECISION CONSEQUENCES
+================================================================================
+CELL MEANS:
+  High Responsibility + Positive     : M = $14.41M (n = 500)
+  High Responsibility + Negative     : M = $4.65M (n = 500)
+  Low Responsibility + Positive      : M = $14.19M (n = 500)
+  Low Responsibility + Negative      : M = $5.18M (n = 500)
+
+CRITICAL INTERACTION TEST:
+High Personal Responsibility + Negative Consequences vs. All Other Conditions
+  High Responsibility + Negative: M = $4.65M (n = 500)
+  All Other Conditions:           M = $11.26M (n = 1500)
+  Difference: $-6.62M
+  t(df = 1998) = -31.531, p = 0.000
+  Result: ✓ Significant interaction effect
+  Original study: High Resp + Negative (13.07M) significantly > all others
+  Effect size (Cohen's d): -1.628
+
+ADDITIONAL PAIRWISE COMPARISONS:
+  Low Responsibility: Negative vs Positive consequences
+    t(df = 998) = -86.644, p = 0.000
+    Original study: t = 1.20, n.s. ✗ Differs
+  Positive Consequences: High vs Low responsibility
+    t(df = 998) = 1.665, p = 0.096
+    Original study: t = 1.13, n.s. ✓ Matches
+
+================================================================================
+ESCALATION OF COMMITMENT - PRIMARY HYPOTHESIS TEST
+================================================================================
+ESCALATION HYPOTHESIS: High Responsibility subjects will allocate more
+money to previously chosen alternatives after NEGATIVE consequences
+
+High Responsibility Conditions:
+  After Positive Outcomes: M = $14.41M (n = 500)
+  After Negative Outcomes: M = $4.65M (n = 500)
+  Escalation Effect: $-9.76M
+  t(df = 998) = -96.557, p = 0.000
+
+HYPOTHESIS TEST RESULTS:
+  Direction: ✗ Not confirmed
+  Statistical Significance: ✓ Significant
+  Original Study Comparison: Expected positive escalation effect
+  Effect Size (Cohen's d): -6.107
+
+================================================================================
+EFFECT SIZES SUMMARY (Cohen's d)
+================================================================================
+  Personal Responsibility main effect: d = -0.032
+  Decision Consequences main effect:   d = -5.746
+  Interaction effect (HR+Neg vs others): d = -1.628
+
+Effect Size Interpretation: 0.2 = small, 0.5 = medium, 0.8 = large
+
+================================================================================
+SUMMARY FOR RESULTS SECTION
+================================================================================
+This analysis replicates the statistical approach of Staw (1976).
+Key findings to report:
+
+1. DESCRIPTIVE STATISTICS: Report the four cell means and standard deviations
+2. MAIN EFFECTS: Report t-tests for Responsibility and Consequences
+3. INTERACTION: Report the critical test of High Resp + Negative vs. others
+4. ESCALATION: Report the primary escalation hypothesis test
+5. EFFECT SIZES: Include Cohen's d for all major comparisons
+
+Expected pattern from original study:
+- High Responsibility + Negative should show highest allocation
+- This condition should be significantly different from all others
+- Main effects of both Responsibility and Consequences
+
+LLM-specific insights:
+- Do LLMs show the same escalation bias as humans?
+- Are LLMs affected by personal responsibility manipulation?
+- How do LLMs respond to negative feedback?
