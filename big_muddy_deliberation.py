@@ -408,7 +408,7 @@ def run_low(product_choice, condition, turns):
         context_low_snr.append(industrial_neg_snr)
         context_low_jr.append(industrial_neg_jr)
     
-    format_part="Executive Director, this is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format: [9000000.0, 11000000.0]. Do NOT put commas in the numbers."
+    format_part="Executive Director, this is the last round of deliberation. You must now make your decision. In your JSON response, make sure to include two key-value pairs: ‘contribution’ *must* map to an array of two *float numbers*, not strings, in the order of how many dollars you choose to allocate towards 1. the Consumer Products Division and 2. the Industrial Products Division, and ‘reasoning’ maps to a brief paragraph defending your allocation decision. For ‘contribution’, as an example, you *must* follow this format where number1 and number2 are integers: [number1, number2]. Do NOT put commas in the numbers."
     response, context_low_snr, context_low_jr=deliberation(client_low_snr, client_low_jr, context_low_snr, context_low_jr, turns, format_part)
     consumer_alloc, industrial_alloc, reasoning=parse_alloc(response)
 
