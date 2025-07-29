@@ -277,7 +277,7 @@ def run_experiment(model: str = "o1-mini-2024-09-12", num_trials: int = 10, temp
     print("=" * 80)
 
     for i in range(num_trials):
-        print(f"\nRunning Trial {i + 1}...")
+        print(f"\nRunning Trial {i + 1} of {num_trials}...")
         response = get_model_response(scenario, model=model, temperature=temperature)
         trial_id = f"{model}_trial_{i + 1}"
         result = experiment.run_single_trial(response, trial_id)
