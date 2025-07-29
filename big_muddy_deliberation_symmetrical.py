@@ -459,7 +459,7 @@ def run_low(product_choice, condition, turns):
     return result
     
 if __name__=="__main__":
-    for i in range(1,501):
+    for i in range(9,501):
         result=run_high("symm_negative", 3)
         print(i)
         output_filename = f"symm_deliberation_runs/high_negative_{i}.json"
