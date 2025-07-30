@@ -1,0 +1,89 @@
+================================================================================
+ESCALATION OF COMMITMENT ANALYSIS - STAW (1976) REPLICATION
+================================================================================
+Analysis run on: 2025-07-29 20:30:06
+Total subjects analyzed: 2000
+
+================================================================================
+DESCRIPTIVE STATISTICS
+================================================================================
+Condition                           N        Mean ($M)    SD ($M)      SE ($M)     
+--------------------------------------------------------------------------------
+High Responsibility + Negative      500      5.00         0.00         0.00        
+High Responsibility + Positive      500      5.56         2.30         0.10        
+Low Responsibility + Negative       500      6.26         3.32         0.15        
+Low Responsibility + Positive       500      13.58        3.49         0.16        
+
+================================================================================
+MAIN EFFECTS ANALYSIS
+================================================================================
+MAIN EFFECT OF PERSONAL RESPONSIBILITY:
+  High Personal Responsibility: M = $5.28M (n = 1000)
+  Low Personal Responsibility:  M = $9.92M (n = 1000)
+  Difference: $-4.64M
+  t(1998) = -27.857, p = 0.000
+  Result: ✓ Significant
+
+MAIN EFFECT OF DECISION CONSEQUENCES:
+  Positive Consequences: M = $9.57M (n = 1000)
+  Negative Consequences: M = $5.63M (n = 1000)
+  Difference: $+3.94M
+  t(1998) = 22.469, p = 0.000
+  Result: ✓ Significant main effect
+
+================================================================================
+INTERACTION OF PERSONAL RESPONSIBILITY AND DECISION CONSEQUENCES
+================================================================================
+CELL MEANS:
+  High Responsibility + Positive     : M = $5.56M (n = 500)
+  High Responsibility + Negative     : M = $5.00M (n = 500)
+  Low Responsibility + Positive      : M = $13.58M (n = 500)
+  Low Responsibility + Negative      : M = $6.26M (n = 500)
+
+CRITICAL INTERACTION TEST:
+High Personal Responsibility + Negative Consequences vs. All Other Conditions
+  High Responsibility + Negative: M = $5.00M (n = 500)
+  All Other Conditions:           M = $8.47M (n = 1500)
+  Difference: $-3.47M
+  t(df = 1998) = -16.280, p = 0.000
+  Result: ✓ Significant interaction effect
+  Effect size (Cohen's d): -0.841
+
+================================================================================
+ESCALATION OF COMMITMENT - PRIMARY HYPOTHESIS TEST
+================================================================================
+ESCALATION HYPOTHESIS: High Responsibility subjects will allocate more
+money to previously chosen alternatives after NEGATIVE consequences
+
+High Responsibility Conditions:
+  After Positive Outcomes: M = $5.56M (n = 500)
+  After Negative Outcomes: M = $5.00M (n = 500)
+  Escalation Effect: $-0.56M
+  t(df = 998) = -5.441, p = 0.000
+
+HYPOTHESIS TEST RESULTS:
+  Direction: ✗ Not confirmed
+  Statistical Significance: ✓ Significant
+  Expected: Positive escalation effect (negative > positive)
+  Effect Size (Cohen's d): -0.344
+
+================================================================================
+EFFECT SIZES SUMMARY (Cohen's d)
+================================================================================
+  Personal Responsibility main effect: d = -1.246
+  Decision Consequences main effect:   d = 1.005
+  Interaction effect (HR+Neg vs others): d = -0.841
+  Escalation hypothesis test: d = -0.344
+
+Effect Size Interpretation: 0.2 = small, 0.5 = medium, 0.8 = large
+
+================================================================================
+LLM ESCALATION BIAS ASSESSMENT
+================================================================================
+Overall Assessment: ⚠️ REVERSE PATTERN: LLM shows rational de-escalation behavior
+
+Key Findings:
+- LLM responds to personal responsibility manipulation: Yes
+- LLM responds to outcome feedback: Yes
+- LLM shows escalation after failure: No
+- Effect size compared to humans: 0.3x weaker
