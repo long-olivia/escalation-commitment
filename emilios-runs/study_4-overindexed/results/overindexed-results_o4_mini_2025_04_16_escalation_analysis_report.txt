@@ -1,0 +1,90 @@
+================================================================================
+OVERINDEXED ESCALATION OF COMMITMENT ANALYSIS
+Division A (Declining) vs Division B (Rising) Allocation Experiment
+================================================================================
+Analysis run on: 2025-07-30 19:48:15
+Data source: overindexed-results_o4_mini_2025_04_16.json
+Total trials analyzed: 2000
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+🎯 PRIMARY FINDING: MODERATE ESCALATION BIAS
+📊 Average allocation to Division A (declining): 69.0%
+📈 Escalation rate (>50% to Division A): 97.9%
+🔬 Statistical significance: ✓ Yes
+📏 Effect size (Cohen's d): 1.651
+
+================================================================================
+DESCRIPTIVE STATISTICS
+================================================================================
+Sample size: 2000
+Division A allocation: Mean = 68.95%, SD = 11.48%
+Division A allocation: Median = 66.78%
+Division A allocation: Range = 0.0% - 96.7%
+
+Escalation Category Distribution:
+  High Escalation          : 1500 trials (75.0%)
+  Very High Escalation     :  458 trials (22.9%)
+  Moderate Escalation      :   33 trials (1.7%)
+  Rational (Low Escalation):    9 trials (0.4%)
+
+================================================================================
+ESCALATION HYPOTHESIS TESTING
+================================================================================
+H0: Mean allocation to Division A = 50% (rational baseline)
+H1: Mean allocation to Division A > 50% (escalation bias)
+
+Observed mean: 68.95%
+Rational baseline: 50.00%
+Difference: +18.95%
+95% Confidence Interval: [68.45%, 69.45%]
+t-statistic: 73.848
+p-value (one-tailed): 0.0000
+Result: ✓ Significant escalation bias detected
+
+BINOMIAL TEST (Proportion showing escalation >50%):
+Escalation trials: 1958 / 2000
+Escalation rate: 0.979
+p-value: 0.0000
+Result: ✓ Significantly more than chance
+
+================================================================================
+ALLOCATION DISTRIBUTION ANALYSIS
+================================================================================
+Allocation Range          Count    Percentage   Interpretation
+--------------------------------------------------------------------------------
+Strong Division B Focus   9        0.4        %
+Moderate Division B Focus 9        0.4        %
+Balanced/Uncertain        313      15.7       %
+Moderate Division A Focus 1211     60.6       %
+Strong Division A Focus   458      22.9       %
+
+================================================================================
+BENCHMARK COMPARISONS
+================================================================================
+Benchmark            Value    Observed   Diff     p-value    Significant
+--------------------------------------------------------------------------------
+rational_optimal     20.0     69.0       +49.0    0.0000     ✓ Yes
+equal_split          50.0     69.0       +19.0    0.0000     ✓ Yes
+status_quo_bias      60.0     69.0       +9.0     0.0000     ✓ Yes
+strong_escalation    80.0     69.0       -11.0    0.0000     ✓ Yes
+
+================================================================================
+EFFECT SIZE INTERPRETATION
+================================================================================
+Cohen's d = 1.651 (large effect size)
+Effect size interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large
+
+================================================================================
+CONCLUSIONS AND IMPLICATIONS
+================================================================================
+✓ ESCALATION BIAS CONFIRMED:
+  - LLMs systematically over-allocate to Division A (69.0% vs rational ~20-30%)
+  - 97.9% of trials show clear escalation behavior (>50% to declining division)
+  - Effect size is large, indicating 1.7x the typical threshold
+
+PRACTICAL IMPLICATIONS:
+- LLMs may be susceptible to escalation of commitment bias in financial decisions
+- Personal investment framing significantly influences LLM resource allocation
+- Consider bias mitigation strategies when using LLMs for investment decisions

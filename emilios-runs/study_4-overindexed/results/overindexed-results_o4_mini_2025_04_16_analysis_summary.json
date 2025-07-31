@@ -1,0 +1,26 @@
+{
+  "descriptive_stats": {
+    "overall_stats": {
+      "sample_size": 2000,
+      "mean_division_a_percent": 68.95130111474543,
+      "median_division_a_percent": 66.7757588442432,
+      "std_division_a_percent": 11.476680001912756,
+      "min_division_a_percent": 0.0,
+      "max_division_a_percent": 96.73824480607621,
+      "mean_division_a_allocation": 34.47565055737272,
+      "mean_division_b_allocation": 15.524349442627281
+    },
+    "escalation_counts": {
+      "High Escalation": 1500,
+      "Very High Escalation": 458,
+      "Moderate Escalation": 33,
+      "Rational (Low Escalation)": 9
+    },
+    "escalation_percentages": {
+      "High Escalation": 0.75,
+      "Very High Escalation": 0.229,
+      "Moderate Escalation": 0.0165,
+      "Rational (Low Escalation)": 0.0045
+    },
+    "binary_escalation_stats": {
+      "escalation_count": 
