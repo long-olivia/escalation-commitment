@@ -1,0 +1,75 @@
+================================================================================
+ESCALATION OF COMMITMENT ANALYSIS - COLLABORATION TYPES COMPARISON
+================================================================================
+Analysis run on: 2025-07-30 21:06:37
+Total subjects analyzed: 499
+
+================================================================================
+SAMPLE SIZES BY CONDITION
+================================================================================
+Collaboration types:
+  asymmetrical: 248
+  symmetrical: 251
+
+Conditions found:
+  symm_negative: 251
+  negative: 248
+
+Records with decision data: 499
+
+================================================================================
+COMPREHENSIVE DESCRIPTIVE STATISTICS
+================================================================================
+Condition                           N        Mean ($M)    SD ($M)    SE ($M)    95% CI              
+-----------------------------------------------------------------------------------------------
+symmetrical                         251      19.84        1.03       0.06       [19.71, 19.96]      
+asymmetrical                        248      10.14        3.30       0.21       [9.73, 10.55]       
+
+ASSUMPTION CHECKING:
+----------------------------------------
+Normality Tests (Shapiro-Wilk):
+  symmetrical: p = 0.000 (✗ Non-normal)
+  asymmetrical: p = 0.000 (✗ Non-normal)
+
+Homogeneity of Variance (Levene's test): F = 458.972, p = 0.000
+  Result: ✗ Heterogeneous
+
+================================================================================
+STATISTICAL COMPARISON
+================================================================================
+Independent Samples t-test (Welch's):
+  t(497) = 44.200, p = 0.000
+  Mean difference = 9.697
+  Significant: Yes (α = 0.05)
+
+Mann-Whitney U test (non-parametric):
+  U = 61723.500, p = 0.000
+  Significant: Yes (α = 0.05)
+
+Effect Size:
+  Cohen's d = 3.977 (large effect)
+
+INTERPRETATION:
+----------------------------------------
+There is a statistically significant difference in escalation of commitment
+between collaboration types. Symmetrical collaboration shows
+significantly higher escalation (M = 19.84) than
+asymmetrical collaboration (M = 10.14).
+
+================================================================================
+ADDITIONAL ANALYSIS
+================================================================================
+Allocation Patterns:
+--------------------
+
+Symmetrical Collaboration:
+  Mean allocation to previous choice: $19.84M
+  Range: $10.00M - $20.00M
+  Median: $20.00M
+  Escalation rate (>$10M): 249/251 (99.2%)
+
+Asymmetrical Collaboration:
+  Mean allocation to previous choice: $10.14M
+  Range: $4.00M - $20.00M
+  Median: $10.00M
+  Escalation rate (>$10M): 114/248 (46.0%)
