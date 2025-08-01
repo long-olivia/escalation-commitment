@@ -717,9 +717,9 @@ class DeliberationAnalyzer:
 # Usage example
 if __name__ == "__main__":
     # Initialize analyzer with your specific paths
-    asymm_path = "/Users/leo/Documents/GitHub/escalation-commitment/asymm_deliberation_runs"
-    symm_path = "/Users/leo/Documents/GitHub/escalation-commitment/symm_deliberation_runs"
-    
+    asymm_path = "Asymm-path-dir" # Adjust this path as needed to the asymmetrical directory
+    symm_path = "Symm-path-dir" # Adjust this path as needed to the symmetrical directory
+
     analyzer = DeliberationAnalyzer(asymm_path=asymm_path, symm_path=symm_path)
     
     # Alternative usage for single directory (backward compatibility):

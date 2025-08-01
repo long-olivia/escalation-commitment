@@ -225,7 +225,7 @@ Then explain your reasoning for this allocation decision.
         return self.scenario
 
     def export_results(self, filename: str = None) -> str:
-        output_dir = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed"
+        output_dir = "output-directory-path"  # Change this to your desired output directory
         os.makedirs(output_dir, exist_ok=True)  # ensures directory exists
 
         filename = filename or f"overindexed_results{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
@@ -290,7 +290,7 @@ def run_experiment(model: str = "o1-mini-2024-09-12", num_trials: int = 10, temp
     
     # Create model-specific output filename
     model_name = model.replace("-", "_").replace(".", "_")
-    output_path = f"/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed/results/overindexed-results_{model_name}.json"
+    output_path = f"output-directory-path/overindexed-results_{model_name}.json" # Change this to your desired output directory
     with open(output_path, "w") as f:
         json.dump(analysis, f, indent=2)
     

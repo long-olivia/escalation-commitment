@@ -577,7 +577,7 @@ def main():
     """
     
     # Your JSON file path:
-    json_file_path = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_4-overindexed/results/overindexed-results_o4_mini_2025_04_16.json"
+    json_file_path = "file-path-here.json" # Update this with your actual JSON file path
     
     print("🔬 Analyzing Study 4 data from JSON file...")
     print("=" * 50)

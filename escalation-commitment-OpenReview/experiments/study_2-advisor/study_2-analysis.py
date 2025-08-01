@@ -620,7 +620,7 @@ def main():
     """
     
     # Update this path to your JSON file
-    json_file_path = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_3-llm-human/results/llm-human_explicit_results_o4-mini-2025-04-16.json"  # Replace with actual path
+    json_file_path = "Insert-file-here.json"  # Replace with actual path
     
     try:
         # Initialize analyzer

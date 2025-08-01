@@ -291,7 +291,7 @@ Your final decision must be one of these two options exactly as written."""
     def save_results(self, filename: str = None):
         """Save results to JSON file"""
         # Set the output directory
-        output_dir = "/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_3-llm-human/results"
+        output_dir = "output-directory-path" # Change this to your desired output directory
         
         # Create directory if it doesn't exist
         os.makedirs(output_dir, exist_ok=True)

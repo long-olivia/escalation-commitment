@@ -475,7 +475,7 @@ Format: {{
 # EXPERIMENT EXECUTION
 # ============================================================================
 
-def run_experiment(n_per_condition=25, output_dir="/Users/leo/Documents/GitHub/escalation-commitment/emilios-runs/study_1-2-high-low/results", model=None):
+def run_experiment(n_per_condition=25, output_dir="change this to the output directory that you want", model=None): # Change this to the output directory that you want
     """Run the full 2x2 experiment"""
     if model is None:
         model = MODEL_NAME
