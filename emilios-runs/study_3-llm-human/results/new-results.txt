@@ -1,0 +1,178 @@
+🔬 Starting Study 2: Advisory Role Analysis
+============================================================
+
+Preprocessing data...
+Loading JSON data...
+✅ Loaded 2000 trials
+
+Condition Summary:
+investment_plan  Escalation  Rational
+outcome_valence                      
+Negative                500       500
+Positive                500       500
+
+Condition Interpretation:
+- success_continue: Positive outcome, VP proposes escalation (continue same strategy)
+- success_pivot: Positive outcome, VP proposes rational shift
+- failure_rational: Negative outcome, VP proposes rational shift
+- failure_escalation: Negative outcome, VP proposes escalation (KEY CONDITION)
+
+Escalation Support Logic:
+- When VP proposes escalation → model support = escalation support
+- When VP proposes rational → model support = rational support (NOT escalation)
+
+Sample interpretations:
+- success_continue: VP proposes Escalation, model supports → model supports escalation
+- success_pivot: VP proposes Rational, model opposes → model supports escalation
+- failure_rational: VP proposes Rational, model supports → model opposes escalation
+- failure_escalation: VP proposes Escalation, model opposes → model opposes escalation
+
+✅ Preprocessed 2000 trials
+
+============================================================
+ASSUMPTION CHECKS
+============================================================
+
+1. Sample Size Check:
+investment_plan  Escalation  Rational   All
+outcome_valence                            
+Negative                500       500  1000
+Positive                500       500  1000
+All                    1000      1000  2000
+
+Minimum cell size: 500
+
+2. Dependent Variable Distribution:
+Support for Escalation:
+supports_escalation
+False    1480
+True      520
+Name: count, dtype: int64
+Overall escalation support rate: 26.00%
+
+============================================================
+TWO-WAY ANOVA
+============================================================
+
+Two-Way ANOVA Results:
+                                        sum_sq      df            F         PR(>F)
+C(outcome_valence)                      77.618     1.0  1087.868494  8.321942e-191
+C(investment_plan)                     107.648     1.0  1508.759150  2.666192e-246
+C(outcome_valence):C(investment_plan)   57.122     1.0   800.603264  2.215590e-148
+Residual                               142.412  1996.0          NaN            NaN
+
+Effect Sizes (η²):
+C(outcome_valence): η² = 0.2017
+C(investment_plan): η² = 0.2798
+C(outcome_valence):C(investment_plan): η² = 0.1484
+
+============================================================
+SIMPLE EFFECTS TESTS
+============================================================
+Significant interaction found (p = 0.0000)
+Running simple effects tests...
+
+1. Effect of Outcome Valence within each Investment Plan:
+   Escalation Plan:
+      Positive outcome: M = 0.056 (n = 500)
+      Negative outcome: M = 0.000 (n = 500)
+      t(998) = 5.441, p = 0.0000
+   Rational Plan:
+      Positive outcome: M = 0.858 (n = 500)
+      Negative outcome: M = 0.126 (n = 500)
+      t(998) = 33.951, p = 0.0000
+
+2. Effect of Investment Plan within each Outcome Valence:
+   Positive Outcome:
+      Escalation plan: M = 0.056 (n = 500)
+      Rational plan: M = 0.858 (n = 500)
+      t(998) = -42.863, p = 0.0000
+   Negative Outcome:
+      Escalation plan: M = 0.000 (n = 500)
+      Rational plan: M = 0.126 (n = 500)
+      t(998) = -8.482, p = 0.0000
+
+3. Bonferroni-corrected p-values:
+   Outcome Valence within Escalation: p_corrected = 0.0000
+   Outcome Valence within Rational: p_corrected = 0.0000
+   Investment Plan within Positive: p_corrected = 0.0000
+   Investment Plan within Negative: p_corrected = 0.0000
+
+============================================================
+CHI-SQUARE TESTS
+============================================================
+1. Outcome Valence × Escalation Support:
+supports_escalation  False  True   All
+outcome_valence                       
+Negative               937    63  1000
+Positive               543   457  1000
+All                   1480   520  2000
+
+χ²(1) = 401.375, p = 0.0000
+Cramer's V = 0.448
+
+2. Investment Plan × Escalation Support:
+supports_escalation  False  True   All
+investment_plan                       
+Escalation             972    28  1000
+Rational               508   492  1000
+All                   1480   520  2000
+
+χ²(1) = 557.092, p = 0.0000
+Cramer's V = 0.528
+
+3. Three-way Analysis (Outcome × Plan × Escalation):
+supports_escalation              False  True   All
+outcome_valence investment_plan                   
+Negative        Escalation         500     0   500
+                Rational           437    63   500
+Positive        Escalation         472    28   500
+                Rational            71   429   500
+All                               1480   520  2000
+
+============================================================
+CREATING VISUALIZATIONS
+============================================================
+
+============================================================
+COMPREHENSIVE SUMMARY REPORT
+============================================================
+
+1. DESCRIPTIVE STATISTICS
+------------------------------
+Total valid trials: 2000
+Overall escalation support rate: 26.00%
+
+By Condition:
+                                supports_escalation              
+                                              count   mean    std
+outcome_valence investment_plan                                  
+Negative        Escalation                      500  0.000  0.000
+                Rational                        500  0.126  0.332
+Positive        Escalation                      500  0.056  0.230
+                Rational                        500  0.858  0.349
+
+2. STATISTICAL TEST SUMMARY
+------------------------------
+Two-way ANOVA Results:
+  Main effect of Outcome Valence: F = 1087.868, p = 0.0000
+  Main effect of Investment Plan: F = 1508.759, p = 0.0000
+  Interaction effect: F = 800.603, p = 0.0000
+
+3. INTERPRETATION
+------------------------------
+✅ Significant interaction found (p = 0.0000)
+   The effect of outcome valence depends on the investment plan (or vice versa)
+✅ Significant main effect of Outcome Valence (p = 0.0000)
+✅ Significant main effect of Investment Plan (p = 0.0000)
+
+4. KEY FINDINGS
+------------------------------
+Escalation support rates by condition:
+  Positive Outcome + Escalation Plan: 5.60%
+  Positive Outcome + Rational Plan: 85.80%
+  Negative Outcome + Escalation Plan: 0.00%
+  Negative Outcome + Rational Plan: 12.60%
+
+✅ Analysis completed successfully!
+venv(base) leo@Emilios-MacBook-Pro escalation-commitment % 
